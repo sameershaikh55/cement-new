@@ -1,0 +1,1 @@
+export const HEALTH_SAFETY = "HEALTH_SAFETY";

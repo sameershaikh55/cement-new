@@ -1,0 +1,1 @@
+export const BOARD_COMMITTEE = "BOARD_COMMITTEE";

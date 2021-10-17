@@ -1,0 +1,1 @@
+export const NUVOCO_GLANCE = "NUVOCO_GLANCE";
