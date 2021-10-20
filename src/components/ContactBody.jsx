@@ -370,7 +370,6 @@ const ContactBody = ({ data }) => {
 
 						<div className="row mt-5">
 							{data.map((prev, i) => {
-								console.log(prev);
 								return (
 									<div key={i} className="col-12 col-md-6">
 										<h5
@@ -378,9 +377,8 @@ const ContactBody = ({ data }) => {
 											data-aos-duration="600"
 											data-aos-offset="400"
 											className="w-100 borderBottomG border-4 pb-2"
-										>
-											{prev.company}
-										</h5>
+											dangerouslySetInnerHTML={{ __html: prev.company }}
+										></h5>
 										<div
 											data-aos="fade-right"
 											data-aos-duration="600"
