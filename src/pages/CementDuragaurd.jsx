@@ -107,9 +107,12 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 							>
 								<div className="d-flex justify-content-center align-items-center">
 									<div className="directionBg main_more text-white d-flex justify-content-center">
-										<span className={`h6 mt-direction2 text-uppercase`}>
-											{temp_page.page.product_title}
-										</span>
+										<span
+											dangerouslySetInnerHTML={{
+												__html: temp_page.page.product_title,
+											}}
+											className={`h6 mt-direction2 text-uppercase`}
+										></span>
 									</div>
 								</div>
 							</div>
@@ -129,9 +132,12 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 							</div>
 							<div>
 								<div className="row">
-									<p className="cementTagline col-md-10 col-lg-8 mx-auto text-center">
-										{temp_page.page.section1_desc}{" "}
-									</p>
+									<p
+										dangerouslySetInnerHTML={{
+											__html: temp_page.page.section1_desc,
+										}}
+										className="cementTagline col-md-10 col-lg-8 mx-auto text-center"
+									></p>
 								</div>
 							</div>
 						</div>

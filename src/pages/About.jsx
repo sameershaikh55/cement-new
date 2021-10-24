@@ -10,7 +10,6 @@ import Footer from "../components/Footer";
 // IMPORTING IMAGES
 import cementCard2 from "../assets/about2.png";
 import Seo from "../components/Seo";
-// import about_usImg from "../assets/about_usImg.png";
 
 // IMPORTING HOOKS
 import { useHooks } from "../hooks/useHooks";
@@ -65,9 +64,11 @@ const About = ({ nuvocoGlance, nuvocoGlanceApi }) => {
 													<span
 														style={{ marginTop: "15px" }}
 														className={`h6 mt-direction2Env text-uppercase`}
-													>
-														{nuvocoGlance.about_nuvoco.nuvoco_at_glance}
-													</span>
+														dangerouslySetInnerHTML={{
+															__html:
+																nuvocoGlance.about_nuvoco.nuvoco_at_glance,
+														}}
+													></span>
 												</div>
 											</div>
 											{/* DIRECTION SECTION END */}
@@ -115,13 +116,20 @@ const About = ({ nuvocoGlance, nuvocoGlanceApi }) => {
 																		/>
 																		<div className="d-flex flex-column justify-content-between ms-2 ms-sm-4">
 																			<div>
-																				<h4 className="themeColorG">{prev}</h4>
-																				<p className="mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify fiveLineElipses">
-																					{
-																						nuvocoGlance.about_nuvoco
-																							.buss_portfilio_desc[ind]
-																					}
-																				</p>
+																				<h4
+																					dangerouslySetInnerHTML={{
+																						__html: prev,
+																					}}
+																					className="themeColorG"
+																				></h4>
+																				<p
+																					dangerouslySetInnerHTML={{
+																						__html:
+																							nuvocoGlance.about_nuvoco
+																								.buss_portfilio_desc[ind],
+																					}}
+																					className="mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify fiveLineElipses"
+																				></p>
 																			</div>
 																			<div>
 																				<Link

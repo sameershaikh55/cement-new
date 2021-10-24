@@ -107,19 +107,29 @@ const CoorporateBody = ({ corporateOffice: { corporate_offices } }) => {
 											className="col-12 col-lg-6 px-4 coorporateCard"
 										>
 											<div className="mb-4 pb-2">
-												<h5 className="text-center text-uppercase themeColor fw-bold mb-2 mb-lg-3">
-													{corporate_offices.corporate_office_type_name[i]}
-												</h5>
+												<h5
+													dangerouslySetInnerHTML={{
+														__html:
+															corporate_offices.corporate_office_type_name[i],
+													}}
+													className="text-center text-uppercase themeColor fw-bold mb-2 mb-lg-3"
+												></h5>
 												<div className="heading_underline"></div>
 											</div>
 											<div>
-												<h5 className="fw-bold borderBottomG border-3 pb-2">
-													{corporate_offices.office_location[i]}
-												</h5>
+												<h5
+													dangerouslySetInnerHTML={{
+														__html: corporate_offices.office_location[i],
+													}}
+													className="fw-bold borderBottomG border-3 pb-2"
+												></h5>
 												<div>
-													<h6 className="fw-bold">
-														{corporate_offices.office_name[i]}
-													</h6>
+													<h6
+														dangerouslySetInnerHTML={{
+															__html: corporate_offices.office_name[i],
+														}}
+														className="fw-bold"
+													></h6>
 													{/* {email && (
 														<p className="mb-0">
 															<span className="fw-bold">Email: </span>
@@ -128,17 +138,31 @@ const CoorporateBody = ({ corporateOffice: { corporate_offices } }) => {
 													)} */}
 													<p className="mb-1">
 														<strong>Address:</strong>{" "}
-														{corporate_offices.office_address[i]}
+														<span
+															dangerouslySetInnerHTML={{
+																__html: corporate_offices.office_address[i],
+															}}
+														></span>
 													</p>
-													<p className="mb-1">
-														{corporate_offices.office_address1[i]}
-													</p>
-													<p className="mb-1">
-														{corporate_offices.office_address2[i]}
-													</p>
+													<p
+														dangerouslySetInnerHTML={{
+															__html: corporate_offices.office_address1[i],
+														}}
+														className="mb-1"
+													></p>
+													<p
+														dangerouslySetInnerHTML={{
+															__html: corporate_offices.office_address2[i],
+														}}
+														className="mb-1"
+													></p>
 													<p className="mb-2">
 														<strong>Phone:</strong>{" "}
-														{corporate_offices.office_phone[i]}
+														<span
+															dangerouslySetInnerHTML={{
+																__html: corporate_offices.office_phone[i],
+															}}
+														></span>
 													</p>
 													<a
 														target="blank"

@@ -31,9 +31,10 @@ const PartnerRBody = ({ temp_data, ind, project_path }) => {
 								/>
 								<div className="ms-2 ms-sm-4">
 									<div>
-										<p className="onlyTextJustify fiveLineElipses mb-3 mb-md-5">
-											{listing_short_desc}
-										</p>
+										<p
+											dangerouslySetInnerHTML={{ __html: listing_short_desc }}
+											className="onlyTextJustify fiveLineElipses mb-3 mb-md-5"
+										></p>
 									</div>
 									<div>
 										<Link to={`/partnerRelations2/${page_url}`}>
@@ -62,9 +63,10 @@ const PartnerRBody = ({ temp_data, ind, project_path }) => {
 							<div className="cementCard align-items-center">
 								<div className="me-2 me-sm-4">
 									<div>
-										<p className="rtlDirection onlyTextJustify fiveLineElipses mb-3 mb-md-5">
-											{listing_short_desc}
-										</p>
+										<p
+											dangerouslySetInnerHTML={{ __html: listing_short_desc }}
+											className="rtlDirection onlyTextJustify fiveLineElipses mb-3 mb-md-5"
+										></p>
 									</div>
 									<div className="rtlDirection">
 										<Link to={`/partnerRelations2/${page_url}`}>

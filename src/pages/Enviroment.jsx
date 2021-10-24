@@ -114,9 +114,12 @@ const Enviroment = ({
 										{/* DIRECTION SECTION START */}
 										<div className="d-flex justify-content-center align-items-center">
 											<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-												<span className={`h6 mt-direction2Env text-uppercase`}>
-													{temp_data.page.section_title[0]}
-												</span>
+												<span
+													className={`h6 mt-direction2Env text-uppercase`}
+													dangerouslySetInnerHTML={{
+														__html: temp_data.page.section_title[0],
+													}}
+												></span>
 											</div>
 										</div>
 										{/* DIRECTION SECTION END */}
@@ -126,9 +129,10 @@ const Enviroment = ({
 										data-aos-delay="1200"
 										data-aos-duration="500"
 										className="textJustify"
-									>
-										{temp_data.page.section_dec[0]}
-									</p>
+										dangerouslySetInnerHTML={{
+											__html: temp_data.page.section_dec[0],
+										}}
+									></p>
 								</div>
 							</div>
 						</div>

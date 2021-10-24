@@ -146,9 +146,12 @@ const HealthSefty = ({ healthSafety, healthSafetyApi }) => {
 								{/* DIRECTION SECTION START */}
 								<div className="d-flex justify-content-center align-items-center">
 									<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-										<span className={`h6 mt-direction2Env text-uppercase`}>
-											{temp_data.page.section1_title}
-										</span>
+										<span
+											className={`h6 mt-direction2Env text-uppercase`}
+											dangerouslySetInnerHTML={{
+												__html: temp_data.page.section1_title,
+											}}
+										></span>
 									</div>
 								</div>
 								{/* DIRECTION SECTION END */}
@@ -185,9 +188,12 @@ const HealthSefty = ({ healthSafety, healthSafetyApi }) => {
 								{/* DIRECTION SECTION START */}
 								<div className="d-flex justify-content-center align-items-center">
 									<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-										<span className={`h6 mt-direction2Env text-uppercase`}>
-											{temp_data.page.section2_title}
-										</span>
+										<span
+											className={`h6 mt-direction2Env text-uppercase`}
+											dangerouslySetInnerHTML={{
+												__html: temp_data.page.section2_title,
+											}}
+										></span>
 									</div>
 								</div>
 								{/* DIRECTION SECTION END */}

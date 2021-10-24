@@ -23,7 +23,6 @@ const Covid = ({ covid, covidApi }) => {
 		covidApi();
 	}, []);
 
-
 	return (
 		<>
 			{(Object.keys(covid).length && (
@@ -56,9 +55,12 @@ const Covid = ({ covid, covidApi }) => {
 										{/* DIRECTION SECTION START */}
 										<div className="d-flex justify-content-center align-items-center">
 											<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-												<span className={`h6 mt-direction2Env text-uppercase`}>
-													{covid.covid_initiative.overview_title}
-												</span>
+												<span
+													className={`h6 mt-direction2Env text-uppercase`}
+													dangerouslySetInnerHTML={{
+														__html: covid.covid_initiative.overview_title,
+													}}
+												></span>
 											</div>
 										</div>
 										{/* DIRECTION SECTION END */}

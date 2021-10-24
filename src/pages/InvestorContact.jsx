@@ -95,35 +95,63 @@ const InvestorContact = ({ ic, icApi }) => {
 																{prev}
 															</h5>
 															<div>
-																<h6 className="fw-bold">
-																	{ic.page_investor[0].office_type_name[i]}
-																</h6>
+																<h6
+																	dangerouslySetInnerHTML={{
+																		__html:
+																			ic.page_investor[0].office_type_name[i],
+																	}}
+																	className="fw-bold"
+																></h6>
 																<p className="mb-1">
 																	<strong>Address:</strong>{" "}
-																	{ic.page_investor[0].address_one[i]}
+																	<span
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				ic.page_investor[0].address_one[i],
+																		}}
+																	></span>
 																</p>
-																<p className="mb-1">
-																	{ic.page_investor[0].address_two[i]}
-																</p>
+																<p
+																	dangerouslySetInnerHTML={{
+																		__html: ic.page_investor[0].address_two[i],
+																	}}
+																	className="mb-1"
+																></p>
 																{ic.page_investor[0].address_three[i] && (
-																	<p className="mb-1">
-																		{ic.page_investor[0].address_three[i]}
-																	</p>
+																	<p
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				ic.page_investor[0].address_three[i],
+																		}}
+																		className="mb-1"
+																	></p>
 																)}
 																<p className="mb-2">
 																	<strong>Phone:</strong>{" "}
-																	{ic.page_investor[0].phone[i]}
+																	<span
+																		dangerouslySetInnerHTML={{
+																			__html: ic.page_investor[0].phone[i],
+																		}}
+																	></span>
 																</p>
 																{ic.page_investor[0].email[i] && (
 																	<p className="mb-2">
 																		<strong>Email:</strong>{" "}
-																		{ic.page_investor[0].email[i]}
+																		<span
+																			dangerouslySetInnerHTML={{
+																				__html: ic.page_investor[0].email[i],
+																			}}
+																		></span>
 																	</p>
 																)}
 																{ic.page_investor[0].website[i] && (
 																	<p className="mb-2">
 																		<strong>Website:</strong>{" "}
-																		{ic.page_investor[0].website[i]}
+																		<span
+																			dangerouslySetInnerHTML={{
+																				__html: ic.page_investor[0].website[i],
+																			}}
+																		></span>
 																	</p>
 																)}
 
@@ -166,35 +194,63 @@ const InvestorContact = ({ ic, icApi }) => {
 																{prev}
 															</h5>
 															<div>
-																<h6 className="fw-bold">
-																	{ic.page_investor[1].office_type_name[i]}
-																</h6>
+																<h6
+																	dangerouslySetInnerHTML={{
+																		__html:
+																			ic.page_investor[1].office_type_name[i],
+																	}}
+																	className="fw-bold"
+																></h6>
 																<p className="mb-1">
 																	<strong>Address:</strong>{" "}
-																	{ic.page_investor[1].address_one[i]}
+																	<span
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				ic.page_investor[1].address_one[i],
+																		}}
+																	></span>
 																</p>
-																<p className="mb-1">
-																	{ic.page_investor[1].address_two[i]}
-																</p>
+																<p
+																	dangerouslySetInnerHTML={{
+																		__html: ic.page_investor[1].address_two[i],
+																	}}
+																	className="mb-1"
+																></p>
 																{ic.page_investor[1].address_three[i] && (
-																	<p className="mb-1">
-																		{ic.page_investor[1].address_three[i]}
-																	</p>
+																	<p
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				ic.page_investor[1].address_three[i],
+																		}}
+																		className="mb-1"
+																	></p>
 																)}
 																<p className="mb-2">
 																	<strong>Phone:</strong>{" "}
-																	{ic.page_investor[1].phone[i]}
+																	<span
+																		dangerouslySetInnerHTML={{
+																			__html: ic.page_investor[1].phone[i],
+																		}}
+																	></span>
 																</p>
 																{ic.page_investor[1].email[i] && (
 																	<p className="mb-2">
 																		<strong>Email:</strong>{" "}
-																		{ic.page_investor[1].email[i]}
+																		<span
+																			dangerouslySetInnerHTML={{
+																				__html: ic.page_investor[1].email[i],
+																			}}
+																		></span>
 																	</p>
 																)}
 																{ic.page_investor[1].website[i] && (
 																	<p className="mb-2">
 																		<strong>Website:</strong>{" "}
-																		{ic.page_investor[1].website[i]}
+																		<span
+																			dangerouslySetInnerHTML={{
+																				__html: ic.page_investor[1].website[i],
+																			}}
+																		></span>
 																	</p>
 																)}
 

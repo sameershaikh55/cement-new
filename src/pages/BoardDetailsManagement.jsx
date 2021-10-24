@@ -45,8 +45,14 @@ class BoardDetailsManagement extends Component {
 											)}
 										</div>
 										<div className="text-center mt-2">
-											<h5 className="mb-0">{boards[index].name}</h5>
-											<p className="mb-0 small">{boards[index].role}</p>
+											<h5
+												dangerouslySetInnerHTML={{ __html: boards[index].name }}
+												className="mb-0"
+											></h5>
+											<p
+												dangerouslySetInnerHTML={{ __html: boards[index].role }}
+												className="mb-0 small"
+											></p>
 										</div>
 										<div className="rightArrow position-absolute">
 											{nextBoard ? (

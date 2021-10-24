@@ -42,9 +42,12 @@ class EmployeeDetails extends Component {
 											)}
 										</div>
 										<div className="text-center mt-1">
-											<h5 className="mb-0 text-uppercase">
-												{employee[index].name}
-											</h5>
+											<h5
+												dangerouslySetInnerHTML={{
+													__html: employee[index].name,
+												}}
+												className="mb-0 text-uppercase"
+											></h5>
 											{/* <p className="mb-0 small">{employee[index].role}</p> */}
 										</div>
 										<div className="rightArrow position-absolute">

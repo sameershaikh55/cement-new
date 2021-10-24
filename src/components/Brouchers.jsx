@@ -9,9 +9,12 @@ const Brouchers = ({ temp_page }) => {
 			<div className="container-fluid my-5">
 				<Fade bottom>
 					<h5 className="text-center d-flex flex-column">
-						<span className="themeColor mb-3">
-							{temp_page.page.product_broucher_title}
-						</span>
+						<span
+							className="themeColor mb-3"
+							dangerouslySetInnerHTML={{
+								__html: temp_page.page.product_broucher_title,
+							}}
+						></span>
 						<span className="heading_underline"></span>
 					</h5>
 				</Fade>
@@ -27,7 +30,7 @@ const Brouchers = ({ temp_page }) => {
 									>
 										<Fade bottom>
 											<button className="greenBtn border-0 h5 mb-0 text-white w-100 text-uppercase">
-												<span>{item}</span>
+												<span dangerouslySetInnerHTML={{ __html: item }}></span>
 											</button>
 										</Fade>
 									</a>

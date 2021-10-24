@@ -236,9 +236,12 @@ const EnvironmentBody = ({
 							{/* DIRECTION SECTION START */}
 							<div className="d-flex justify-content-center align-items-center">
 								<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-									<span className={`h6 mt-direction2Env text-uppercase`}>
-										{temp_data.page.our_policy_title}
-									</span>
+									<span
+										dangerouslySetInnerHTML={{
+											__html: temp_data.page.our_policy_title,
+										}}
+										className={`h6 mt-direction2Env text-uppercase`}
+									></span>
 								</div>
 							</div>
 							{/* DIRECTION SECTION END */}
@@ -259,9 +262,12 @@ const EnvironmentBody = ({
 							{/* DIRECTION SECTION START */}
 							<div className="d-flex justify-content-center align-items-center">
 								<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-									<span className={`h6 mt-direction2Env text-uppercase`}>
-										{temp_data.page.our_commitment_title}
-									</span>
+									<span
+										dangerouslySetInnerHTML={{
+											__html: temp_data.page.our_commitment_title,
+										}}
+										className={`h6 mt-direction2Env text-uppercase`}
+									></span>
 								</div>
 							</div>
 							{/* DIRECTION SECTION END */}
@@ -293,9 +299,10 @@ const EnvironmentBody = ({
 										data-aos-duration="600"
 										data-aos-offset="700"
 										className="f14 greenBtn downloadBtn py-1 text-uppercase text-white h5 fw-light rounded-pill mt-4"
-									>
-										{temp_data.page.download_button}
-									</button>
+										dangerouslySetInnerHTML={{
+											__html: temp_data.page.download_button,
+										}}
+									></button>
 								</a>
 							</div>
 						</div>

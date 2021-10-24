@@ -42,7 +42,10 @@ class UnitsPopUp extends Component {
 											)}
 										</div>
 										<div className="text-center">
-											<h5 className="mb-0">{units[index].name}</h5>
+											<h5
+												dangerouslySetInnerHTML={{ __html: units[index].name }}
+												className="mb-0"
+											></h5>
 										</div>
 										<div className="rightArrow position-absolute">
 											{nextUnits ? (
@@ -72,9 +75,10 @@ class UnitsPopUp extends Component {
 									</div>
 								</div>
 
-								<div className="text-center mt-4 small">
-									{units[index].desc}
-								</div>
+								<div
+									dangerouslySetInnerHTML={{ __html: units[index].desc }}
+									className="text-center mt-4 small"
+								></div>
 
 								<div className="crossIcon position-absolute">
 									<Link to="/manufacturingUnits">

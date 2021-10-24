@@ -56,9 +56,12 @@ const HomeBuilding = ({ building, buildingApi }) => {
 										{/* DIRECTION SECTION START */}
 										<div className="d-flex justify-content-center align-items-center">
 											<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-												<span className={`h6 mt-direction2Env text-uppercase`}>
-													{building.overview_title}
-												</span>
+												<span
+													dangerouslySetInnerHTML={{
+														__html: building.overview_title,
+													}}
+													className={`h6 mt-direction2Env text-uppercase`}
+												></span>
 											</div>
 										</div>
 										{/* DIRECTION SECTION END */}

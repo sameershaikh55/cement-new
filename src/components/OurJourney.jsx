@@ -147,11 +147,15 @@ const OurJourney = ({ data }) => {
 									data-index="8"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousandtwenty[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandtwenty[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -211,10 +215,15 @@ const OurJourney = ({ data }) => {
 									data-index="9"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{Object.keys(data).length &&
-												data.our_journey.twothousandnineteen[0].year}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandnineteen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -275,11 +284,15 @@ const OurJourney = ({ data }) => {
 									data-index="10"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousandseventeen[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandseventeen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -340,11 +353,15 @@ const OurJourney = ({ data }) => {
 									data-index="11"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousandsixteen[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandsixteen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -405,11 +422,15 @@ const OurJourney = ({ data }) => {
 									data-index="12"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousandfourteen[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandfourteen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -470,11 +491,15 @@ const OurJourney = ({ data }) => {
 									data-index="13"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousandthirteen[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandthirteen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -535,11 +560,15 @@ const OurJourney = ({ data }) => {
 									data-index="14"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousandtwelve[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandtwelve[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -600,11 +629,15 @@ const OurJourney = ({ data }) => {
 									data-index="15"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousandnine[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandnine[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -665,11 +698,15 @@ const OurJourney = ({ data }) => {
 									data-index="16"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousandeight[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousandeight[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -730,11 +767,15 @@ const OurJourney = ({ data }) => {
 									data-index="17"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.twothousand[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.twothousand[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
@@ -795,12 +836,16 @@ const OurJourney = ({ data }) => {
 									data-index="18"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.our_journey.onethousandninehundredninetynine[0]
-													.year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.our_journey.onethousandninehundredninetynine[0]
+															.year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div

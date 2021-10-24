@@ -33,16 +33,22 @@ const ThreeC = ({ data }) => {
 									target="blank"
 									href={data._3c_cta_button_url[0]}
 								>
-									<button className="greenBtn px-4 text-uppercase text-white py-1">
-										{data._3c_image_title[0]}
-									</button>
+									<button
+										dangerouslySetInnerHTML={{
+											__html: data._3c_image_title[0],
+										}}
+										className="greenBtn px-4 text-uppercase text-white py-1"
+									></button>
 								</a>{" "}
 							</div>
 							<div className="col-4 text-center">
 								<a href={data._3c_cta_button_url[1]}>
-									<button className="greenBtn px-4 text-uppercase text-white py-1">
-										{data._3c_image_title[1]}
-									</button>
+									<button
+										dangerouslySetInnerHTML={{
+											__html: data._3c_image_title[1],
+										}}
+										className="greenBtn px-4 text-uppercase text-white py-1"
+									></button>
 								</a>{" "}
 							</div>
 							<div className="col-4 text-center">
@@ -51,9 +57,12 @@ const ThreeC = ({ data }) => {
 									target="blank"
 									href={data._3c_cta_button_url[2]}
 								>
-									<button className="greenBtn px-4 text-uppercase text-white py-1">
-										{data._3c_image_title[2]}
-									</button>
+									<button
+										dangerouslySetInnerHTML={{
+											__html: data._3c_image_title[2],
+										}}
+										className="greenBtn px-4 text-uppercase text-white py-1"
+									></button>
 								</a>
 							</div>
 						</div>

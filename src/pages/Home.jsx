@@ -154,12 +154,22 @@ const Home = ({ home, homeApi }) => {
 											/>
 											<div className="text_data text-white px-4 px-lg-4">
 												<div className="h-100 d-flex flex-column justify-content-between">
-													<h1 className="fw-bold titleT">{prev.title}</h1>
+													<h1
+														dangerouslySetInnerHTML={{ __html: prev.title }}
+														className="fw-bold titleT"
+													></h1>
 													<div>
-														<p className="fw-bold mb-1 mb-md-3">
-															{prev.short_title}
-														</p>
-														<p>{prev.description}</p>
+														<p
+															dangerouslySetInnerHTML={{
+																__html: prev.short_title,
+															}}
+															className="fw-bold mb-1 mb-md-3"
+														></p>
+														<p
+															dangerouslySetInnerHTML={{
+																__html: prev.description,
+															}}
+														></p>
 													</div>
 												</div>
 											</div>

@@ -4,7 +4,6 @@ import React from "react";
 import Direction from "./Direction";
 
 const ApplicationAreas = ({ temp_page }) => {
-
 	return (
 		<div className="page_container">
 			<div className="container-fluid">
@@ -17,9 +16,10 @@ const ApplicationAreas = ({ temp_page }) => {
 						data-aos-offset="800"
 						data-aos-delay="1000"
 						className="col-12 col-sm-11 col-md-10 col-lg-7 mx-auto text-center mt-2"
-					>
-						{temp_page.page.area_of_application_subtitle}
-					</h6>
+						dangerouslySetInnerHTML={{
+							__html: temp_page.page.area_of_application_subtitle,
+						}}
+					></h6>
 				</div>
 				<div className="row justify-content-center mt-4">
 					<div className="col-12 col-sm-10 col-lg-8 mx-auto">
@@ -37,9 +37,13 @@ const ApplicationAreas = ({ temp_page }) => {
 											src={`${temp_page.project_path}${item}`}
 											alt={temp_page.page.area_of_application_img_alt[index]}
 										/>
-										<h6 className="mt-3">
-											{temp_page.page.area_of_application_img_title[index]}{" "}
-										</h6>
+										<h6
+											dangerouslySetInnerHTML={{
+												__html:
+													temp_page.page.area_of_application_img_title[index],
+											}}
+											className="mt-3"
+										></h6>
 									</div>
 								);
 							})}

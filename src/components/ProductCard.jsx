@@ -53,15 +53,16 @@ const ProductCard = ({
 									/>
 									<div className="d-flex flex-column justify-content-between ms-2 ms-sm-4">
 										<div>
-											<h4 className="themeColorG">
-												{/* <span className="borderBottomG pb-0 pb-sm-1">
-                        Concr
-                      </span> */}
-												{franchaise_title}
-											</h4>
-											<p className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify">
-												{franchaise_subtitle}
-											</p>
+											<h4
+												dangerouslySetInnerHTML={{ __html: franchaise_title }}
+												className="themeColorG"
+											></h4>
+											<p
+												dangerouslySetInnerHTML={{
+													__html: franchaise_subtitle,
+												}}
+												className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify"
+											></p>
 										</div>
 										<div>
 											{(open && (
@@ -86,9 +87,10 @@ const ProductCard = ({
 													spy={true}
 													offset={-80}
 												>
-													<button className="greenBtn px-3 py-1 text-uppercase text-white">
-														{franchaise_cta}
-													</button>
+													<button
+														dangerouslySetInnerHTML={{ __html: franchaise_cta }}
+														className="greenBtn px-3 py-1 text-uppercase text-white"
+													></button>
 												</Link>
 											)}
 										</div>
@@ -120,16 +122,16 @@ const ProductCard = ({
 								<div className="cementCard">
 									<div className="d-flex flex-column justify-content-between me-2 me-sm-4">
 										<div>
-											<h4 className="rtlDirection themeColorG">
-												{/* Dura
-                      <span className="borderBottomG pb-0 pb-sm-2">
-                        guard
-                      </span> */}
-												{franchaise_title}
-											</h4>
-											<p className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify">
-												{franchaise_subtitle}
-											</p>
+											<h4
+												dangerouslySetInnerHTML={{ __html: franchaise_title }}
+												className="rtlDirection themeColorG"
+											></h4>
+											<p
+												dangerouslySetInnerHTML={{
+													__html: franchaise_subtitle,
+												}}
+												className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify"
+											></p>
 										</div>
 										<div className="text-end">
 											{(open1 && (
@@ -154,9 +156,10 @@ const ProductCard = ({
 													spy={true}
 													offset={-80}
 												>
-													<button className="greenBtn px-3 py-1 text-uppercase text-white">
-														{franchaise_cta}
-													</button>
+													<button
+														dangerouslySetInnerHTML={{ __html: franchaise_cta }}
+														className="greenBtn px-3 py-1 text-uppercase text-white"
+													></button>
 												</Link>
 											)}
 										</div>

@@ -84,12 +84,18 @@ const BoardComitee = ({ boardCommittee, boardCommitteeApi }) => {
 														<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
 															<Zoom key={i} left>
 																<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-																	<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-																		{person_designation}
-																	</div>
-																	<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-																		{person_name}
-																	</div>
+																	<div
+																		dangerouslySetInnerHTML={{
+																			__html: person_designation,
+																		}}
+																		className="pb-2 w-100 rounded lightDown d-flex justify-content-center"
+																	></div>
+																	<div
+																		dangerouslySetInnerHTML={{
+																			__html: person_name,
+																		}}
+																		className="py-1 fw-bold text-white text-uppercase greenUpp"
+																	></div>
 																</div>
 															</Zoom>
 														</div>
@@ -112,12 +118,18 @@ const BoardComitee = ({ boardCommittee, boardCommitteeApi }) => {
 														<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
 															<Zoom key={i} left>
 																<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-																	<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-																		{person_designation}
-																	</div>
-																	<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-																		{person_name}
-																	</div>
+																	<div
+																		dangerouslySetInnerHTML={{
+																			__html: person_designation,
+																		}}
+																		className="pb-2 w-100 rounded lightDown d-flex justify-content-center"
+																	></div>
+																	<div
+																		dangerouslySetInnerHTML={{
+																			__html: person_name,
+																		}}
+																		className="py-1 fw-bold text-white text-uppercase greenUpp"
+																	></div>
 																</div>
 															</Zoom>
 														</div>
@@ -140,12 +152,18 @@ const BoardComitee = ({ boardCommittee, boardCommitteeApi }) => {
 														<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
 															<Zoom key={i} left>
 																<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-																	<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-																		{person_designation}
-																	</div>
-																	<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-																		{person_name}
-																	</div>
+																	<div
+																		dangerouslySetInnerHTML={{
+																			__html: person_designation,
+																		}}
+																		className="pb-2 w-100 rounded lightDown d-flex justify-content-center"
+																	></div>
+																	<div
+																		dangerouslySetInnerHTML={{
+																			__html: person_name,
+																		}}
+																		className="py-1 fw-bold text-white text-uppercase greenUpp"
+																	></div>
 																</div>
 															</Zoom>
 														</div>
@@ -172,12 +190,16 @@ const BoardComitee = ({ boardCommittee, boardCommitteeApi }) => {
 																		className={`${
 																			prev === "" && "jaya"
 																		} pb-2 w-100 rounded lightDown d-flex justify-content-center`}
-																	>
-																		{person_designation}
-																	</div>
-																	<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-																		{person_name}
-																	</div>
+																		dangerouslySetInnerHTML={{
+																			__html: person_designation,
+																		}}
+																	></div>
+																	<div
+																		dangerouslySetInnerHTML={{
+																			__html: person_name,
+																		}}
+																		className="py-1 fw-bold text-white text-uppercase greenUpp"
+																	></div>
 																</div>
 															</Zoom>
 														</div>

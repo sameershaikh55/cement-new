@@ -139,13 +139,19 @@ const Feature = ({ data }) => {
 												) : (
 													data.features_img_title[i]
 												)}
-												<p className="my-4 px-1 px-md-3">
-													{data.features_img_subtitle[i]}
-												</p>
+												<p
+													dangerouslySetInnerHTML={{
+														__html: data.features_img_subtitle[i],
+													}}
+													className="my-4 px-1 px-md-3"
+												></p>
 												<a target="blank" href={data.features_url[i]}>
-													<button className="greenBtn text-white text-uppercase py-1">
-														{data.features_img_cta[i]}
-													</button>
+													<button
+														dangerouslySetInnerHTML={{
+															__html: data.features_img_cta[i],
+														}}
+														className="greenBtn text-white text-uppercase py-1"
+													></button>
 												</a>
 											</div>
 										</div>

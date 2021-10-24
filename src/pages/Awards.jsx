@@ -22,8 +22,6 @@ const Awards = ({ awards, awardsApi }) => {
 		awardsApi();
 	}, []);
 
-	console.log(awards);
-
 	return (
 		<>
 			<div>

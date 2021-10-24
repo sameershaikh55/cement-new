@@ -98,9 +98,10 @@ const WhyNuvoco = () => {
 															<img src={el.image} alt="" />
 															<div className="overlay position-absolute"></div>
 														</div>
-														<h5 className="position-absolute text-white text-center text-uppercase px-2">
-															{el.name}
-														</h5>
+														<h5
+															dangerouslySetInnerHTML={{ __html: el.name }}
+															className="position-absolute text-white text-center text-uppercase px-2"
+														></h5>
 													</div>
 												</Link>
 											);

@@ -61,7 +61,6 @@ const PartnerRelations2 = ({
 		temp_data.page.redemption_thumbnail_subtitle = JSON.parse(
 			temp_data.page.redemption_thumbnail_subtitle
 		);
-
 	}
 
 	return (
@@ -113,9 +112,12 @@ const PartnerRelations2 = ({
 										{/* DIRECTION SECTION START */}
 										<div className="d-flex justify-content-center align-items-center">
 											<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-												<span className={`h6 mt-direction2Env text-uppercase`}>
-													{temp_data.page.partner_about_title}
-												</span>
+												<span
+													className={`h6 mt-direction2Env text-uppercase`}
+													dangerouslySetInnerHTML={{
+														__html: temp_data.page.partner_about_title,
+													}}
+												></span>
 											</div>
 										</div>
 										{/* DIRECTION SECTION END */}
@@ -197,9 +199,10 @@ const PartnerRelations2 = ({
 										data-aos-delay="1400"
 										data-aos-duration="500"
 										className="textJustify"
-									>
-										{temp_data.page.insurance_benifit_desc}
-									</p>
+										dangerouslySetInnerHTML={{
+											__html: temp_data.page.insurance_benifit_desc,
+										}}
+									></p>
 
 									<div
 										data-aos="zoom-in"
@@ -233,9 +236,12 @@ const PartnerRelations2 = ({
 														src={`${temp_data.project_path}${prev}`}
 														alt="icon"
 													/>
-													<p>
-														{temp_data.page.redemption_thumbnail_subtitle[i]}
-													</p>
+													<p
+														dangerouslySetInnerHTML={{
+															__html:
+																temp_data.page.redemption_thumbnail_subtitle[i],
+														}}
+													></p>
 												</div>
 											);
 										})}

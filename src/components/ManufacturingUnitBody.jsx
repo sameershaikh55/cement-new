@@ -1078,33 +1078,51 @@ const ManufacturingUnitBody = ({ manufacturing }) => {
 													className="col-6 coorporateCard"
 												>
 													<div>
-														<h5 className="fw-bold borderBottomG border-3 pb-2">
-															{state}
-														</h5>
+														<h5
+															dangerouslySetInnerHTML={{ __html: state }}
+															className="fw-bold borderBottomG border-3 pb-2"
+														></h5>
 														<div className="row gy-5">
 															{office_name.map((prev, ind) => {
 																return (
 																	<div className="col-12" key={ind}>
 																		<h6 className="fw-bold">{prev}</h6>
-																		<h6 className="fw-bold">
-																			{company_name[ind]}
-																		</h6>
+																		<h6
+																			dangerouslySetInnerHTML={{
+																				__html: company_name[ind],
+																			}}
+																			className="fw-bold"
+																		></h6>
 																		<p className="mb-1">
 																			<strong>Address:</strong>{" "}
-																			{office_address1[ind]}
+																			<span
+																				dangerouslySetInnerHTML={{
+																					__html: office_address1[ind],
+																				}}
+																			></span>
 																		</p>
-																		<p className="mb-1">
-																			{office_address2[ind]}
-																		</p>
+																		<p
+																			dangerouslySetInnerHTML={{
+																				__html: office_address2[ind],
+																			}}
+																			className="mb-1"
+																		></p>
 																		{office_address3[ind] !== null && (
-																			<p className="mb-1">
-																				{office_address3[ind]}
-																			</p>
+																			<p
+																				dangerouslySetInnerHTML={{
+																					__html: office_address3[ind],
+																				}}
+																				className="mb-1"
+																			></p>
 																		)}
 																		{(office_phone[ind] !== null && (
 																			<p className="mb-2">
 																				<strong>Phone:</strong>{" "}
-																				{office_phone[ind]}
+																				<span
+																					dangerouslySetInnerHTML={{
+																						__html: office_phone[ind],
+																					}}
+																				></span>
 																			</p>
 																		)) ||
 																			""}

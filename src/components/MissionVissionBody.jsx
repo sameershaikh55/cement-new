@@ -24,9 +24,10 @@ const MissionVissionBody = ({ data: { vision_mission_values } }) => {
 								<span
 									style={{ marginTop: "15px" }}
 									className={`h6 mt-direction2Env text-uppercase`}
-								>
-									{vision_mission_values.vision_text}
-								</span>
+									dangerouslySetInnerHTML={{
+										__html: vision_mission_values.vision_text,
+									}}
+								></span>
 							</div>
 						</div>
 						{/* DIRECTION SECTION END */}
@@ -68,9 +69,10 @@ const MissionVissionBody = ({ data: { vision_mission_values } }) => {
 								<span
 									style={{ marginTop: "15px" }}
 									className={`h6 mt-direction2Env text-uppercase`}
-								>
-									{vision_mission_values.mission_text}
-								</span>
+									dangerouslySetInnerHTML={{
+										__html: vision_mission_values.mission_text,
+									}}
+								></span>
 							</div>
 						</div>
 						{/* DIRECTION SECTION END */}
@@ -113,9 +115,10 @@ const MissionVissionBody = ({ data: { vision_mission_values } }) => {
 								<span
 									style={{ marginTop: "15px" }}
 									className={`h6 mt-direction2Env text-uppercase`}
-								>
-									{vision_mission_values.values_text}
-								</span>
+									dangerouslySetInnerHTML={{
+										__html: vision_mission_values.values_text,
+									}}
+								></span>
 							</div>
 						</div>
 						{/* DIRECTION SECTION END */}

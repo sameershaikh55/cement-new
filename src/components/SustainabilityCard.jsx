@@ -33,10 +33,14 @@ const SustainabilityCard = ({
 									/>
 									<div className="d-flex flex-column justify-content-between ms-2 ms-sm-4">
 										<div>
-											<h4 className="themeColorG">{title}</h4>
-											<p className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify">
-												{short_desc}
-											</p>
+											<h4
+												dangerouslySetInnerHTML={{ __html: title }}
+												className="themeColorG"
+											></h4>
+											<p
+												dangerouslySetInnerHTML={{ __html: short_desc }}
+												className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify"
+											></p>
 										</div>
 										<div>
 											<Link to={urlLink}>
@@ -67,10 +71,14 @@ const SustainabilityCard = ({
 								<div className="cementCard">
 									<div className="d-flex flex-column justify-content-between me-2 me-sm-4">
 										<div>
-											<h4 className="rtlDirection themeColorG">{title}</h4>
-											<p className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify">
-												{short_desc}
-											</p>
+											<h4
+												dangerouslySetInnerHTML={{ __html: title }}
+												className="rtlDirection themeColorG"
+											></h4>
+											<p
+												dangerouslySetInnerHTML={{ __html: short_desc }}
+												className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify"
+											></p>
 										</div>
 										<div className="text-end">
 											<Link to={urlLink}>

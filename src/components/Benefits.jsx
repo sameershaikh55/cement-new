@@ -48,9 +48,12 @@ const Benefits = ({ temp_page }) => {
 						data-aos-delay="400"
 						className="text-center"
 					>
-						<span className="themeColor borderBottom pb-2 px-5">
-							{temp_page.page.benifits_title}
-						</span>
+						<span
+							dangerouslySetInnerHTML={{
+								__html: temp_page.page.benifits_title,
+							}}
+							className="themeColor borderBottom pb-2 px-5"
+						></span>
 					</h5>
 					<div className="row gx-0">
 						<div className="col-11 col-sm-10 col-lg-8 mx-auto mx-auto px-3 px-sm-1">
@@ -71,9 +74,12 @@ const Benefits = ({ temp_page }) => {
 												/>
 												<div className="overlay position-absolute"></div>
 											</div>
-											<h5 className="position-absolute text-white text-center text-uppercase px-2">
-												{temp_page.page.benifits_img_title[i]}
-											</h5>
+											<h5
+												dangerouslySetInnerHTML={{
+													__html: temp_page.page.benifits_img_title[i],
+												}}
+												className="position-absolute text-white text-center text-uppercase px-2"
+											></h5>
 										</div>
 									);
 								})}

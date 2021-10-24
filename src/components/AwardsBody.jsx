@@ -104,18 +104,22 @@ const AwardsBody = ({ data }) => {
 									data-index="8"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year">
-											{(Object.keys(data).length &&
-												data.award_list.twothousandtwentyone[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.award_list.twothousandtwentyone[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
 											className="interactive-timeline__article-row js-interactive-timeline-article scrolled-into-view"
 											data-repeat-animation="true"
 										>
-											{Object.keys(data).length &&
+											{(Object.keys(data).length &&
 												data.award_list.twothousandtwentyone.map((prev, i) => {
 													return (
 														<section key={i} className="timeline-article">
@@ -157,7 +161,8 @@ const AwardsBody = ({ data }) => {
 															</div>
 														</section>
 													);
-												})}
+												})) ||
+												""}
 										</div>
 									</div>
 								</div>
@@ -169,18 +174,22 @@ const AwardsBody = ({ data }) => {
 									data-index="9"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.award_list.twothousandtwenty[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.award_list.twothousandtwenty[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
 											className="interactive-timeline__article-row js-interactive-timeline-article"
 											data-repeat-animation="true"
 										>
-											{Object.keys(data).length &&
+											{(Object.keys(data).length &&
 												data.award_list.twothousandtwenty.map((prev, i) => {
 													return (
 														<section key={i} className="timeline-article">
@@ -222,7 +231,8 @@ const AwardsBody = ({ data }) => {
 															</div>
 														</section>
 													);
-												})}
+												})) ||
+												""}
 										</div>
 									</div>
 								</div>
@@ -234,18 +244,22 @@ const AwardsBody = ({ data }) => {
 									data-index="10"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.award_list.twothousandnineteen[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.award_list.twothousandnineteen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
 											className="interactive-timeline__article-row js-interactive-timeline-article"
 											data-repeat-animation="true"
 										>
-											{Object.keys(data).length &&
+											{(Object.keys(data).length &&
 												data.award_list.twothousandnineteen.map((prev, i) => {
 													return (
 														<section key={i} className="timeline-article">
@@ -287,7 +301,8 @@ const AwardsBody = ({ data }) => {
 															</div>
 														</section>
 													);
-												})}
+												})) ||
+												""}
 										</div>
 									</div>
 								</div>
@@ -299,18 +314,22 @@ const AwardsBody = ({ data }) => {
 									data-index="11"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.award_list.twothousandeighteen[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.award_list.twothousandeighteen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
 											className="interactive-timeline__article-row js-interactive-timeline-article"
 											data-repeat-animation="true"
 										>
-											{Object.keys(data).length &&
+											{(Object.keys(data).length &&
 												data.award_list.twothousandeighteen.map((prev, i) => {
 													return (
 														<section key={i} className="timeline-article">
@@ -352,7 +371,8 @@ const AwardsBody = ({ data }) => {
 															</div>
 														</section>
 													);
-												})}
+												})) ||
+												""}
 										</div>
 									</div>
 								</div>
@@ -364,18 +384,22 @@ const AwardsBody = ({ data }) => {
 									data-index="12"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.award_list.twothousandseventeen[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.award_list.twothousandseventeen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
 											className="interactive-timeline__article-row js-interactive-timeline-article"
 											data-repeat-animation="true"
 										>
-											{Object.keys(data).length &&
+											{(Object.keys(data).length &&
 												data.award_list.twothousandseventeen.map((prev, i) => {
 													return (
 														<section key={i} className="timeline-article">
@@ -417,7 +441,8 @@ const AwardsBody = ({ data }) => {
 															</div>
 														</section>
 													);
-												})}
+												})) ||
+												""}
 										</div>
 									</div>
 								</div>
@@ -429,18 +454,22 @@ const AwardsBody = ({ data }) => {
 									data-index="13"
 								>
 									<div className="interactive-timeline__year-column">
-										<div className="interactive-timeline__display-year ms-0 ms-md-5">
-											{(Object.keys(data).length &&
-												data.award_list.twothousandsixteen[0].year) ||
-												""}
-										</div>
+										<div
+											dangerouslySetInnerHTML={{
+												__html:
+													(Object.keys(data).length &&
+														data.award_list.twothousandsixteen[0].year) ||
+													"",
+											}}
+											className="interactive-timeline__display-year ms-0 ms-md-5"
+										></div>
 									</div>
 									<div className="interactive-timeline__article-column">
 										<div
 											className="interactive-timeline__article-row js-interactive-timeline-article"
 											data-repeat-animation="true"
 										>
-											{Object.keys(data).length &&
+											{(Object.keys(data).length &&
 												data.award_list.twothousandsixteen.map((prev, i) => {
 													return (
 														<section key={i} className="timeline-article">
@@ -482,7 +511,8 @@ const AwardsBody = ({ data }) => {
 															</div>
 														</section>
 													);
-												})}
+												})) ||
+												""}
 										</div>
 									</div>
 								</div>

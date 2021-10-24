@@ -25,9 +25,8 @@ const Hero = ({ heading, img1, img2, home, alt1, alt2 }) => {
 								className={`${
 									home && "w-100 homeBannerText"
 								} text-white text-center text-uppercase fw-bold px-md-0`}
-							>
-								{heading}
-							</h1>
+								dangerouslySetInnerHTML={{ __html: heading }}
+							></h1>
 						</BounceR>
 					</div>
 					<div className="downArrow">

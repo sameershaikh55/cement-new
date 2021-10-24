@@ -113,9 +113,12 @@ const CSR = ({ csr, csrApi }) => {
 										{/* DIRECTION SECTION START */}
 										<div className="d-flex justify-content-center align-items-center">
 											<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-												<span className={`h6 mt-direction2Env text-uppercase`}>
-													{temp_data.page.corporate_social_res}
-												</span>
+												<span
+													className={`h6 mt-direction2Env text-uppercase`}
+													dangerouslySetInnerHTML={{
+														__html: temp_data.page.corporate_social_res,
+													}}
+												></span>
 											</div>
 										</div>
 										{/* DIRECTION SECTION END */}
@@ -163,9 +166,13 @@ const CSR = ({ csr, csrApi }) => {
 															<div className="d-flex flex-column justify-content-between ms-2 ms-sm-4">
 																<div>
 																	<h4 className="themeColorG">{prev}</h4>
-																	<p className="mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify">
-																		{temp_data.page.key_focus_area_desc[ind]}
-																	</p>
+																	<p
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				temp_data.page.key_focus_area_desc[ind],
+																		}}
+																		className="mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify"
+																	></p>
 																</div>
 															</div>
 														</div>
@@ -190,9 +197,13 @@ const CSR = ({ csr, csrApi }) => {
 																	<h4 className="rtlDirection themeColorG">
 																		{prev}
 																	</h4>
-																	<p className="rtlDirection mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify">
-																		{temp_data.page.key_focus_area_desc[ind]}
-																	</p>
+																	<p
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				temp_data.page.key_focus_area_desc[ind],
+																		}}
+																		className="rtlDirection mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify"
+																	></p>
 																</div>
 															</div>
 															<img

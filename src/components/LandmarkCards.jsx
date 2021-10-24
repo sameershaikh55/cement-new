@@ -47,11 +47,18 @@ const LandmarkCards = ({
 									/>
 									<div className="d-flex flex-column justify-content-between ms-2 ms-sm-4">
 										<div>
-											<h4 className="themeColorG">{title}</h4>
-											<span className="themeColorG small">{under_head}</span>
-											<p className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify">
-												{short_desc}
-											</p>
+											<h4
+												dangerouslySetInnerHTML={{ __html: title }}
+												className="themeColorG"
+											></h4>
+											<span
+												dangerouslySetInnerHTML={{ __html: under_head }}
+												className="themeColorG small"
+											></span>
+											<p
+												dangerouslySetInnerHTML={{ __html: short_desc }}
+												className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify"
+											></p>
 										</div>
 										<div>
 											{(open && (
@@ -93,10 +100,7 @@ const LandmarkCards = ({
 				</div>
 			)) || (
 				<div>
-					<div
-						id={`closecen${ind}`}
-						className="col-12 mt-5 mt-md-0 mt-5"
-					>
+					<div id={`closecen${ind}`} className="col-12 mt-5 mt-md-0 mt-5">
 						{/* SECOND START */}
 						<div className="row">
 							<div
@@ -109,15 +113,20 @@ const LandmarkCards = ({
 								<div className="cementCard">
 									<div className="d-flex flex-column justify-content-between me-2 me-sm-4">
 										<div>
-											<h4 className="rtlDirection themeColorG">{title}</h4>
+											<h4
+												dangerouslySetInnerHTML={{ __html: title }}
+												className="rtlDirection themeColorG"
+											></h4>
 											<div className="rtlDirection my-0 py-0">
-												<span className="themeColorG borderBottomG pb-1 small">
-													{under_head}
-												</span>
+												<span
+													dangerouslySetInnerHTML={{ __html: under_head }}
+													className="themeColorG borderBottomG pb-1 small"
+												></span>
 											</div>
-											<p className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify">
-												{short_desc}
-											</p>
+											<p
+												dangerouslySetInnerHTML={{ __html: short_desc }}
+												className="desc mb-0 mb-sm-2 mt-2 mt-sm-4 onlyTextJustify"
+											></p>
 										</div>
 										<div className="text-end">
 											{(open1 && (

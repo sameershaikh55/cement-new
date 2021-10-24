@@ -113,9 +113,8 @@ const ContactBody = ({ data }) => {
 															<label
 																className="fw-bold themeColorG"
 																htmlFor="year"
-															>
-																{label}
-															</label>
+																dangerouslySetInnerHTML={{ __html: label }}
+															></label>
 															<br />
 															<div className="inp position-relative w-100 d-flex align-items-center rounded-2">
 																<input
@@ -385,27 +384,46 @@ const ContactBody = ({ data }) => {
 											data-aos-offset="400"
 											data-aos-delay="600"
 										>
-											<h6>{prev.reg_offc_title[i]}</h6>
+											<h6
+												dangerouslySetInnerHTML={{
+													__html: prev.reg_offc_title[i],
+												}}
+											></h6>
 											<div>
 												<div>
-													<strong>Address:</strong> {prev.reg_offc_address[i]}
+													<strong>Address:</strong>{" "}
+													<span
+														dangerouslySetInnerHTML={{
+															__html: prev.reg_offc_address[i],
+														}}
+													></span>
 												</div>
-												{prev.reg_offc_address1[i]}
+												<span
+													dangerouslySetInnerHTML={{
+														__html: prev.reg_offc_address1[i],
+													}}
+												></span>
 											</div>
 											{prev.reg_offc_contact[i] && (
 												<div className="d-flex">
 													<strong>Contact:</strong>
-													<p className="ms-2 mb-0">
-														{prev.reg_offc_contact[i]}
-													</p>
+													<p
+														dangerouslySetInnerHTML={{
+															__html: prev.reg_offc_contact[i],
+														}}
+														className="ms-2 mb-0"
+													></p>
 												</div>
 											)}
 											{prev.reg_offc_tollfree[i] && (
 												<div className="d-flex">
 													<strong>Toll-Free Number:</strong>
-													<p className="ms-2 mb-0">
-														{prev.reg_offc_tollfree[i]}
-													</p>
+													<p
+														dangerouslySetInnerHTML={{
+															__html: prev.reg_offc_tollfree[i],
+														}}
+														className="ms-2 mb-0"
+													></p>
 												</div>
 											)}
 										</div>
@@ -436,30 +454,49 @@ const ContactBody = ({ data }) => {
 													data-aos-delay="600"
 													className="mt-5"
 												>
-													<h6>{prev.reg_offc_title[i]}</h6>
+													<h6
+														dangerouslySetInnerHTML={{
+															__html: prev.reg_offc_title[i],
+														}}
+													></h6>
 													<div>
 														<div>
 															<strong>Address:</strong>{" "}
-															{prev.reg_offc_address[i]}
+															<span
+																dangerouslySetInnerHTML={{
+																	__html: prev.reg_offc_address[i],
+																}}
+															></span>
 														</div>
 													</div>
 													<div className="d-flex">
 														<strong>Contact:</strong>
-														<p className="ms-2 mb-0">
-															{prev.reg_offc_contact[i]}
-														</p>
+														<p
+															dangerouslySetInnerHTML={{
+																__html: prev.reg_offc_contact[i],
+															}}
+															className="ms-2 mb-0"
+														></p>
 													</div>
 													{prev.reg_offc_tollfree[i] && (
 														<div className="d-flex">
 															<strong>Toll-Free Number:</strong>
-															<p className="ms-2 mb-0">
-																{prev.reg_offc_tollfree[i]}
-															</p>
+															<p
+																dangerouslySetInnerHTML={{
+																	__html: prev.reg_offc_tollfree[i],
+																}}
+																className="ms-2 mb-0"
+															></p>
 														</div>
 													)}
 													<div className="d-flex">
 														<strong>E-mail:</strong>
-														<p className="ms-2 mb-0">{prev.email[i]}</p>
+														<p
+															dangerouslySetInnerHTML={{
+																__html: prev.email[i],
+															}}
+															className="ms-2 mb-0"
+														></p>
 													</div>
 												</div>
 												<h6 className="fw-bold mt-3">

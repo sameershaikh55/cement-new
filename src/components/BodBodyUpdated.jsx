@@ -64,10 +64,17 @@ const BodBodyUpdated = ({ boardDirectors }) => {
 																	src={imgUrl + person_photo}
 																	alt="management1"
 																/>
-																<h6 className="themeColorG mb-0 mt-2 text-uppercase">
-																	{person_name}
-																</h6>
-																<p>{person_designation}</p>
+																<h6
+																	dangerouslySetInnerHTML={{
+																		__html: person_name,
+																	}}
+																	className="themeColorG mb-0 mt-2 text-uppercase"
+																></h6>
+																<p
+																	dangerouslySetInnerHTML={{
+																		__html: person_designation,
+																	}}
+																></p>
 															</div>
 														</div>
 													</div>
@@ -126,10 +133,17 @@ const BodBodyUpdated = ({ boardDirectors }) => {
 																	src={imgUrl + person_photo}
 																	alt="management1"
 																/>
-																<h6 className="themeColorG mb-0 mt-2 text-uppercase">
-																	{person_name}
-																</h6>
-																<p>{person_designation}</p>
+																<h6
+																	dangerouslySetInnerHTML={{
+																		__html: person_name,
+																	}}
+																	className="themeColorG mb-0 mt-2 text-uppercase"
+																></h6>
+																<p
+																	dangerouslySetInnerHTML={{
+																		__html: person_designation,
+																	}}
+																></p>
 															</div>
 														</div>
 													</div>

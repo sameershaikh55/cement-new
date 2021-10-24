@@ -42,9 +42,12 @@ class WhyNuvocoDetail extends Component {
 											)}
 										</div>
 										<div className="text-center mt-1">
-											<h5 className="mb-0 text-uppercase">
-												{nuvocoLife[index].name}
-											</h5>
+											<h5
+												dangerouslySetInnerHTML={{
+													__html: nuvocoLife[index].name,
+												}}
+												className="mb-0 text-uppercase"
+											></h5>
 											{/* <p className="mb-0 small">{employee[index].role}</p> */}
 										</div>
 										<div className="rightArrow position-absolute">
@@ -63,7 +66,9 @@ class WhyNuvocoDetail extends Component {
 									</div>
 								</div>
 								<div className="row mt-4">
-									<p>{nuvocoLife[index].desc}</p>
+									<p
+										dangerouslySetInnerHTML={{ __html: nuvocoLife[index].desc }}
+									></p>
 								</div>
 
 								<div className="crossIcon position-absolute">

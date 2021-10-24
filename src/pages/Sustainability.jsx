@@ -64,9 +64,12 @@ const Sustainability = ({ sustainability, sustainabilityApi }) => {
 										{/* DIRECTION SECTION START */}
 										<div className="d-flex justify-content-center align-items-center">
 											<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-												<span className={`h6 mt-direction2Env text-uppercase`}>
-													{sustainability.overview_title}
-												</span>
+												<span
+													className={`h6 mt-direction2Env text-uppercase`}
+													dangerouslySetInnerHTML={{
+														__html: sustainability.overview_title,
+													}}
+												></span>
 											</div>
 										</div>
 										{/* DIRECTION SECTION END */}

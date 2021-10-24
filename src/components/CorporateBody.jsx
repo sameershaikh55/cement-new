@@ -219,9 +219,8 @@ const CorporateBody = ({
 											"themeGBG border-0 py-1 px-4 mt-2 text-white") ||
 										"border-0 py-1 px-4 mt-2"
 									} me-3`}
-								>
-									{item.category}
-								</button>
+									dangerouslySetInnerHTML={{ __html: item.category }}
+								></button>
 							</Fade>
 						))}
 					</div>
@@ -257,9 +256,10 @@ const CorporateBody = ({
 																	value={item.id}
 																	key={item.id}
 																	selected={selectedYear === item.id}
-																>
-																	{item.year}
-																</option>
+																	dangerouslySetInnerHTML={{
+																		__html: item.year,
+																	}}
+																></option>
 															))}
 														</select>
 														<img

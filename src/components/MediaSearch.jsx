@@ -63,9 +63,8 @@ const MediaSearch = ({
 													"themeGBG border-0 py-1 px-4 mt-2 text-white") ||
 												"border-0 py-1 px-4 mt-2"
 											} me-3`}
-										>
-											{item.category}
-										</button>
+											dangerouslySetInnerHTML={{ __html: item.category }}
+										></button>
 									</Fade>
 								))
 							}{" "}
