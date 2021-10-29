@@ -27,7 +27,7 @@ const ManufacturingPopup = ({ open, setOpen, popUpData }) => {
 				<DialogContent>
 					<DialogContentText id="alert-dialog-description">
 						<h2 className="text-center">{popUpData.title}</h2>
-						<img src={imgUrl + popUpData.img} alt="" />
+						<img src={imgUrl + popUpData.img} alt={popUpData.desc} />
 						<p className="text-center">{popUpData.desc}</p>
 					</DialogContentText>
 				</DialogContent>

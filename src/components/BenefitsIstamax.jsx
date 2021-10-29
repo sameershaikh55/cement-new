@@ -63,7 +63,7 @@ const BenefitsIstamax = () => {
 											className="benefitCard position-relative"
 										>
 											<div className="imgContainer position-relative">
-												<img src={prev.img} alt="" />
+												<img src={prev.img} alt={prev.text} />
 												<div className="overlay position-absolute"></div>
 											</div>
 											<h5 className="position-absolute text-white text-center text-uppercase px-2">

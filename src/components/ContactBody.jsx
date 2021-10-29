@@ -20,7 +20,7 @@ import { AiFillYoutube } from "react-icons/ai";
 
 const ContactBody = ({ data }) => {
 	const [nextTab, setNextTab] = useState(true);
-	console.log(data);
+
 	const contactData = [
 		{ label: "Full Name*", img: contact1, name: "full_name" },
 		{ label: "Email Id*", img: contact2, name: "email" },
@@ -134,7 +134,11 @@ const ContactBody = ({ data }) => {
 																	}`}
 																	placeholder={`${prev.label.replace("*", "")}`}
 																/>
-																<img className="contactIcon" src={img} alt="" />
+																<img
+																	className="contactIcon"
+																	src={img}
+																	alt={label}
+																/>
 																<div
 																	style={{ bottom: "-40%" }}
 																	className="position-absolute end-0 text-danger small"
@@ -239,7 +243,7 @@ const ContactBody = ({ data }) => {
 																	src={selectIcon}
 																	alt="selectIcon"
 																/>
-																<img className="contactIcon" src={img} alt="" />
+																<img className="contactIcon" src={img} alt="contactIcon" />
 															</div>
 														</div>
 													)}
@@ -286,7 +290,7 @@ const ContactBody = ({ data }) => {
 														src={selectIcon}
 														alt="selectIcon"
 													/>
-													<img className="contactIcon" src={contact4} alt="" />
+													<img className="contactIcon" src={contact4} alt="contactIcon" />
 												</div>
 											</div>
 										</div>
@@ -320,7 +324,7 @@ const ContactBody = ({ data }) => {
 														src={selectIcon}
 														alt="selectIcon"
 													/>
-													<img className="contactIcon" src={contact4} alt="" />
+													<img className="contactIcon" src={contact4} alt="contactIcon" />
 												</div>
 											</div>
 										</div>

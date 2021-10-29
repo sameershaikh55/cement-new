@@ -330,7 +330,7 @@ const EnvironmentBody = ({
 								</label>
 								<br />
 								<div className="inp d-flex align-items-center px-2 rounded-2">
-									<img src={calenderIcon} alt="" />
+									<img src={calenderIcon} alt="calenderIcon" />
 									{/* <h6 className="ms-2 mb-0">2020</h6> */}
 									<select
 										className="w-100 border-0 rounded-3 ps-2"
@@ -362,7 +362,7 @@ const EnvironmentBody = ({
 								</label>
 								<br />
 								<div className="inp d-flex align-items-center px-2 rounded-2">
-									<img src={calenderIcon} alt="" />
+									<img src={calenderIcon} alt="calenderIcon" />
 									{/* <h6 className="ms-2 mb-0">March</h6> */}
 									<select
 										className="w-100 border-0 rounded-3 ps-2"
@@ -394,7 +394,7 @@ const EnvironmentBody = ({
 								</label>
 								<br />
 								<div className="inp d-flex align-items-center px-2 rounded-2">
-									<img src={factoryIcon} alt="" />
+									<img src={factoryIcon} alt="factoryIcon" />
 									{/* <h6 className="ms-2 mb-0">Arasmeta Cement Plant</h6> */}
 									<select
 										className="w-100 border-0 rounded-3 ps-2"

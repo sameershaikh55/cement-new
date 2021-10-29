@@ -23,7 +23,11 @@ const ThreeC = ({ data }) => {
 					<div className="col-12 mx-auto">
 						<div className="row">
 							<div className="col-11 mx-auto">
-								<img className="w-100" src={imgUrl + data._3c_image} alt="" />
+								<img
+									className="w-100"
+									src={imgUrl + data._3c_image}
+									alt={data._3c_title}
+								/>
 							</div>
 						</div>
 						<div className="row">

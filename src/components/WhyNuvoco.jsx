@@ -95,7 +95,7 @@ const WhyNuvoco = () => {
 														className="benefitCard position-relative"
 													>
 														<div className="imgContainer position-relative">
-															<img src={el.image} alt="" />
+															<img src={el.image} alt={el.name} />
 															<div className="overlay position-absolute"></div>
 														</div>
 														<h5

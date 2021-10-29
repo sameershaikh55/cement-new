@@ -54,7 +54,7 @@ const Cement = ({ productDetails, productDetailsApi }) => {
 						img2={imgUrl + temp_data.page.category.banner_img_mob}
 						alt1={temp_data.page.category.banner_img_alt}
 						alt2={temp_data.page.category.banner_img_alt}
-					/>{" "}
+					/>
 					{/* BODY START */}
 					<div className="page_container mt-5">
 						<div className="container-fluid">

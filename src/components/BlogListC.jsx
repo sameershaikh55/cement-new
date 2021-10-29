@@ -80,7 +80,7 @@ const BlogListC = () => {
 										className="col-12 col-md-6 col-lg-4 mt-5 mt-md-4"
 									>
 										<div className="blogListCard">
-											<img className="w-100 rounded-3" src={img} alt="" />
+											<img className="w-100 rounded-3" src={img} alt={title} />
 											<div className="my-3 px-3">
 												<h6 className="fw-bold themeColorG text-uppercase">
 													{title}

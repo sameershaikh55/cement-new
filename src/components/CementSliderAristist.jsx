@@ -58,7 +58,7 @@ const CementSliderAristist = () => {
 							{sliderData.map((prev, i) => {
 								return (
 									<div key={i}>
-										<img src={prev} alt="" />
+										<img src={prev} alt="cement" />
 									</div>
 								);
 							})}

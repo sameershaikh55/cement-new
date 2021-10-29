@@ -25,7 +25,13 @@ const NovocoLife = () => {
 		<div>
 			<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 			<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
-			<Hero heading="CAREERS" img1={banner} img2={bannerM} />
+			<Hero
+				heading="CAREERS"
+				img1={banner}
+				img2={bannerM}
+				alt1="career"
+				alt2="career"
+			/>
 
 			{/* BODY START */}
 			<div className="page_container mt-5">

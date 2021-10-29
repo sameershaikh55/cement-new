@@ -25,7 +25,7 @@ const About = ({ nuvocoGlance, nuvocoGlanceApi }) => {
 	useEffect(() => {
 		nuvocoGlanceApi();
 	}, []);
-
+	console.log(nuvocoGlance);
 	return (
 		<>
 			{(Object.keys(nuvocoGlance).length && (
@@ -35,7 +35,7 @@ const About = ({ nuvocoGlance, nuvocoGlanceApi }) => {
 						<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
 
 						<Seo
-							title={nuvocoGlance.about_nuvoco.about_nuvoco_title}
+							title={nuvocoGlance.about_nuvoco.meta_title}
 							description={nuvocoGlance.about_nuvoco.meta_description}
 							canonical={nuvocoGlance.about_nuvoco.canonical_rel}
 						/>

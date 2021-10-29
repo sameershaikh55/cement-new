@@ -124,7 +124,8 @@ const Feature = ({ data }) => {
 													<img
 														width="40%"
 														src={imgUrl + data.features_img[i]}
-														alt=""
+														alt={data.features_img_title[i]}
+														title={data.features_img_title[i]}
 													/>
 												</div>
 												{data.features_img_title[i] ? (

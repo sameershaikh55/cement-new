@@ -41,6 +41,7 @@ const CovidGallery = ({ data }) => {
 						<div className="col-11 col-sm-10 col-lg-8 mx-auto mx-auto px-3 px-sm-1">
 							<Slider {...settings}>
 								{data.gallery_imgs.map((prev, i) => {
+									console.log(prev);
 									return (
 										<div
 											key={i}
@@ -50,7 +51,11 @@ const CovidGallery = ({ data }) => {
 											className="benefitCard position-relative"
 										>
 											<div className="imgContainer position-relative">
-												<img src={imgUrl + prev} alt="" />
+												<img
+													src={imgUrl + prev}
+													alt={data.gallery_img_alt[i]}
+													title={data.gallery_img_title[i]}
+												/>
 											</div>
 										</div>
 									);

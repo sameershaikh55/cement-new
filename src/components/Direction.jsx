@@ -9,9 +9,7 @@ const Direction = ({ title }) => {
 					<span
 						dangerouslySetInnerHTML={{ __html: title }}
 						className={`h6 mt-direction2 text-uppercase`}
-					>
-						{" "}
-					</span>
+					></span>
 				</div>
 			</div>
 			{/* DIRECTION SECTION END */}

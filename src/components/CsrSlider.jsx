@@ -58,6 +58,7 @@ const CsrSlider = ({ temp_data, project_path }) => {
 									}}
 								>
 									{temp_data.map((prev, i) => {
+										console.log(prev);
 										const { img, title, description } = prev;
 										return (
 											<SwiperSlide>
@@ -72,7 +73,8 @@ const CsrSlider = ({ temp_data, project_path }) => {
 														<img
 															className="topBRounded w-100"
 															src={project_path + img}
-															alt=""
+															alt={title}
+															title={title}
 														/>
 														<div className="innerText d-flex flex-column justify-content-between p-3">
 															<h6

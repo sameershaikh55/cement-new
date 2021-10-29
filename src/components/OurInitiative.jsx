@@ -140,7 +140,7 @@ const OurInitiative = ({
 														<img
 															className="contactIcon"
 															src={searchIcon}
-															alt=""
+															alt="contactIcon"
 														/>
 													</div>
 												</div>

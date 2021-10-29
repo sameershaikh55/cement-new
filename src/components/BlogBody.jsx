@@ -193,7 +193,7 @@ const BlogBody = () => {
 												bottom
 											>
 												<div className="blogCard">
-													<img src={prev.img} alt="" />
+													<img src={prev.img} alt={prev.title} />
 													<div className="p-3">
 														<h6 className="text-uppercase themeColorG fw-bold">
 															{prev.title}
