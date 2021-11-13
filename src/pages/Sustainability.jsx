@@ -27,7 +27,7 @@ const Sustainability = ({ sustainability, sustainabilityApi }) => {
 	useEffect(() => {
 		sustainabilityApi();
 	}, []);
-	console.log(sustainability.work_img);
+
 	const urls = ["/covid", "/health_and_safety", "/enviroment", "/csr"];
 
 	return (

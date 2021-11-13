@@ -20,11 +20,12 @@ import { EmployeeTestimonial } from "../context/NuvocoLifeTestimonials.jsx";
 
 // IMPORTING LINK
 import { Link } from "react-router-dom";
+import { imgUrl } from "../redux/config";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation]);
 
-const EmployeTestimonials = () => {
+const EmployeTestimonials = ({ data }) => {
 	return (
 		<EmployeeTestimonial.Consumer>
 			{(state) => {
@@ -60,8 +61,10 @@ const EmployeTestimonials = () => {
 									navigation={true}
 									className="mySwiper"
 								>
-									{state.EmployeeTestimonials.map((el, i) => {
-										let title = state.nameToUrl(el.name);
+									{data.LifeAtNuvoco.emp_testonomial_order_by.map((el, i) => {
+										let title = state.nameToUrl(
+											state.EmployeeTestimonials[i].name
+										);
 										return (
 											<SwiperSlide key={i}>
 												<Link
@@ -76,34 +79,48 @@ const EmployeTestimonials = () => {
 														className="employeeTestimonial"
 													>
 														<div className="innerEmployeeTestimonial mx-auto py-3 py-sm-5 text-dark">
-															<h2 className="text-center fw-bold">
-																Tell us about your journey at Nuvoco
-															</h2>
+															<h2
+																dangerouslySetInnerHTML={{
+																	__html:
+																		data.LifeAtNuvoco.emp_testonomials_titles,
+																}}
+																className="text-center fw-bold"
+															></h2>
 															<div className="row mt-4 mt-sm-5">
 																<div className="col-7 col-md-9">
-																	<h5 className="themeColorG">Learnings</h5>
-																	<p className="onlyTextJustify">
-																		The journey has been very exciting although
-																		full of challenges which presented lot of
-																		opportunities to learn. The challenging
-																		situations have helped me to continually
-																		expand the capacity to create the results
-																		which is truly desired. In Nuvoco there is a
-																		lot of emphasis on creating, acquiring, and
-																		transferring knowledge, and at modifying
-																		behaviour to reflect new knowledge and
-																		insights
-																	</p>
+																	<h5
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				data.LifeAtNuvoco.emp_testonomial_title[
+																					i
+																				],
+																		}}
+																		className="themeColorG"
+																	></h5>
+																	<p
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				data.LifeAtNuvoco.emp_testonomial_desc[
+																					i
+																				],
+																		}}
+																		className="onlyTextJustify"
+																	></p>
 																</div>
 																<div className="col-5 ps-0 ps-sm-3 col-md-3 mx-auto text-center">
 																	<img
 																		className="placeholderImg"
-																		src={placeholderEmployee}
+																		src={
+																			imgUrl + data.LifeAtNuvoco.emp_photo[i]
+																		}
 																		alt="placeholderEmployee"
 																	/>
-																	<h5 className="mt-2 fw-bold authorName">
-																		-Ashwini Parashar
-																	</h5>
+																	<h5
+																		dangerouslySetInnerHTML={{
+																			__html: data.LifeAtNuvoco.emp_name[i],
+																		}}
+																		className="mt-2 fw-bold authorName"
+																	></h5>
 																</div>
 															</div>
 														</div>

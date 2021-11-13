@@ -62,3 +62,7 @@ export { landmarkApi } from "./landmark/action";
 export { buildingApi } from "./homeBuilding/action";
 
 export { sustainabilityApi } from "./sustainability/action";
+
+export { careerApi } from "./careers/action";
+
+export { footerApi } from "./footer/action";

@@ -46,6 +46,9 @@ const CSR = ({ csr, csrApi }) => {
 		temp_data.page.key_focus_area_title = JSON.parse(
 			temp_data.page.key_focus_area_title
 		);
+		temp_data.page.key_focus_area_image_alt = JSON.parse(
+			temp_data.page.key_focus_area_image_alt
+		);
 	}
 
 	const getFilterData = (
@@ -161,7 +164,7 @@ const CSR = ({ csr, csrApi }) => {
 																	imgUrl +
 																	temp_data.page.key_focus_area_img[ind]
 																}
-																alt="cardImage"
+																alt={temp_data.page.key_focus_area_image_alt[ind]}
 															/>
 															<div className="d-flex flex-column justify-content-between ms-2 ms-sm-4">
 																<div>

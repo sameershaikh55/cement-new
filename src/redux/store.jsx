@@ -28,6 +28,8 @@ import menuRed from "./menu/reducer";
 import landmarkRed from "./landmark/reducer";
 import buildingRed from "./homeBuilding/reducer";
 import sustainabilityRed from "./sustainability/reducer";
+import careerRed from "./careers/reducer";
+import footerRed from "./footer/reducer";
 
 const middleware = applyMiddleware(thunk, logger);
 
@@ -57,6 +59,8 @@ const rootReducer = combineReducers({
 	landmarkRed,
 	buildingRed,
 	sustainabilityRed,
+	careerRed,
+	footerRed,
 });
 
 const store = createStore(rootReducer, middleware);

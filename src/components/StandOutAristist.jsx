@@ -1,8 +1,12 @@
 import React from "react";
 
 const StandOutAristist = ({ temp_data }) => {
-	const { section2_title, section2_images, section2_subtitles } =
-		temp_data.page.category;
+	const {
+		section2_title,
+		section2_images,
+		section2_subtitles,
+		section2_image_alt,
+	} = temp_data.page.category;
 	return (
 		<div className="page_container mt-5">
 			<div className="container-fluid">
@@ -37,7 +41,7 @@ const StandOutAristist = ({ temp_data }) => {
 										<div className="col-10 col-md-5 mx-auto">
 											<img
 												src={temp_data.project_path + prev}
-												alt="stand"
+												alt={section2_image_alt[ind]}
 												className="w-100"
 											/>
 										</div>

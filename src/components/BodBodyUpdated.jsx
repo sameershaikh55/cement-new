@@ -46,6 +46,7 @@ const BodBodyUpdated = ({ boardDirectors }) => {
 											person_name,
 											person_designation,
 											person_description,
+											image_alt,
 										} = prev;
 
 										return (
@@ -62,7 +63,7 @@ const BodBodyUpdated = ({ boardDirectors }) => {
 																<img
 																	className="w-100"
 																	src={imgUrl + person_photo}
-																	alt="management1"
+																	alt={image_alt}
 																/>
 																<h6
 																	dangerouslySetInnerHTML={{
@@ -115,6 +116,7 @@ const BodBodyUpdated = ({ boardDirectors }) => {
 											person_name,
 											person_designation,
 											person_description,
+											image_alt,
 										} = prev;
 
 										return (
@@ -131,7 +133,7 @@ const BodBodyUpdated = ({ boardDirectors }) => {
 																<img
 																	className="w-100"
 																	src={imgUrl + person_photo}
-																	alt="management1"
+																	alt={image_alt}
 																/>
 																<h6
 																	dangerouslySetInnerHTML={{

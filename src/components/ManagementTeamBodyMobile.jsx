@@ -50,6 +50,7 @@ const ManagementTeamBodyMobile = ({ managementTeam }) => {
 											person_name,
 											person_designation,
 											person_description,
+											image_alt,
 										} = prev;
 										return (
 											<div key={i} className="col-12">
@@ -60,7 +61,7 @@ const ManagementTeamBodyMobile = ({ managementTeam }) => {
 																<img
 																	className="w-100"
 																	src={imgUrl + person_photo}
-																	alt="management1"
+																	alt={image_alt}
 																/>
 																<h6
 																	dangerouslySetInnerHTML={{
@@ -113,6 +114,7 @@ const ManagementTeamBodyMobile = ({ managementTeam }) => {
 											person_name,
 											person_designation,
 											person_description,
+											image_alt,
 										} = prev;
 										return (
 											<div key={i} className="col-12">
@@ -123,7 +125,7 @@ const ManagementTeamBodyMobile = ({ managementTeam }) => {
 																<img
 																	className="w-100"
 																	src={imgUrl + person_photo}
-																	alt="management1"
+																	alt={image_alt}
 																/>
 																<h6
 																	dangerouslySetInnerHTML={{

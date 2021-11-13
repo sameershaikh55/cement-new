@@ -8,7 +8,7 @@ import Direction from "../components/Direction";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Sidebar from "../components/Sidebar";
-import StandOut from "../components/StandOut";
+import StandOutAristist from "../components/StandOutAristist";
 import Footer from "../components/Footer";
 
 // IMPORTING HOOKS
@@ -30,16 +30,21 @@ const Cement = ({ productDetails, productDetailsApi }) => {
 	// ERROR HANDLING AND SORTING (PARSE) START
 	if (Object.keys(productDetails).length) {
 		var temp_data = { ...productDetails.data };
+		temp_data.page.category.section2_images = JSON.parse(
+			temp_data.page.category.section2_images
+		);
+		temp_data.page.category.section2_subtitles = JSON.parse(
+			temp_data.page.category.section2_subtitles
+		);
+		temp_data.page.category.section2_image_alt = JSON.parse(
+			temp_data.page.category.section2_image_alt
+		);
 	}
 	// ERROR HANDLING AND SORTING (PARSE) END
 
 	return (
 		<>
-			{(!Object.keys(productDetails).length && (
-				<div className="loader">
-					<Loader />
-				</div>
-			)) || (
+			{(Object.keys(productDetails).length && (
 				<div>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
@@ -88,7 +93,10 @@ const Cement = ({ productDetails, productDetailsApi }) => {
 							</div>
 						</div>
 					</div>
-					<StandOut />
+
+					<StandOutAristist temp_data={temp_data} />
+					{/* <StandOut /> */}
+
 					<div className="page_container my-5">
 						<div className="container-fluid">
 							<div className="row">
@@ -120,7 +128,8 @@ const Cement = ({ productDetails, productDetailsApi }) => {
 					{/* BODY END */}
 					<Footer />
 				</div>
-			)}
+			)) ||
+				""}
 		</>
 	);
 };

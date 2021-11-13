@@ -275,6 +275,7 @@ const EnvironmentBody = ({
 
 						<div className="row">
 							{temp_data.page.our_commitment_img.map((prev, i) => {
+								console.log(prev);
 								return (
 									<div
 										data-aos="zoom-in"
@@ -284,7 +285,11 @@ const EnvironmentBody = ({
 										key={i}
 										className="col-6 col-md-4 col-lg-3 commitmentCard text-center"
 									>
-										<img src={imgUrl + prev} alt="icon" />
+										<img
+											src={imgUrl + prev}
+											alt={temp_data.page.our_commitment_img_alt[i]}
+											title={temp_data.page.our_commitment_img_title[i]}
+										/>
 										<p>{temp_data.page.our_commitment_img_title[i]}</p>
 									</div>
 								);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // IMPORTING COMPONENTS
 import Header from "../components/Header";
@@ -17,84 +17,91 @@ import WhyNuvoco from "../components/WhyNuvoco";
 // import SubmitResume from "../components/SubmitResume";
 import SubmitResume from "../components/SubmitResume";
 
-const NovocoLife = () => {
+// IMPORTING API'S
+import { connect } from "react-redux";
+import { careerApi } from "../redux/index";
+import { imgUrl } from "../redux/config";
+
+const NovocoLife = ({ career, careerApi }) => {
 	const { isOpen, setIsOpen } = useHooks();
 	const [hamb, setHamb] = useState(true);
 
-	return (
-		<div>
-			<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
-			<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
-			<Hero
-				heading="CAREERS"
-				img1={banner}
-				img2={bannerM}
-				alt1="career"
-				alt2="career"
-			/>
+	useEffect(() => {
+		careerApi();
+	}, []);
+	console.log(career);
 
-			{/* BODY START */}
-			<div className="page_container mt-5">
-				<div className="container-fluid">
-					<div
-						data-aos="zoom-in"
-						data-aos-delay="900"
-						data-aos-duration="600"
-						data-aos-offset="600"
-					>
-						{/* DIRECTION SECTION START */}
-						<div className="d-flex justify-content-center align-items-center">
-							<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-								<span className={`h6 mt-direction2Env text-uppercase`}>
-									overview
-								</span>
-							</div>
-						</div>
-						{/* DIRECTION SECTION END */}
-					</div>
-					<div className="row">
-						<div className="col-11 col-md-12 mx-auto">
-							<p
-								data-aos="fade-right"
-								data-aos-delay="1200"
+	return (
+		<>
+			{(Object.keys(career).length && (
+				<div>
+					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
+					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
+					<Hero
+						heading={career.LifeAtNuvoco.banner_img_title}
+						img1={imgUrl + career.LifeAtNuvoco.banner_img}
+						img2={imgUrl + career.LifeAtNuvoco.banner_img_mob}
+						alt1={career.LifeAtNuvoco.banner_img_alt}
+						alt2={career.LifeAtNuvoco.banner_img_alt}
+					/>
+
+					{/* BODY START */}
+					<div className="page_container mt-5">
+						<div className="container-fluid">
+							<div
+								data-aos="zoom-in"
+								data-aos-delay="900"
 								data-aos-duration="600"
 								data-aos-offset="600"
-								className="textJustify"
 							>
-								Nuvoco is the fifth-largest player in India and the largest
-								cement company in East India, in terms of capacity, following
-								the acquisition of NU Vista Limited (formerly Emami Cement
-								Limited); with a consolidated capacity of 22.32 MMTPA. We have
-								11 Cement Plants in the states of West Bengal, Bihar, Odisha,
-								Chhattisgarh, Jharkhand, Rajasthan and Haryana and approximately
-								50 Ready-Mix Concrete Plants across India.
-							</p>
-							<p
-								data-aos="fade-left"
-								data-aos-delay="1500"
-								data-aos-duration="600"
-								data-aos-offset="400"
-								className="textJustify"
-							>
-								Being the performance driven and fast growing organisation,
-								Nuvoco has highly motivated and dynamic team comprising of more
-								than 3,500 employees. At Nuvoco, we offer ample career
-								opportunities across functions and embraces cultural diversity
-								to build strong teams working in highly conducive and
-								sustainable environment.
-							</p>
+								{/* DIRECTION SECTION START */}
+								<div className="d-flex justify-content-center align-items-center">
+									<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
+										<span
+											dangerouslySetInnerHTML={{
+												__html: career.LifeAtNuvoco.section1_title,
+											}}
+											className={`h6 mt-direction2Env text-uppercase`}
+										></span>
+									</div>
+								</div>
+								{/* DIRECTION SECTION END */}
+							</div>
+							<div className="row">
+								<div
+									dangerouslySetInnerHTML={{
+										__html: career.LifeAtNuvoco.section1,
+									}}
+									className="col-11 col-md-12 mx-auto"
+								></div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			{/* BODY END */}
+					{/* BODY END */}
 
-			<WhyNuvoco />
-			{/* <EmployeTestimonials /> */}
-			<SubmitResume />
-			<Footer />
-		</div>
+					<WhyNuvoco data={career} />
+					{/* <EmployeTestimonials data={career} /> */}
+					<SubmitResume />
+					<Footer />
+				</div>
+			)) ||
+				""}
+		</>
 	);
 };
 
-export default NovocoLife;
+const mapStatetoProps = (state) => {
+	return {
+		career: state.careerRed.career,
+	};
+};
+
+const mapDispatchtoProps = (dispatch) => {
+	return {
+		careerApi: function () {
+			dispatch(careerApi());
+		},
+	};
+};
+
+export default connect(mapStatetoProps, mapDispatchtoProps)(NovocoLife);

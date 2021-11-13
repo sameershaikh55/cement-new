@@ -14,7 +14,7 @@ const Hero = ({ heading, img1, img2, home, alt1, alt2 }) => {
 			<div className="underHeader">
 				<div className="position-relative">
 					<div className="d-none d-md-block dBannerCont">
-						<img src={img1} alt={alt1} />
+						<img src={img1} alt={alt1} />	
 					</div>
 					<div className="d-block d-md-none">
 						<img width="100%" src={img2} alt={alt2} />

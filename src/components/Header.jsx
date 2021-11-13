@@ -69,13 +69,15 @@ const Header = ({ home, isOpen, setIsOpen, hamb }) => {
 	if (hamb) {
 		var hamberger = (isOpen && (
 			<ImCross
-				onClick={() => setIsOpen(false)}
+				onClick={() => console.log("object")}
+				// onClick={() => setIsOpen(false)}
 				fontSize="1.6rem"
 				className="pointer"
 			/>
 		)) || (
 			<GiHamburgerMenu
-				onClick={() => setIsOpen(true)}
+				onClick={() => console.log("object2")}
+				// onClick={() => setIsOpen(true)}
 				fontSize="2rem"
 				className="pointer"
 			/>

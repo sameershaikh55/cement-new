@@ -3,9 +3,6 @@ import React, { useEffect, useState } from "react";
 // IMPORTING LOADER
 import Loader from "../components/Loader.jsx";
 
-// IMPORTING IMAGES
-import bannerM from "../assets/pRelation1BannerM.png";
-
 // IMPORTING COMPONENTS
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -40,6 +37,9 @@ const PartnerRelations2 = ({
 		temp_data.page.points_of_earning_logos = JSON.parse(
 			temp_data.page.points_of_earning_logos
 		);
+		temp_data.page.points_of_earning_image_alt = JSON.parse(
+			temp_data.page.points_of_earning_image_alt
+		);
 		temp_data.page.points_of_earning_subtitle = JSON.parse(
 			temp_data.page.points_of_earning_subtitle
 		);
@@ -61,6 +61,7 @@ const PartnerRelations2 = ({
 		temp_data.page.redemption_thumbnail_subtitle = JSON.parse(
 			temp_data.page.redemption_thumbnail_subtitle
 		);
+		console.log(temp_data);
 	}
 
 	return (
@@ -180,7 +181,14 @@ const PartnerRelations2 = ({
 												>
 													<img
 														src={`${temp_data.project_path}${prev}`}
-														alt="icon"
+														alt={
+															(temp_data.page.points_of_earning_image_alt !==
+																null &&
+																temp_data.page.points_of_earning_image_alt[
+																	i
+																]) ||
+															""
+														}
 													/>
 													<p>{temp_data.page.points_of_earning_subtitle[i]}</p>
 												</div>
@@ -234,7 +242,14 @@ const PartnerRelations2 = ({
 												>
 													<img
 														src={`${temp_data.project_path}${prev}`}
-														alt="icon"
+														alt={
+															(temp_data.page.redemption_thumbnail_image_alt !==
+																null &&
+																temp_data.page.redemption_thumbnail_image_alt[
+																	i
+																]) ||
+															""
+														}
 													/>
 													<p
 														dangerouslySetInnerHTML={{

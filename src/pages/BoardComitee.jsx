@@ -20,18 +20,19 @@ import Seo from "../components/Seo";
 const BoardComitee = ({ boardCommittee, boardCommitteeApi }) => {
 	const { isOpen, setIsOpen } = useHooks();
 	const [hamb, setHamb] = useState(true);
-	const [change, setChange] = useState(0);
+	const [change, setChange] = useState("Audit");
 
 	useEffect(() => {
 		boardCommitteeApi();
 	}, []);
 
-	const tabs = [
-		"Audit",
-		"Stakeholders’ Relationship",
-		"Nomination & Remuneration",
-		"Corporate Social Responsibility",
-	];
+	const tabs = [];
+
+	if (Object.keys(boardCommittee).length) {
+		boardCommittee.data.board_of_committe_detail.map((prev, i) => {
+			tabs.push(Object.keys(prev));
+		});
+	}
 
 	return (
 		<>
@@ -59,279 +60,53 @@ const BoardComitee = ({ boardCommittee, boardCommitteeApi }) => {
 									return (
 										<Fade delay={1000} left>
 											<button
-												onClick={() => setChange(i)}
+												onClick={() => setChange(prev[0])}
 												className={`${
-													(change === i &&
+													(change === prev[0] &&
 														"themeGBG border-0 py-1 px-4 mt-2 text-white") ||
 													"border-0 py-1 px-4 mt-2"
 												} me-1`}
 											>
-												{prev}
+												{prev[0].replaceAll("_", " ")}
 											</button>
 										</Fade>
 									);
 								})}
 							</div>
 
-							{change === 0 && (
-								<div className="row mt-3">
-									<div className="col-12 col-md-10 col-lg-8 mx-auto">
-										<div className="row gx-5 gy-5">
-											{boardCommittee.data.board_of_committe_detail[0].Audit.map(
-												(prev, i) => {
-													const { person_designation, person_name } = prev;
-													return (
-														<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-															<Zoom key={i} left>
-																<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-																	<div
-																		dangerouslySetInnerHTML={{
-																			__html: person_designation,
-																		}}
-																		className="pb-2 w-100 rounded lightDown d-flex justify-content-center"
-																	></div>
-																	<div
-																		dangerouslySetInnerHTML={{
-																			__html: person_name,
-																		}}
-																		className="py-1 fw-bold text-white text-uppercase greenUpp"
-																	></div>
-																</div>
-															</Zoom>
-														</div>
-													);
-												}
-											)}
-										</div>
+							<div className="row mt-3">
+								<div className="col-12 col-md-10 col-lg-8 mx-auto">
+									<div className="row gx-5 gy-5">
+										{boardCommittee.data.board_of_committe_detail.map(
+											(prev, i) => {
+												return (
+													<>
+														{prev[change] !== undefined &&
+															prev[change].map((prev2, i) => {
+																const { person_designation, person_name } =
+																	prev2;
+																return (
+																	<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
+																		<Zoom key={i} left>
+																			<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
+																				<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
+																					{person_designation}
+																				</div>
+																				<div className="py-1 fw-bold text-white text-uppercase greenUpp">
+																					{person_name}
+																				</div>
+																			</div>
+																		</Zoom>
+																	</div>
+																);
+															})}
+													</>
+												);
+											}
+										)}
 									</div>
 								</div>
-							)}
-
-							{change === 1 && (
-								<div className="row mt-3">
-									<div className="col-12 col-md-10 col-lg-8 mx-auto">
-										<div className="row gx-5 gy-5">
-											{boardCommittee.data.board_of_committe_detail[0].Audit.map(
-												(prev, i) => {
-													const { person_designation, person_name } = prev;
-													return (
-														<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-															<Zoom key={i} left>
-																<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-																	<div
-																		dangerouslySetInnerHTML={{
-																			__html: person_designation,
-																		}}
-																		className="pb-2 w-100 rounded lightDown d-flex justify-content-center"
-																	></div>
-																	<div
-																		dangerouslySetInnerHTML={{
-																			__html: person_name,
-																		}}
-																		className="py-1 fw-bold text-white text-uppercase greenUpp"
-																	></div>
-																</div>
-															</Zoom>
-														</div>
-													);
-												}
-											)}
-										</div>
-									</div>
-								</div>
-							)}
-
-							{change === 2 && (
-								<div className="row mt-3">
-									<div className="col-12 col-md-10 col-lg-8 mx-auto">
-										<div className="row gx-5 gy-5">
-											{boardCommittee.data.board_of_committe_detail[0].Audit.map(
-												(prev, i) => {
-													const { person_designation, person_name } = prev;
-													return (
-														<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-															<Zoom key={i} left>
-																<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-																	<div
-																		dangerouslySetInnerHTML={{
-																			__html: person_designation,
-																		}}
-																		className="pb-2 w-100 rounded lightDown d-flex justify-content-center"
-																	></div>
-																	<div
-																		dangerouslySetInnerHTML={{
-																			__html: person_name,
-																		}}
-																		className="py-1 fw-bold text-white text-uppercase greenUpp"
-																	></div>
-																</div>
-															</Zoom>
-														</div>
-													);
-												}
-											)}
-										</div>
-									</div>
-								</div>
-							)}
-
-							{change === 3 && (
-								<div className="row mt-3">
-									<div className="col-12 col-md-10 col-lg-8 mx-auto">
-										<div className="row gx-5 gy-5">
-											{boardCommittee.data.board_of_committe_detail[3].Corporate_Social_Responsibility.map(
-												(prev, i) => {
-													const { person_designation, person_name } = prev;
-													return (
-														<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-															<Zoom key={i} left>
-																<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-																	<div
-																		className={`${
-																			prev === "" && "jaya"
-																		} pb-2 w-100 rounded lightDown d-flex justify-content-center`}
-																		dangerouslySetInnerHTML={{
-																			__html: person_designation,
-																		}}
-																	></div>
-																	<div
-																		dangerouslySetInnerHTML={{
-																			__html: person_name,
-																		}}
-																		className="py-1 fw-bold text-white text-uppercase greenUpp"
-																	></div>
-																</div>
-															</Zoom>
-														</div>
-													);
-												}
-											)}
-										</div>
-									</div>
-								</div>
-							)}
-
-							{change === 4 && (
-								<div className="row mt-5">
-									<div className="col-12 col-md-10 col-lg-8 mx-auto">
-										<div className="row gx-5 gy-5">
-											<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-												<Zoom left>
-													<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-														<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-															Chairman and Non-Executive&nbsp;
-															<span className="d-none d-md-block">
-																{" "}
-																Director
-															</span>
-														</div>
-														<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-															Mr. Kaushikbhai Patel
-														</div>
-													</div>
-												</Zoom>
-											</div>
-											<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-												<Zoom left>
-													<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-														<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-															Independent Director
-															{/* <span className="d-none d-md-block"> Director</span> */}
-														</div>
-														<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-															Mrs. Bhavna Doshi{" "}
-														</div>
-													</div>
-												</Zoom>
-											</div>
-											<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-												<Zoom left>
-													<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-														<div className="jaya pb-2 w-100 rounded lightDown d-flex justify-content-center">
-															Managing Director
-														</div>
-														<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-															Mr. Jayakumar Krishnaswamy
-														</div>
-													</div>
-												</Zoom>
-											</div>
-											<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-												<Zoom left>
-													<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-														<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-															Chief Financial Officer
-															{/* <span className="d-none d-md-block"> Director</span> */}
-														</div>
-														<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-															Mr. Maneesh Agrawal
-														</div>
-													</div>
-												</Zoom>
-											</div>
-										</div>
-									</div>
-								</div>
-							)}
-
-							{change === 5 && (
-								<div className="row mt-5">
-									<div className="col-12 col-md-10 col-lg-8 mx-auto">
-										<div className="row gx-5 gy-5">
-											<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-												<Zoom left>
-													<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-														<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-															Chairperson
-														</div>
-														<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-															Mr. Vivek Chawla
-														</div>
-													</div>
-												</Zoom>
-											</div>
-											<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-												<Zoom left>
-													<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-														<div className="jaya pb-2 w-100 rounded lightDown d-flex justify-content-center">
-															Member
-														</div>
-														<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-															Mr. Jayakumar Krishnaswamy
-														</div>
-													</div>
-												</Zoom>
-											</div>
-											<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-												<Zoom left>
-													<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-														<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-															Member
-															{/* <span className="d-none d-md-block"> Director</span> */}
-														</div>
-														<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-															Mr. Manan Nutanbhai Shah
-														</div>
-													</div>
-												</Zoom>
-											</div>
-											<div className="col-7 col-md-6 firstCommitte mx-auto text-center">
-												<Zoom left>
-													<div className="commiteeCard text-uppercase d-flex justify-content-center align-items-center position-relative">
-														<div className="pb-2 w-100 rounded lightDown d-flex justify-content-center">
-															Member
-															{/* <span className="d-none d-md-block"> Director</span> */}
-														</div>
-														<div className="py-1 fw-bold text-white text-uppercase greenUpp">
-															Mrs. Shruta Sanghavi
-														</div>
-													</div>
-												</Zoom>
-											</div>
-										</div>
-									</div>
-								</div>
-							)}
+							</div>
 						</div>
 					</div>
 					<Footer />

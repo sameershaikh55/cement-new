@@ -119,7 +119,7 @@ const Home = ({ home, homeApi }) => {
 
 	const { isOpen, setIsOpen } = useHooks();
 	const [hamb, setHamb] = useState(true);
-	console.log(home);
+
 	return (
 		<>
 			{(Object.keys(home).length && (

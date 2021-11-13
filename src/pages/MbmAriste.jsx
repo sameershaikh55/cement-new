@@ -3,14 +3,6 @@ import React, { useEffect, useState } from "react";
 // IMPORTING LOADER
 import Loader from "../components/Loader";
 
-// IMPORTING IMAGES
-import banner from "../assets/arististBanner.png";
-import bannerM from "../assets/arististBannerM.png";
-import cementCard1 from "../assets/arististCard1.png";
-import cementCard2 from "../assets/arististCard2.png";
-import cementCard3 from "../assets/arististCard3.png";
-import cementCard4 from "../assets/arististCard4.png";
-
 // IMPORTING COMPONENTS
 import Direction from "../components/Direction";
 import Header from "../components/Header";
@@ -46,16 +38,18 @@ const ConcreteAriste = ({ productDetails, productDetailsApi }) => {
 		temp_data.page.category.section2_subtitles = JSON.parse(
 			temp_data.page.category.section2_subtitles
 		);
+		temp_data.page.category.section2_image_alt = JSON.parse(
+			temp_data.page.category.section2_image_alt
+		);
+		// temp_data.page.category.section2_images = JSON.parse(
+		// 	temp_data.page.category.section2_images
+		// );
 	}
 	// ERROR HANDLING AND SORTING (PARSE) END
 
 	return (
 		<>
-			{(!Object.keys(productDetails).length && (
-				<div className="loader">
-					<Loader />
-				</div>
-			)) || (
+			{(Object.keys(productDetails).length && (
 				<div>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
@@ -135,7 +129,8 @@ const ConcreteAriste = ({ productDetails, productDetailsApi }) => {
 
 					<Footer />
 				</div>
-			)}
+			)) ||
+				""}
 		</>
 	);
 };

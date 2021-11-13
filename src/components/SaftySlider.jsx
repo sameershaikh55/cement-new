@@ -50,6 +50,7 @@ const SaftySlider = ({ temp_data, project_path }) => {
 											good_practice_title,
 											good_practices_desc,
 											good_practices_file,
+											good_practices_img_alt,
 										} = prev;
 
 										return (
@@ -64,7 +65,7 @@ const SaftySlider = ({ temp_data, project_path }) => {
 													<img
 														className="topBRounded w-100"
 														src={project_path + good_practices_img}
-														alt={good_practice_title}
+														alt={good_practices_img_alt}
 														title={good_practice_title}
 													/>
 													<div className="innerText d-flex flex-column justify-content-between p-3">

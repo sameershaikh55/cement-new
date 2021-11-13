@@ -13,7 +13,7 @@ import CementSlider from "../components/CementSlider";
 
 // IMPORTING HOOKS
 import { useHooks } from "../hooks/useHooks";
-import StandOutMbm from "../components/StandOutMbm";
+import StandOutAristist from "../components/StandOutAristist";
 import { connect } from "react-redux";
 import { productDetailsApi } from "../redux";
 import ProductCard from "../components/ProductCard";
@@ -33,19 +33,24 @@ const Mbm = ({ productDetailsApi, productDetails }) => {
 	// ERROR HANDLING AND SORTING (PARSE) START
 	if (Object.keys(productDetails).length) {
 		var temp_data = { ...productDetails.data };
+		temp_data.page.category.section2_images = JSON.parse(
+			temp_data.page.category.section2_images
+		);
+		temp_data.page.category.section2_subtitles = JSON.parse(
+			temp_data.page.category.section2_subtitles
+		);
+		temp_data.page.category.section2_image_alt = JSON.parse(
+			temp_data.page.category.section2_image_alt
+		);
 	}
 	// ERROR HANDLING AND SORTING (PARSE) END
 
 	return (
 		<>
-			{(!Object.keys(productDetails).length && (
-				<div className="loader">
-					<Loader />
-				</div>
-			)) || (
+			{(Object.keys(productDetails).length && (
 				<div>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
-					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
+					{/* <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} /> */}
 					<Seo
 						title={temp_data.page.category.page_title}
 						description={temp_data.page.category.meta_description}
@@ -86,9 +91,8 @@ const Mbm = ({ productDetailsApi, productDetails }) => {
 							</p>
 						</div>
 					</div>
-
-					<StandOutMbm />
-
+					<StandOutAristist temp_data={temp_data} />
+					{/* <StandOutMbm /> */}
 					<div className="page_container my-5">
 						<div className="container-fluid">
 							<div className="row">
@@ -118,10 +122,10 @@ const Mbm = ({ productDetailsApi, productDetails }) => {
 						</div>
 					</div>
 					{/* BODY END */}
-
 					<Footer />
 				</div>
-			)}
+			)) ||
+				""}
 		</>
 	);
 };

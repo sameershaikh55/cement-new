@@ -70,7 +70,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[0].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[0].key_csr_projects_name
+																	data.length &&
+																	data[0].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[0].key_csr_projects_name
@@ -132,7 +133,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[1].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[1].key_csr_projects_name
+																	data.length &&
+																	data[1].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[1].key_csr_projects_name
@@ -194,7 +196,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[2].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[2].key_csr_projects_name
+																	data.length &&
+																	data[2].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[2].key_csr_projects_name
@@ -256,7 +259,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[3].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[3].key_csr_projects_name
+																	data.length &&
+																	data[3].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[3].key_csr_projects_name
@@ -318,7 +322,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[4].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[4].key_csr_projects_name
+																	data.length &&
+																	data[4].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[4].key_csr_projects_name
@@ -380,7 +385,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[5].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[5].key_csr_projects_name
+																	data.length &&
+																	data[5].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[5].key_csr_projects_name
@@ -442,7 +448,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[6].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[6].key_csr_projects_name
+																	data.length &&
+																	data[6].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[6].key_csr_projects_name
@@ -504,7 +511,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[7].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[7].key_csr_projects_name
+																	data.length &&
+																	data[7].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[7].key_csr_projects_name
@@ -566,7 +574,8 @@ const CsrProjects = ({ data }) => {
 																	imgUrl + data[8].key_csr_projects_img
 																}
 																alt={
-																	data.length && data[8].key_csr_projects_name
+																	data.length &&
+																	data[8].key_csr_projects_image_alt
 																}
 																title={
 																	data.length && data[8].key_csr_projects_name

@@ -11,8 +11,9 @@ import Slider from "react-slick";
 // import lifeCard2 from "../assets/lifeCard2.png";
 // import lifeCard3 from "../assets/lifeCard3.png";
 import { Link } from "react-router-dom";
+import { imgUrl } from "../redux/config.jsx";
 
-const WhyNuvoco = () => {
+const WhyNuvoco = ({ data }) => {
 	var settings = {
 		dots: false,
 		infinite: false,
@@ -54,34 +55,32 @@ const WhyNuvoco = () => {
 								{/* DIRECTION SECTION START */}
 								<div className="d-flex justify-content-center align-items-center">
 									<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-										<span className={`h6 mt-direction2Env text-uppercase`}>
-											Life at Nuvoco
-										</span>
+										<span
+											dangerouslySetInnerHTML={{
+												__html: data.LifeAtNuvoco.section2_title,
+											}}
+											className={`h6 mt-direction2Env text-uppercase`}
+										></span>
 									</div>
 								</div>
 								{/* DIRECTION SECTION END */}
 
-								<p
+								<div
 									data-aos="fade-left"
 									data-aos-delay="1500"
 									data-aos-duration="600"
 									data-aos-offset="400"
 									className="textJustify"
-								>
-									We are the proud receivers of the CII Level I for displaying
-									strong commitment to HR Excellence. At, Nuvoco we have
-									progressive people policies that are aligned with company’s
-									core values and help in maintaining a work environment that
-									both challenges and supports people and in turn help
-									organization to accomplish its goals faster and easier, while
-									having fun at work.
-								</p>
+									dangerouslySetInnerHTML={{
+										__html: data.LifeAtNuvoco.section2_desc,
+									}}
+								></div>
 							</div>
 							<div className="row gx-0">
 								<div className="col-11 col-sm-10 col-lg-8 mx-auto mx-auto px-3 px-sm-1">
 									<Slider {...settings}>
 										{state.nuvocoLife.map((el, i) => {
-											let title = state.nameToUrl(el.name);
+											let title = state.nameToUrl(state.nuvocoLife[i].name);
 											return (
 												<Link
 													to={`/nuvoco_life2/${title}`}
@@ -95,11 +94,18 @@ const WhyNuvoco = () => {
 														className="benefitCard position-relative"
 													>
 														<div className="imgContainer position-relative">
-															<img src={el.image} alt={el.name} />
+															<img
+																src={
+																	imgUrl + data.LifeAtNuvoco.why_choose_img[i]
+																}
+																alt={data.LifeAtNuvoco.why_choose_title[i]}
+															/>
 															<div className="overlay position-absolute"></div>
 														</div>
 														<h5
-															dangerouslySetInnerHTML={{ __html: el.name }}
+															dangerouslySetInnerHTML={{
+																__html: data.LifeAtNuvoco.why_choose_title[i],
+															}}
 															className="position-absolute text-white text-center text-uppercase px-2"
 														></h5>
 													</div>

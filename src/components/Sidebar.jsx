@@ -24,6 +24,7 @@ const Sidebar = ({ isOpen, setIsOpen, setHamb, menuApi, menu }) => {
 	const [careers, setCareers] = useState(false);
 	const [product, setProduct] = useState(false);
 	const [about, setAbout] = useState(false);
+	const [urlNumber, setUrlNumber] = useState(false);
 
 	let history = useHistory();
 
@@ -91,7 +92,9 @@ const Sidebar = ({ isOpen, setIsOpen, setHamb, menuApi, menu }) => {
 		sbOpen();
 	};
 
-	const nestMenu = (url) => {
+	const nestMenu = (url, i) => {
+		setUrlNumber(i);
+
 		if (url === "About Us") {
 			setAbout(true);
 			hambH();
@@ -111,6 +114,48 @@ const Sidebar = ({ isOpen, setIsOpen, setHamb, menuApi, menu }) => {
 		}
 	};
 
+	let mainMenu = [];
+	let sideMenu = [];
+
+	if (Object.keys(menu).length) {
+		menu.menu_list
+			.map((prev, i) => {
+				mainMenu.push({
+					menu: prev.menu,
+					menu_url: prev.menu_url,
+					order_by: prev.menu_order,
+				});
+			})
+			.sort((a, b) => a.menu_order - b.menu_order);
+
+		menu.menu_list.map((prev, i1) => {
+			prev.submenus.map((prev2, i2) => {
+				sideMenu.push({
+					submenus: prev2,
+					submenu_url: prev.submenu_url[i2],
+					submenu_order: prev.submenu_order[i2],
+					menu: prev.menu,
+				});
+			});
+		});
+
+		var aboutVal = sideMenu
+			.filter((prev, i) => prev.menu === "About Us")
+			.sort((a, b) => parseInt(a.submenu_order) - parseInt(b.submenu_order));
+
+		var sustainability = sideMenu
+			.filter((prev, i) => prev.menu === "Sustainability")
+			.sort((a, b) => parseInt(a.submenu_order) - parseInt(b.submenu_order));
+
+		var investorRelations = sideMenu
+			.filter((prev, i) => prev.menu === "Investor Relations")
+			.sort((a, b) => parseInt(a.submenu_order) - parseInt(b.submenu_order));
+
+		var productPortfolio = sideMenu
+			.filter((prev, i) => prev.menu === "Our Product Portfolio")
+			.sort((a, b) => parseInt(a.submenu_order) - parseInt(b.submenu_order));
+	}
+
 	return (
 		<>
 			{(Object.keys(menu).length && (
@@ -119,11 +164,11 @@ const Sidebar = ({ isOpen, setIsOpen, setHamb, menuApi, menu }) => {
 						<div onClick={() => setIsOpen(false)} className="SideBarContainer">
 							<Bounce duration={500} cascade={true}>
 								<ul className="list-unstyled">
-									{menu.menu_list.map((prev, i) => {
+									{mainMenu.map((prev, i) => {
 										return (
-											<li className="text-center">
+											<li key={i} className="text-center">
 												{(!prev.menu_url && (
-													<div onClick={() => nestMenu(prev.menu)}>
+													<div onClick={() => nestMenu(prev.menu, i)}>
 														{prev.menu}
 													</div>
 												)) || (
@@ -211,15 +256,15 @@ const Sidebar = ({ isOpen, setIsOpen, setHamb, menuApi, menu }) => {
 									ity
 								</h3>
 								<ul className="list-unstyled">
-									{menu.menu_list[2].submenus.map((prev, i) => {
+									{sustainability.map((prev, i) => {
 										return (
 											<li key={i}>
 												<NavLink
 													className="text-dark text-decoration-none"
 													activeClassName="activeNav"
-													to={menu.menu_list[2].submenu_url[i]}
+													to={prev.submenu_url}
 												>
-													{prev}
+													{prev.submenus}
 												</NavLink>
 											</li>
 										);
@@ -305,15 +350,15 @@ const Sidebar = ({ isOpen, setIsOpen, setHamb, menuApi, menu }) => {
 									ions
 								</h3>
 								<ul className="list-unstyled">
-									{menu.menu_list[3].submenus.map((prev, i) => {
+									{investorRelations.map((prev, i) => {
 										return (
 											<li key={i}>
 												<NavLink
 													className="text-dark text-decoration-none"
 													activeClassName="activeNav"
-													to={menu.menu_list[3].submenu_url[i]}
+													to={prev.submenu_url}
 												>
-													{prev}
+													{prev.submenus}
 												</NavLink>
 											</li>
 										);
@@ -631,15 +676,15 @@ const Sidebar = ({ isOpen, setIsOpen, setHamb, menuApi, menu }) => {
 									rtfolio
 								</h3>
 								<ul className="list-unstyled">
-									{menu.menu_list[1].submenus.map((prev, i) => {
+									{productPortfolio.map((prev, i) => {
 										return (
 											<li key={i}>
 												<NavLink
 													className="text-dark text-decoration-none"
 													activeClassName="activeNav"
-													to={menu.menu_list[1].submenu_url[i]}
+													to={prev.submenu_url}
 												>
-													{prev}
+													{prev.submenus}
 												</NavLink>
 											</li>
 										);
@@ -723,23 +768,23 @@ const Sidebar = ({ isOpen, setIsOpen, setHamb, menuApi, menu }) => {
 									About Us
 								</h3>
 								<ul className="list-unstyled">
-									{menu.menu_list[0].submenus.map((prev, i) => {
+									{aboutVal.map((prev, i) => {
 										return (
 											<li key={i}>
-												{(menu.menu_list[0].submenu_url[i] === "/aboutUs" && (
+												{(prev.submenu_url === "/aboutUs" && (
 													<a
 														className="text-dark text-decoration-none"
-														href={menu.menu_list[0].submenu_url[i]}
+														href={prev.submenu_url}
 													>
-														{prev}
+														{prev.submenus}
 													</a>
 												)) || (
 													<NavLink
 														className="text-dark text-decoration-none"
 														activeClassName="activeNav"
-														to={menu.menu_list[0].submenu_url[i]}
+														to={prev.submenu_url}
 													>
-														{prev}
+														{prev.submenus}
 													</NavLink>
 												)}
 											</li>

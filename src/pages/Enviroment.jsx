@@ -51,6 +51,9 @@ const Enviroment = ({
 		temp_data.page.our_commitment_img_title = JSON.parse(
 			temp_data.page.our_commitment_img_title
 		);
+		temp_data.page.our_commitment_img_alt = JSON.parse(
+			temp_data.page.our_commitment_img_alt
+		);
 
 		if (Object.keys(environmentSearch).length) {
 			// SEARCH DATA

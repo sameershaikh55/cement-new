@@ -15,6 +15,7 @@ const Seo = ({ description, title, canonical }) => {
 			<title>{metaTitle}</title>
 			<meta property="og:title" content={metaTitle} />
 			<meta name="description" content={metaDescription} />
+			<meta name="robots" content={metaTitle} />
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:site" content="" />
 			<meta name="twitter:title" content={metaTitle} />
@@ -28,7 +29,8 @@ const Seo = ({ description, title, canonical }) => {
 			<meta itemprop="image" content="" />
 			<meta property="og:url" content="http://nuvoco.com/" />
 			<meta itemprop="url" content="http://nuvoco.com/" />
-			{canonical && <link rel="canonical" href={canonical} />}
+			<link rel="canonical" href={canonical} />
+			<link href={canonical} />
 		</Helmet>
 	);
 };
