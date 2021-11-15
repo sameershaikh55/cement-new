@@ -33,6 +33,7 @@ const Covid = ({ covid, covidApi }) => {
 						title={covid.covid_initiative.meta_title}
 						description={covid.covid_initiative.meta_description}
 						canonical={covid.covid_initiative.canonical_rel}
+						robot={covid.covid_initiative.meta_robots}
 					/>
 					<Hero
 						heading={covid.covid_initiative.banner_img_title}

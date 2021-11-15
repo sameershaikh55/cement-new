@@ -36,6 +36,7 @@ const MissionVission = ({ mv, mvApi }) => {
 						title={mv.vision_mission_values.meta_title}
 						description={mv.vision_mission_values.meta_description}
 						canonical={mv.vision_mission_values.canonical_rel}
+						robot={mv.vision_mission_values.meta_robots}
 					/>
 					<Hero
 						heading={mv.vision_mission_values.banner_img_title}

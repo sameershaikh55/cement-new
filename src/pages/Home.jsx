@@ -130,6 +130,7 @@ const Home = ({ home, homeApi }) => {
 						title={home.seo.page_title}
 						description={home.seo.meta_description}
 						canonical={home.seo.canonical_rel}
+						robot={home.seo.meta_robots}
 					/>
 					<div className="d-none d-md-block truck_video">
 						<video ref={vidRef} loop muted>

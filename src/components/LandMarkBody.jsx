@@ -17,6 +17,8 @@ const LandMarkBody = ({ data }) => {
 			landmarks_title: data.landmark_page_list.landmarks_title[i],
 			order_by: data.landmark_page_list.order_by[i],
 		});
+
+		landmarkLineup.sort((a, b) => parseInt(a.order_by) - parseInt(b.order_by));
 	});
 
 	return (

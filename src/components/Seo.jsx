@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-const Seo = ({ description, title, canonical }) => {
+const Seo = ({ description, title, canonical, robot }) => {
 	const noFound = {
 		title: "",
 		description: "",
@@ -15,7 +15,7 @@ const Seo = ({ description, title, canonical }) => {
 			<title>{metaTitle}</title>
 			<meta property="og:title" content={metaTitle} />
 			<meta name="description" content={metaDescription} />
-			<meta name="robots" content={metaTitle} />
+			<meta name="robots" content={robot} />
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:site" content="" />
 			<meta name="twitter:title" content={metaTitle} />

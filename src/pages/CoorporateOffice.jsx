@@ -30,6 +30,7 @@ const CoorporateOffice = ({ corporateOffice, corporateOfficeApi }) => {
 						title={corporateOffice.corporate_offices.page_title}
 						description={corporateOffice.corporate_offices.meta_description}
 						canonical={corporateOffice.corporate_offices.canonical_rel}
+						robot={corporateOffice.corporate_offices.meta_robots}
 					/>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />

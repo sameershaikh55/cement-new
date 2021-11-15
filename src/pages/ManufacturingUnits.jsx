@@ -32,6 +32,7 @@ const ManufacturingUnits = ({ manufacturing, manufacturingApi }) => {
 						title={manufacturing.manufacturing_detail.page_title}
 						description={manufacturing.manufacturing_detail.meta_description}
 						canonical={manufacturing.manufacturing_detail.canonical_rel}
+						robot={manufacturing.manufacturing_detail.meta_robots}
 					/>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />

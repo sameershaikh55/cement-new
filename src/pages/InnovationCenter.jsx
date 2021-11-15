@@ -35,6 +35,7 @@ const InnovationCenter = ({ innovationCentre, innovationCentreApi }) => {
 						title={innovationCentre.innovation_center.meta_title}
 						description={innovationCentre.innovation_center.meta_description}
 						canonical={innovationCentre.innovation_center.canonical_rel}
+						robot={innovationCentre.innovation_center.meta_robots}
 					/>
 					<Hero
 						heading={innovationCentre.innovation_center.banner_img_title}

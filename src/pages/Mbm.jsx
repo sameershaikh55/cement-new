@@ -50,11 +50,12 @@ const Mbm = ({ productDetailsApi, productDetails }) => {
 			{(Object.keys(productDetails).length && (
 				<div>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
-					{/* <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} /> */}
+					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
 					<Seo
 						title={temp_data.page.category.page_title}
 						description={temp_data.page.category.meta_description}
 						canonical={temp_data.page.category.canonical_rel}
+						robot={temp_data.page.category.meta_robots}
 					/>
 					<Hero
 						heading={temp_data.page.category.banner_img_title}

@@ -33,6 +33,7 @@ const HomeBuilding = ({ building, buildingApi }) => {
 						title={building.page_title}
 						description={building.meta_description}
 						canonical={building.canonical_rel}
+						robot={building.meta_robots}
 					/>
 					<Hero
 						heading={building.homebuild_title}

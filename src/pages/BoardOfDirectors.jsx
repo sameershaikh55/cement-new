@@ -31,6 +31,7 @@ const BoardOfDirectors = ({ boardDirectors, boardDirectorsApi }) => {
 						title={boardDirectors.data.board_of_director.page_title}
 						description={boardDirectors.data.board_of_director.meta_description}
 						canonical={boardDirectors.data.board_of_director.canonical_rel}
+						robot={boardDirectors.data.board_of_director.meta_robots}
 					/>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />

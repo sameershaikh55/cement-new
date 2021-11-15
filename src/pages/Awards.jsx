@@ -33,6 +33,7 @@ const Awards = ({ awards, awardsApi }) => {
 							title={awards.award_detail.meta_title}
 							description={awards.award_detail.meta_description}
 							canonical={awards.award_detail.canonical_rel}
+							robot={awards.award_detail.meta_robots}
 						/>
 						<Hero
 							heading={awards.award_detail.banner_img_title}

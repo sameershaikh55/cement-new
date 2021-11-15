@@ -35,6 +35,7 @@ const InvestorContact = ({ ic, icApi }) => {
 						title={ic.page.page_title}
 						description={ic.page.meta_description}
 						canonical={ic.page.canonical_rel}
+						robot={ic.page.meta_robots}
 					/>
 					<Hero
 						heading={ic.page.banner_img_title}

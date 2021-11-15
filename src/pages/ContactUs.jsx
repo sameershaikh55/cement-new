@@ -32,6 +32,7 @@ const ContactUs = ({ contact, contactApi }) => {
 						title={contact.page.page_title}
 						description={contact.page.meta_description}
 						canonical={contact.page.canonical_rel}
+						robot={contact.page.meta_robots}
 					/>
 					<Hero
 						heading={contact.page.banner_img_title}

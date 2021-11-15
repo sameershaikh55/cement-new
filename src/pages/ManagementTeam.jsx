@@ -30,6 +30,7 @@ const ManagementTeam = ({ managementApi, managementTeam }) => {
 						title={managementTeam.management_team.page_title}
 						description={managementTeam.management_team.meta_description}
 						canonical={managementTeam.management_team.canonical_rel}
+						robot={managementTeam.management_team.meta_robots}
 					/>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />

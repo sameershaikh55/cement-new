@@ -159,12 +159,15 @@ const CSR = ({ csr, csrApi }) => {
 														className="col-12 col-sm-10 col-md-8 col-lg-6"
 													>
 														<div className="cementCard">
+															d
 															<img
 																src={
 																	imgUrl +
 																	temp_data.page.key_focus_area_img[ind]
 																}
-																alt={temp_data.page.key_focus_area_image_alt[ind]}
+																alt={
+																	temp_data.page.key_focus_area_image_alt[ind]
+																}
 															/>
 															<div className="d-flex flex-column justify-content-between ms-2 ms-sm-4">
 																<div>

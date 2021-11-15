@@ -57,6 +57,7 @@ const ConcreteAriste = ({ productDetails, productDetailsApi }) => {
 						title={temp_data.page.category.page_title}
 						description={temp_data.page.category.meta_description}
 						canonical={temp_data.page.category.canonical_rel}
+						robot={temp_data.page.category.meta_robots}
 					/>
 					<Hero
 						heading={temp_data.page.category.banner_img_title}

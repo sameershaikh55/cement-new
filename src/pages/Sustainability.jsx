@@ -41,6 +41,7 @@ const Sustainability = ({ sustainability, sustainabilityApi }) => {
 						title={sustainability.meta_title}
 						description={sustainability.meta_description}
 						canonical={sustainability.canonical_rel}
+						robot={sustainability.meta_robots}
 					/>
 					<Hero
 						heading={sustainability.sustanability_title}

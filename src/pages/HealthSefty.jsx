@@ -109,6 +109,7 @@ const HealthSefty = ({ healthSafety, healthSafetyApi }) => {
 						title={temp_data.page.page_title}
 						description={temp_data.page.meta_description}
 						canonical={temp_data.page.canonical_rel}
+						robot={temp_data.page.meta_robots}
 					/>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />

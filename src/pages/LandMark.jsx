@@ -32,6 +32,7 @@ const LandMark = ({ landmark, landmarkApi }) => {
 						title={landmark.landmark_page_list.page_title}
 						description={landmark.landmark_page_list.meta_description}
 						canonical={landmark.landmark_page_list.canonical_rel}
+						robot={landmark.landmark_page_list.meta_robots}
 					/>
 					<Hero
 						heading={landmark.landmark_page_list.landmark_title}

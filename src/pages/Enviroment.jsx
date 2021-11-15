@@ -68,6 +68,7 @@ const Enviroment = ({
 					title={temp_data.page.page_title}
 					description={temp_data.page.meta_description}
 					canonical={temp_data.page.canonical_rel}
+					robot={temp_data.page.meta_robots}
 				/>
 				<Hero
 					heading={temp_data.page.banner_img_title}

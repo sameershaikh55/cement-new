@@ -87,6 +87,7 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 						title={temp_page.page.page_title}
 						description={temp_page.page.meta_description}
 						canonical={temp_page.page.canonical_rel}
+						robot={temp_page.page.meta_robots}
 					/>
 					<Hero
 						heading={temp_page.page.product_title}

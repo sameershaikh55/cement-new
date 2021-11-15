@@ -38,6 +38,7 @@ const About = ({ nuvocoGlance, nuvocoGlanceApi }) => {
 							title={nuvocoGlance.about_nuvoco.meta_title}
 							description={nuvocoGlance.about_nuvoco.meta_description}
 							canonical={nuvocoGlance.about_nuvoco.canonical_rel}
+							robot={nuvocoGlance.about_nuvoco.meta_robots}
 						/>
 						<Hero
 							heading={nuvocoGlance.about_nuvoco.banner_img_title}

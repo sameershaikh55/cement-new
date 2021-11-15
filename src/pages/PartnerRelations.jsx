@@ -47,6 +47,7 @@ const PartnerRelations = ({ partnerRelations, partnerRelationsApi }) => {
 						title={temp_data.page.page_title}
 						description={temp_data.page.meta_description}
 						canonical={temp_data.page.canonical_rel}
+						robot={temp_data.page.meta_robots}
 					/>
 					<Hero
 						heading={temp_data.page.banner_img_title}
@@ -69,9 +70,12 @@ const PartnerRelations = ({ partnerRelations, partnerRelationsApi }) => {
 										{/* DIRECTION SECTION START */}
 										<div className="d-flex justify-content-center align-items-center">
 											<div className="directionBgEnv text-white d-flex justify-content-center fw-bold">
-												<span className={`h6 mt-direction2Env text-uppercase`}>
-													our network
-												</span>
+												<span
+													dangerouslySetInnerHTML={{
+														__html: temp_data.page.section1_title,
+													}}
+													className={`h6 mt-direction2Env text-uppercase`}
+												></span>
 											</div>
 										</div>
 										{/* DIRECTION SECTION END */}
@@ -81,15 +85,10 @@ const PartnerRelations = ({ partnerRelations, partnerRelationsApi }) => {
 										data-aos-delay="1200"
 										data-aos-duration="500"
 										className="textJustify"
-									>
-										At Nuvoco, we share an inclusive relationship with our
-										stakeholders and have a loyal customer base who has been
-										partners in our journey. To recognise their efforts and
-										reward them at regular intervals we have specialised and
-										dedicated loyalty programmes catering to our robust network
-										of 12600+ dealers, 37600+ retailers and 41500+ influencers
-										(contractors, engineers and architects).
-									</p>
+										dangerouslySetInnerHTML={{
+											__html: temp_data.page.section1_desc,
+										}}
+									></p>
 								</div>
 							</div>
 						</div>

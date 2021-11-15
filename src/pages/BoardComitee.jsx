@@ -42,6 +42,7 @@ const BoardComitee = ({ boardCommittee, boardCommitteeApi }) => {
 						title={boardCommittee.data.board_of_committe.page_title}
 						description={boardCommittee.data.board_of_committe.meta_description}
 						canonical={boardCommittee.data.board_of_committe.canonical_rel}
+						robot={boardCommittee.data.board_of_committe.meta_robots}
 					/>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />

@@ -26,15 +26,15 @@ const Footer = ({ footer, footerApi }) => {
 	let footerLinks = [];
 
 	if (Object.keys(footer).length) {
-		footer.footer[0].footer_menu
-			.map((prev, i) => {
-				footerLinks.push({
-					footer_menu: prev,
-					quick_links: footer.footer[0].quick_links[i],
-					order_by: footer.footer[0].order_by[i],
-				});
-			})
-			.sort((a, b) => parseInt(a.order_by) - parseInt(b.order_by));
+		footer.footer[0].footer_menu.map((prev, i) => {
+			footerLinks.push({
+				footer_menu: prev,
+				quick_links: footer.footer[0].quick_links[i],
+				order_by: footer.footer[0].order_by[i],
+			});
+		});
+
+		footerLinks.sort((a, b) => parseInt(a.order_by) - parseInt(b.order_by));
 	}
 
 	return (

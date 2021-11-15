@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
+import Seo from "../components/Seo";
 import EmployeTestimonials from "../components/EmployeTestimonials";
 
 // IMPORTING IMAGES
@@ -29,7 +30,6 @@ const NovocoLife = ({ career, careerApi }) => {
 	useEffect(() => {
 		careerApi();
 	}, []);
-	console.log(career);
 
 	return (
 		<>
@@ -37,6 +37,12 @@ const NovocoLife = ({ career, careerApi }) => {
 				<div>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
 					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
+					<Seo
+						title={career.LifeAtNuvoco.meta_title}
+						description={career.LifeAtNuvoco.meta_description}
+						canonical={career.LifeAtNuvoco.canonical_rel}
+						robot={career.LifeAtNuvoco.meta_robots}
+					/>
 					<Hero
 						heading={career.LifeAtNuvoco.banner_img_title}
 						img1={imgUrl + career.LifeAtNuvoco.banner_img}
