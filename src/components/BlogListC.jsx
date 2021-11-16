@@ -51,7 +51,10 @@ const BlogListC = ({ data }) => {
 													className="small"
 												></div>
 												<button
-													onClick={() => history.push(`/blog/${page_url}`)}
+													onClick={() => {
+														history.push(`/blog/${page_url}`);
+														window.scrollTo(0, 0);
+													}}
 													className="text-uppercase greenBtn px-4 py-1 mt-2 text-white"
 												>
 													know more

@@ -160,9 +160,10 @@ const BlogBody = ({ data, data2 }) => {
 														></p>
 														<div>
 															<button
-																onClick={() =>
-																	history.push(`/blog/${prev.page_url}`)
-																}
+																onClick={() => {
+																	history.push(`/blog/${prev.page_url}`);
+																	window.scrollTo(0, 0);
+																}}
 																className="text-uppercase greenBtn border-0 py-1 px-4 text-white mt-1"
 															>
 																Know mORE
