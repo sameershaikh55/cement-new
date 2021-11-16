@@ -25,7 +25,6 @@ const About = ({ nuvocoGlance, nuvocoGlanceApi }) => {
 	useEffect(() => {
 		nuvocoGlanceApi();
 	}, []);
-	console.log(nuvocoGlance);
 	return (
 		<>
 			{(Object.keys(nuvocoGlance).length && (

@@ -1459,6 +1459,13 @@ video::-webkit-media-controls-start-playback-button {
   border-top-right-radius: 8px;
 }
 
+.blogCard .p_description {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .commiteeCard div:nth-child(1) {
   background-color: #efefef;
 }

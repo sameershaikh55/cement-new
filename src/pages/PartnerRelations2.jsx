@@ -61,7 +61,6 @@ const PartnerRelations2 = ({
 		temp_data.page.redemption_thumbnail_subtitle = JSON.parse(
 			temp_data.page.redemption_thumbnail_subtitle
 		);
-		console.log(temp_data);
 	}
 
 	return (

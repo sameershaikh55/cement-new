@@ -86,7 +86,6 @@ const ContactBody = ({ data }) => {
 			reset();
 		}
 	};
-	console.log(data);
 	return (
 		<div className="page_container my-4 my-sm-5">
 			<div className="container-fluid">

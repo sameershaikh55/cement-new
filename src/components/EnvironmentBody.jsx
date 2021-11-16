@@ -275,7 +275,6 @@ const EnvironmentBody = ({
 
 						<div className="row">
 							{temp_data.page.our_commitment_img.map((prev, i) => {
-								console.log(prev);
 								return (
 									<div
 										data-aos="zoom-in"

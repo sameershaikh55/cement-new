@@ -58,7 +58,6 @@ const CsrSlider = ({ temp_data, project_path }) => {
 									}}
 								>
 									{temp_data.map((prev, i) => {
-										console.log(prev);
 										const { img, title, description } = prev;
 										return (
 											<SwiperSlide>

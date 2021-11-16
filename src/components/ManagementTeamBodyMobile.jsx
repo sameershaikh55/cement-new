@@ -62,6 +62,7 @@ const ManagementTeamBodyMobile = ({ managementTeam }) => {
 																	className="w-100"
 																	src={imgUrl + person_photo}
 																	alt={image_alt}
+																	title={image_alt}
 																/>
 																<h6
 																	dangerouslySetInnerHTML={{
@@ -126,6 +127,7 @@ const ManagementTeamBodyMobile = ({ managementTeam }) => {
 																	className="w-100"
 																	src={imgUrl + person_photo}
 																	alt={image_alt}
+																	title={image_alt}
 																/>
 																<h6
 																	dangerouslySetInnerHTML={{

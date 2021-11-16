@@ -137,12 +137,10 @@ const SubmitResume = () => {
 	};
 
 	const handleCV = (e) => {
-		// console.log(e.target.files[0]);
 		setUploadedCv(e.target.files[0]);
 	};
 
 	const onSubmit = (data) => {
-		// console.log(data);
 		setFormPart(formPart + 1);
 		setSendData([...sendData, data]);
 
@@ -151,12 +149,6 @@ const SubmitResume = () => {
 			let data1 = sendData[0];
 			let data2 = sendData[1];
 			let data3 = sendData[2];
-			// console.log(data1, "data1");
-			// console.log(data2, "data2");
-			// console.log(data3, "data3");
-
-			// console.log(uploadedCv, "uploadedCv");
-			// console.log(sendData);
 
 			var formData = new FormData();
 			// formData.append("full_name", "data1.full_name");
@@ -220,8 +212,6 @@ const SubmitResume = () => {
 				data.education_technical_qualifications || ""
 			);
 
-			// console.log(formData, "formData");
-
 			// POST API FOR DATA SENDING
 			// POST request using fetch with set headers
 			axios({
@@ -241,27 +231,6 @@ const SubmitResume = () => {
 			reset();
 		}
 	};
-
-	// const [file, setFile] = useState();
-
-	// const handleChange = (e) => {
-	// 	let reader = new FileReader();
-	// 	reader.onloadend = () => {
-	// 		setFile("file", reader.result);
-	// 	};
-	// 	reader.readAsDataURL(e.currentTarget.files[0]);
-
-	// 	console.log(reader);
-	// 	setFile(e.target.files[0]);
-	// };
-
-	// const submitForm = (e) => {
-	// 	e.preventDefault();
-	// 	console.log(file);
-	// 	let formData = new FormData();
-	// 	formData.append("files", formData);
-	// 	console.log(formData);
-	// };
 
 	return (
 		<div className="page_container my-5 pt-3">

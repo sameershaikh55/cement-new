@@ -55,7 +55,6 @@ const HealthSefty = ({ healthSafety, healthSafetyApi }) => {
 			temp_data.page.section3_imgs_titles
 		);
 		temp_data.page.video = JSON.parse(temp_data.page.video);
-		console.log(temp_data);
 	}
 
 	const getFilterData = (

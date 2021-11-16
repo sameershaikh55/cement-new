@@ -66,3 +66,7 @@ export { sustainabilityApi } from "./sustainability/action";
 export { careerApi } from "./careers/action";
 
 export { footerApi } from "./footer/action";
+
+export { blogApi } from "./blog/action";
+
+export { blogSingleApi } from "./blog/action";

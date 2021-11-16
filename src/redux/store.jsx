@@ -30,6 +30,7 @@ import buildingRed from "./homeBuilding/reducer";
 import sustainabilityRed from "./sustainability/reducer";
 import careerRed from "./careers/reducer";
 import footerRed from "./footer/reducer";
+import blogRed from "./blog/reducer";
 
 const middleware = applyMiddleware(thunk, logger);
 
@@ -61,6 +62,7 @@ const rootReducer = combineReducers({
 	sustainabilityRed,
 	careerRed,
 	footerRed,
+	blogRed,
 });
 
 const store = createStore(rootReducer, middleware);

@@ -147,7 +147,7 @@ function App() {
 										path={`/products/:productName`}
 										component={CementDuragaurd}
 									/>
-									<Route exact path={`/blogs`} component={Blogs} />
+									<Route exact path={`/blog/:single`} component={Blogs} />
 									<Route
 										exact
 										path={`/board_committee`}

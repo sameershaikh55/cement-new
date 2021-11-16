@@ -30,7 +30,6 @@ const FinancialInfoBody = ({
 	}, []);
 
 	if (Object.keys(financialInformation).length) {
-		console.log(financialInformation);
 		var ratingTable = (
 			<div className="page_container">
 				<div className="container-fluid">

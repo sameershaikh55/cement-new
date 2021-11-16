@@ -41,7 +41,6 @@ const CovidGallery = ({ data }) => {
 						<div className="col-11 col-sm-10 col-lg-8 mx-auto mx-auto px-3 px-sm-1">
 							<Slider {...settings}>
 								{data.gallery_imgs.map((prev, i) => {
-									console.log(prev);
 									return (
 										<div
 											key={i}

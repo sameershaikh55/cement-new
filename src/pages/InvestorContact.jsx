@@ -23,8 +23,6 @@ const InvestorContact = ({ ic, icApi }) => {
 		icApi();
 	}, []);
 
-	// console.log(ic);
-
 	return (
 		<>
 			{(Object.keys(ic).length && (
@@ -77,7 +75,6 @@ const InvestorContact = ({ ic, icApi }) => {
 									<div className="col-11 col-md-12 mx-auto">
 										<div className="row">
 											{ic.page_investor[0].title.map((prev, i) => {
-												console.log(prev);
 												return (
 													<div
 														key={i}

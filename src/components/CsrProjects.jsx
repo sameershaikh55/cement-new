@@ -5,7 +5,6 @@ import selectIcon from "../assets/selectIcon.png";
 import { imgUrl } from "../redux/config";
 
 const CsrProjects = ({ data }) => {
-	console.log(data);
 	return (
 		<div className="page_container mt-5 mb-5">
 			<div className="container-fluid">
