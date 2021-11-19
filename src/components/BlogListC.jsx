@@ -11,7 +11,7 @@ const BlogListC = ({ data }) => {
 				<div className="row">
 					<div className="col-11 col-md-12 mx-auto">
 						<div className="row">
-							{data.Blogs.map((prev, i) => {
+							{data.map((prev, i) => {
 								const {
 									banner_img,
 									banner_img_alt,
