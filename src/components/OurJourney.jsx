@@ -9,7 +9,7 @@ const OurJourney = ({ data }) => {
 	useEffect(() => {
 		document.body.style.overflow = "initial";
 	}, []);
-
+	console.log(data);
 	return (
 		<div className="page_container mt-5 mb-5">
 			<div className="container-fluid">
@@ -195,8 +195,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -264,8 +264,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -333,8 +333,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -402,8 +402,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -471,8 +471,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -540,8 +540,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -609,8 +609,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -678,8 +678,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -747,8 +747,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -816,8 +816,8 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__image">
 																	<img
 																		className="w-100 leftPaddingTimeline"
-																		srcset={imgUrl + image}
-																		alt="journey1"
+																		src={imgUrl + image}
+																		alt={prev.image_alt}
 																	/>
 																</div>
 															</div>
@@ -887,8 +887,8 @@ const OurJourney = ({ data }) => {
 																	<div className="timeline-article__image">
 																		<img
 																			className="w-100 leftPaddingTimeline"
-																			srcset={imgUrl + image}
-																			alt="journey1"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
 																		/>
 																	</div>
 																</div>

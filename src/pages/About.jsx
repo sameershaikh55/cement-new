@@ -25,6 +25,7 @@ const About = ({ nuvocoGlance, nuvocoGlanceApi }) => {
 	useEffect(() => {
 		nuvocoGlanceApi();
 	}, []);
+
 	return (
 		<>
 			{(Object.keys(nuvocoGlance).length && (
@@ -112,7 +113,14 @@ const About = ({ nuvocoGlance, nuvocoGlanceApi }) => {
 																				nuvocoGlance.about_nuvoco
 																					.buss_portfilio_img[ind]
 																			}
-																			alt="cardImage"
+																			alt={
+																				nuvocoGlance.about_nuvoco
+																					.buss_portfilio_title[ind]
+																			}
+																			title={
+																				nuvocoGlance.about_nuvoco
+																					.buss_portfilio_title[ind]
+																			}
 																		/>
 																		<div className="d-flex flex-column justify-content-between ms-2 ms-sm-4">
 																			<div>

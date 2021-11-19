@@ -2,21 +2,6 @@ import React, { useEffect } from "react";
 
 // IMPORTING IMAGE
 import selectIcon from "../assets/selectIcon.png";
-import journey1 from "../assets/award1.png";
-import journey2 from "../assets/award2.png";
-import journey3 from "../assets/award3.png";
-import journey4 from "../assets/award4.jpg";
-import journey5 from "../assets/award5.png";
-import journey6 from "../assets/award6.png";
-import journey7 from "../assets/award7.png";
-import journey8 from "../assets/award8.png";
-import journey9 from "../assets/award9.png";
-import journey10 from "../assets/award10.png";
-import journey11 from "../assets/award11.png";
-import journey12 from "../assets/award12.png";
-import journey13 from "../assets/award13.png";
-import journey14 from "../assets/award14.png";
-import journey15 from "../assets/award15.png";
 import { imgUrl } from "../redux/config";
 
 const AwardsBody = ({ data }) => {
@@ -135,7 +120,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="rightImgArrow"
 																				src={selectIcon}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																		<div
@@ -153,7 +138,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="w-100 leftPaddingTimeline"
 																				src={imgUrl + prev.award_image}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																	)}
@@ -205,7 +190,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="rightImgArrow"
 																				src={selectIcon}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																		<div
@@ -223,7 +208,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="w-100 leftPaddingTimeline"
 																				src={imgUrl + prev.award_image}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																	)}
@@ -275,7 +260,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="rightImgArrow"
 																				src={selectIcon}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																		<div
@@ -293,7 +278,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="w-100 leftPaddingTimeline"
 																				src={imgUrl + prev.award_image}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																	)}
@@ -345,7 +330,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="rightImgArrow"
 																				src={selectIcon}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																		<div
@@ -363,7 +348,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="w-100 leftPaddingTimeline"
 																				src={imgUrl + prev.award_image}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																	)}
@@ -415,7 +400,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="rightImgArrow"
 																				src={selectIcon}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																		<div
@@ -433,7 +418,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="w-100 leftPaddingTimeline"
 																				src={imgUrl + prev.award_image}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																	)}
@@ -485,7 +470,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="rightImgArrow"
 																				src={selectIcon}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																		<div
@@ -503,7 +488,7 @@ const AwardsBody = ({ data }) => {
 																			<img
 																				className="w-100 leftPaddingTimeline"
 																				src={imgUrl + prev.award_image}
-																				alt="selectIcon"
+																				alt={prev.award_image_alt}
 																			/>
 																		</div>
 																	)}
