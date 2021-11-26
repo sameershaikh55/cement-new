@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
 
 // IMPORTING ROUTER AND SWITCH
-import {
-	Switch,
-	Route,
-	useLocation,
-	NavLink,
-	useParams,
-} from "react-router-dom";
+import { Switch, Route, useLocation, NavLink } from "react-router-dom";
 
 // CSS LINKS SLICK CROUSEL
 import "slick-carousel/slick/slick.css";
@@ -20,10 +14,6 @@ import "./styles/index-generated.css";
 
 // IMPORTING ANIMATIONS
 import AOS from "aos";
-
-// IMPORTING REDUX PROVIDER AND STORE
-import { Provider } from "react-redux";
-import store from "./redux/store";
 
 // IMPORTING CONTEXT
 import BoardContext from "./context/BoardContext.jsx";
@@ -78,8 +68,15 @@ import { SiWhatsapp } from "react-icons/si";
 import WhyNuvocoDetail from "./pages/WhyNuvocoDetail";
 import UnitsPopUp from "./pages/UnitsPopUp";
 import Disclaimer from "./pages/Disclaimer";
+import { connect } from "react-redux";
+import { menuApi, homeApi } from "./redux";
 
-function App() {
+function App({ menuApi, menu, homeApi, home }) {
+	useEffect(() => {
+		menuApi();
+		homeApi();
+	}, []);
+
 	useEffect(() => {
 		document.body.style.overflow = "hidden";
 
@@ -110,36 +107,36 @@ function App() {
 					<Loader />
 				</div>
 			</div>
-			<Provider store={store}>
-				{/* BUTTONS START */}
-				<div className="fixedSideBtn d-flex">
-					<NavLink to="/contact_us">
-						<button> Contact Us </button>
-					</NavLink>
-					<NavLink to="/homeBuilding">
-						<button className="ms-4"> Home Builders </button>
-					</NavLink>
-				</div>
-				<div className="fixedShareBtns">
-					<a href="https://wa.me/919830017272?text=hi" target="blank">
-						<button>
-							<SiWhatsapp color="#fff" className="ws" />
-						</button>
-					</a>
-				</div>
-				{/* BUTTONS END  */}
-				<ManufacturingUnitsContext>
-					<BoardContext>
-						<EmployeeTestimonial>
-							<NuvocoLifeContext>
-								{/* <ScrollToTop /> */}
+			{/* BUTTONS START */}
+			<div className="fixedSideBtn d-flex">
+				<NavLink to="/contact_us">
+					<button> Contact Us </button>
+				</NavLink>
+				<NavLink to="/homeBuilding">
+					<button className="ms-4"> Home Builders </button>
+				</NavLink>
+			</div>
+			<div className="fixedShareBtns">
+				<a href="https://wa.me/919830017272?text=hi" target="blank">
+					<button>
+						<SiWhatsapp color="#fff" className="ws" />
+					</button>
+				</a>
+			</div>
+			{/* BUTTONS END  */}
+			<ManufacturingUnitsContext>
+				<BoardContext>
+					<EmployeeTestimonial>
+						<NuvocoLifeContext>
+							{Object.keys(menu).length && Object.keys(home).length && (
 								<Switch>
+									{/* <ScrollToTop /> */}
 									{/* <Route exact path={`/`} component={TestAnim} /> */}
 									{/* <Route exact path={`/`} component={TestAnim2} /> */}
 									<Route exact path={`/`} component={Home} />
 									<Route
 										exact
-										path={`/homeBuilding`}
+										path={home.home_page_list[4].link}
 										component={HomeBuilding}
 									/>
 									<Route
@@ -150,95 +147,149 @@ function App() {
 									<Route exact path={`/blog/:single`} component={Blogs} />
 									<Route
 										exact
-										path={`/board_committee`}
+										path={menu.menu_list[0].submenu_url[3]}
 										component={BoardComitee}
 									/>
-									<Route exact path={`/cement`} component={Cement} />
-									<Route exact path={`/enviroment`} component={Enviroment} />
-									<Route exact path={`/contact_us`} component={ContactUs} />
-									<Route exact path={`/blog_list`} component={BlogsList} />
+									<Route
+										exact
+										path={menu.menu_list[1].submenu_url[0]}
+										component={Cement}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[2].submenu_url[2]}
+										component={Enviroment}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[7].menu_url}
+										component={ContactUs}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[8].menu_url}
+										component={BlogsList}
+									/>
 									<Route exact path={`/disclaimer`} component={Disclaimer} />
 									<Route
 										exact
-										path={`/co_orporate_office`}
+										path={menu.menu_list[0].submenu_url[5]}
 										component={CoorporateOffice}
 									/>
 									<Route
 										exact
-										path={`/health_and_safety`}
+										path={menu.menu_list[2].submenu_url[1]}
 										component={HealthSefty}
 									/>
 									<Route
 										exact
-										path={`/sustainability`}
+										path={home.home_page_list[7].link}
 										component={Sustainability}
 									/>
 									<Route exact path={`/mbmIstamax`} component={MbmIstamax} />
-									<Route exact path={`/mbm`} component={Mbm} />
-									<Route exact path={`/concrete`} component={ConcreteAriste} />
-									<Route exact path={`/awards`} component={Awards} />
 									<Route
 										exact
-										path={`/partnerRelations`}
+										path={menu.menu_list[1].submenu_url[2]}
+										component={Mbm}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[1].submenu_url[1]}
+										component={ConcreteAriste}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[0].submenu_url[8]}
+										component={Awards}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[5].menu_url}
 										component={PartnerRelations}
 									/>
-									<Route exact path={`/csr`} component={CSR} />
-									<Route exact path={`/VMV`} component={MissionVission} />
 									<Route
 										exact
-										path={`/innovationCenter`}
+										path={menu.menu_list[2].submenu_url[3]}
+										component={CSR}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[0].submenu_url[1]}
+										component={MissionVission}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[0].submenu_url[7]}
 										component={InnovationCenter}
 									/>
 									<Route
 										exact
-										path={`/partnerRelations2/:partnerName`}
+										path={`/partner-relations/:partnerName`}
 										component={PartnerRelations2}
 									/>
 									<Route
 										exact
-										path={`/corporateGovernance`}
+										path={menu.menu_list[3].submenu_url[2]}
 										component={CorporateGovernance}
 									/>
 									<Route
 										exact
-										path={`/financialInformation`}
+										path={menu.menu_list[3].submenu_url[0]}
 										component={FinancialInformation}
 									/>
-									<Route exact path={`/aboutUs`} component={About} />
 									<Route
 										exact
-										path={`/investorContact`}
+										path={menu.menu_list[0].submenu_url[0]}
+										component={About}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[3].submenu_url[1]}
 										component={InvestorContact}
 									/>
-									<Route exact path={`/media`} component={Media} />
-									<Route exact path={`/covid`} component={Covid} />
-									<Route exact path={`/landmark`} component={LandMark} />
-									{(hist[0] === "board_of_directors" && (
+									<Route
+										exact
+										path={menu.menu_list[4].menu_url}
+										component={Media}
+									/>
+									<Route
+										exact
+										path={menu.menu_list[2].submenu_url[0]}
+										component={Covid}
+									/>
+									<Route
+										exact
+										path={home.home_page_list[5].link}
+										component={LandMark}
+									/>
+									{(hist[0] ===
+										menu.menu_list[0].submenu_url[2].replace("/", "") && (
 										<>
 											{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP START */}
 											<div>
 												<Route
-													path={`/board_of_directors`}
+													path={menu.menu_list[0].submenu_url[2]}
 													component={BoardOfDirectors}
 												/>
 												<Route
-													path={`/board_of_directors/:board`}
+													path={`${menu.menu_list[0].submenu_url[2]}/:board`}
 													component={BoardDetails}
 												/>
 											</div>
 											{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
 										</>
 									)) ||
-										(hist[0] === "managementTeam" && (
+										(hist[0] ===
+											menu.menu_list[0].submenu_url[4].replace("/", "") && (
 											<>
 												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP START */}
 												<div>
 													<Route
-														path={`/managementTeam`}
+														path={menu.menu_list[0].submenu_url[4]}
 														component={ManagementTeam}
 													/>
 													<Route
-														path={`/managementTeam/:board`}
+														path={`${menu.menu_list[0].submenu_url[4]}/:board`}
 														component={BoardDetailsManagement}
 													/>
 												</div>
@@ -261,15 +312,16 @@ function App() {
 												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
 											</>
 										)) ||
-										(hist[0] === "manufacturingUnits" && (
+										(hist[0] ===
+											menu.menu_list[0].submenu_url[6].replace("/", "") && (
 											<div>
 												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
 												<Route
-													path={`/manufacturingUnits`}
+													path={menu.menu_list[0].submenu_url[6]}
 													component={ManufacturingUnits}
 												/>
 												<Route
-													path={`/manufacturingUnits/:units`}
+													path={`${menu.menu_list[0].submenu_url[6]}/:units`}
 													component={UnitsPopUp}
 												/>
 												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
@@ -278,9 +330,12 @@ function App() {
 											<>
 												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
 												<div>
-													<Route path={`/nuvoco_life`} component={NovocoLife} />
 													<Route
-														path={`/nuvoco_life/:employee`}
+														path={menu.menu_list[6].menu_url}
+														component={NovocoLife}
+													/>
+													<Route
+														path={`${menu.menu_list[6].menu_url}/:employee`}
 														component={EmployeeDetails}
 													/>
 												</div>
@@ -289,13 +344,30 @@ function App() {
 										)}
 									{/* BOARD DIRECTOR */}
 								</Switch>
-							</NuvocoLifeContext>
-						</EmployeeTestimonial>
-					</BoardContext>
-				</ManufacturingUnitsContext>
-			</Provider>
+							)}
+						</NuvocoLifeContext>
+					</EmployeeTestimonial>
+				</BoardContext>
+			</ManufacturingUnitsContext>
 		</>
 	);
 }
 
-export default App;
+const mapStatetoProps = (state) => {
+	return {
+		menu: state.menuRed.menu,
+		home: state.homeRed.home,
+	};
+};
+const mapDispatchtoProps = (dispatch) => {
+	return {
+		menuApi: function () {
+			dispatch(menuApi());
+		},
+		homeApi: function () {
+			dispatch(homeApi());
+		},
+	};
+};
+
+export default connect(mapStatetoProps, mapDispatchtoProps)(App);

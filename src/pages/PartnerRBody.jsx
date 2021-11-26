@@ -37,7 +37,7 @@ const PartnerRBody = ({ temp_data, ind, project_path }) => {
 										></p>
 									</div>
 									<div>
-										<Link to={`/partnerRelations2/${page_url}`}>
+										<Link to={`/partner-relations/${page_url}`}>
 											<button className="greenBtn px-3 py-1 text-uppercase text-white">
 												view more
 											</button>
@@ -69,7 +69,7 @@ const PartnerRBody = ({ temp_data, ind, project_path }) => {
 										></p>
 									</div>
 									<div className="rtlDirection">
-										<Link to={`/partnerRelations2/${page_url}`}>
+										<Link to={`/partner-relations/${page_url}`}>
 											<button className="greenBtn px-3 py-1 text-uppercase text-white">
 												view more
 											</button>

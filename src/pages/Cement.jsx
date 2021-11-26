@@ -47,7 +47,7 @@ const Cement = ({ productDetails, productDetailsApi }) => {
 			{(Object.keys(productDetails).length && (
 				<div>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
-					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
+					{/* <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} /> */}
 					<Seo
 						title={temp_data.page.category.page_title}
 						description={temp_data.page.category.meta_description}
