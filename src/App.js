@@ -108,14 +108,17 @@ function App({ menuApi, menu, homeApi, home }) {
 				</div>
 			</div>
 			{/* BUTTONS START */}
-			<div className="fixedSideBtn d-flex">
-				<NavLink to="/contact_us">
-					<button> Contact Us </button>
-				</NavLink>
-				<NavLink to="/homeBuilding">
-					<button className="ms-4"> Home Builders </button>
-				</NavLink>
-			</div>
+			{(Object.keys(menu).length && Object.keys(home).length && (
+				<div className="fixedSideBtn d-flex">
+					<NavLink to={menu.menu_list[7].menu_url}>
+						<button> Contact Us </button>
+					</NavLink>
+					<NavLink to={home.home_page_list[4].link}>
+						<button className="ms-4"> Home Builders </button>
+					</NavLink>
+				</div>
+			)) ||
+				""}
 			<div className="fixedShareBtns">
 				<a href="https://wa.me/919830017272?text=hi" target="blank">
 					<button>
@@ -128,7 +131,7 @@ function App({ menuApi, menu, homeApi, home }) {
 				<BoardContext>
 					<EmployeeTestimonial>
 						<NuvocoLifeContext>
-							{Object.keys(menu).length && Object.keys(home).length && (
+							{(Object.keys(menu).length && Object.keys(home).length && (
 								<Switch>
 									{/* <ScrollToTop /> */}
 									{/* <Route exact path={`/`} component={TestAnim} /> */}
@@ -344,7 +347,8 @@ function App({ menuApi, menu, homeApi, home }) {
 										)}
 									{/* BOARD DIRECTOR */}
 								</Switch>
-							)}
+							)) ||
+								""}
 						</NuvocoLifeContext>
 					</EmployeeTestimonial>
 				</BoardContext>

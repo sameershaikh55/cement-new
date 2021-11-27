@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-// IMPORTING LOADER
-import Loader from "../components/Loader";
-
 // IMPORTING COMPONENTS
 import Direction from "../components/Direction";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
-import Sidebar from "../components/Sidebar";
 import StandOutAristist from "../components/StandOutAristist";
 import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
 
 // IMPORTING HOOKS
 import { useHooks } from "../hooks/useHooks";
@@ -47,7 +44,7 @@ const Cement = ({ productDetails, productDetailsApi }) => {
 			{(Object.keys(productDetails).length && (
 				<div>
 					<Header isOpen={isOpen} setIsOpen={setIsOpen} hamb={hamb} />
-					{/* <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} /> */}
+					<Sidebar isOpen={isOpen} setIsOpen={setIsOpen} setHamb={setHamb} />
 					<Seo
 						title={temp_data.page.category.page_title}
 						description={temp_data.page.category.meta_description}
