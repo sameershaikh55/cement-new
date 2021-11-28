@@ -32,18 +32,6 @@ const ConcreteAriste = ({ productDetails, productDetailsApi }) => {
 	// ERROR HANDLING AND SORTING (PARSE) START
 	if (Object.keys(productDetails).length) {
 		var temp_data = { ...productDetails.data };
-		temp_data.page.category.section2_images = JSON.parse(
-			temp_data.page.category.section2_images
-		);
-		temp_data.page.category.section2_subtitles = JSON.parse(
-			temp_data.page.category.section2_subtitles
-		);
-		temp_data.page.category.section2_image_alt = JSON.parse(
-			temp_data.page.category.section2_image_alt
-		);
-		// temp_data.page.category.section2_images = JSON.parse(
-		// 	temp_data.page.category.section2_images
-		// );
 	}
 	// ERROR HANDLING AND SORTING (PARSE) END
 
