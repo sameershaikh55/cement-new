@@ -131,224 +131,220 @@ function App({ menuApi, menu, homeApi, home }) {
 				<BoardContext>
 					<EmployeeTestimonial>
 						<NuvocoLifeContext>
-							{(Object.keys(menu).length && Object.keys(home).length && (
-								<Switch>
-									{/* <ScrollToTop /> */}
-									{/* <Route exact path={`/`} component={TestAnim} /> */}
-									{/* <Route exact path={`/`} component={TestAnim2} /> */}
-									<Route exact path={`/`} component={Home} />
-									<Route
-										exact
-										path={home.home_page_list[4].link}
-										component={HomeBuilding}
-									/>
-									<Route
-										exact
-										path={`/products/:productName`}
-										component={CementDuragaurd}
-									/>
-									<Route exact path={`/blog/:single`} component={Blogs} />
-									<Route
-										exact
-										path={menu.menu_list[0].submenu_url[3]}
-										component={BoardComitee}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[1].submenu_url[0]}
-										component={Cement}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[2].submenu_url[2]}
-										component={Enviroment}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[7].menu_url}
-										component={ContactUs}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[8].menu_url}
-										component={BlogsList}
-									/>
-									<Route exact path={`/disclaimer`} component={Disclaimer} />
-									<Route
-										exact
-										path={menu.menu_list[0].submenu_url[5]}
-										component={CoorporateOffice}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[2].submenu_url[1]}
-										component={HealthSefty}
-									/>
-									<Route
-										exact
-										path={home.home_page_list[7].link}
-										component={Sustainability}
-									/>
-									<Route exact path={`/mbmIstamax`} component={MbmIstamax} />
-									<Route
-										exact
-										path={menu.menu_list[1].submenu_url[2]}
-										component={Mbm}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[1].submenu_url[1]}
-										component={ConcreteAriste}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[0].submenu_url[8]}
-										component={Awards}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[5].menu_url}
-										component={PartnerRelations}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[2].submenu_url[3]}
-										component={CSR}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[0].submenu_url[1]}
-										component={MissionVission}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[0].submenu_url[7]}
-										component={InnovationCenter}
-									/>
-									<Route
-										exact
-										path={`/partner-relations/:partnerName`}
-										component={PartnerRelations2}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[3].submenu_url[2]}
-										component={CorporateGovernance}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[3].submenu_url[0]}
-										component={FinancialInformation}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[0].submenu_url[0]}
-										component={About}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[3].submenu_url[1]}
-										component={InvestorContact}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[4].menu_url}
-										component={Media}
-									/>
-									<Route
-										exact
-										path={menu.menu_list[2].submenu_url[0]}
-										component={Covid}
-									/>
-									<Route
-										exact
-										path={home.home_page_list[5].link}
-										component={LandMark}
-									/>
-									{(hist[0] ===
-										menu.menu_list[0].submenu_url[2].replace("/", "") && (
-										<>
-											{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP START */}
-											<div>
-												<Route
-													path={menu.menu_list[0].submenu_url[2]}
-													component={BoardOfDirectors}
-												/>
-												<Route
-													path={`${menu.menu_list[0].submenu_url[2]}/:board`}
-													component={BoardDetails}
-												/>
-											</div>
-											{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
-										</>
-									)) ||
-										(hist[0] ===
-											menu.menu_list[0].submenu_url[4].replace("/", "") && (
+							<Switch>
+								{/* <ScrollToTop /> */}
+								{/* <Route exact path={`/`} component={TestAnim} /> */}
+								{/* <Route exact path={`/`} component={TestAnim2} /> */}
+
+								<Route exact path="/about-us" component={About} />
+								<Route exact path="/awards" component={Awards} />
+								<Route
+									exact
+									path="/corporate-social-responsibility"
+									component={CSR}
+								/>
+
+								{(Object.keys(menu).length && Object.keys(home).length && (
+									<>
+										<Route exact path={`/`} component={Home} />
+										<Route
+											exact
+											path={home.home_page_list[4].link}
+											component={HomeBuilding}
+										/>
+										<Route
+											exact
+											path={`/products/:productName`}
+											component={CementDuragaurd}
+										/>
+										<Route exact path={`/blog/:single`} component={Blogs} />
+										<Route
+											exact
+											path={menu.menu_list[0].submenu_url[3]}
+											component={BoardComitee}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[1].submenu_url[0]}
+											component={Cement}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[2].submenu_url[2]}
+											component={Enviroment}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[7].menu_url}
+											component={ContactUs}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[8].menu_url}
+											component={BlogsList}
+										/>
+										<Route exact path={`/disclaimer`} component={Disclaimer} />
+										<Route
+											exact
+											path={menu.menu_list[0].submenu_url[5]}
+											component={CoorporateOffice}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[2].submenu_url[1]}
+											component={HealthSefty}
+										/>
+										<Route
+											exact
+											path={home.home_page_list[7].link}
+											component={Sustainability}
+										/>
+										<Route exact path={`/mbmIstamax`} component={MbmIstamax} />
+										<Route
+											exact
+											path={menu.menu_list[1].submenu_url[2]}
+											component={Mbm}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[1].submenu_url[1]}
+											component={ConcreteAriste}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[5].menu_url}
+											component={PartnerRelations}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[0].submenu_url[1]}
+											component={MissionVission}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[0].submenu_url[7]}
+											component={InnovationCenter}
+										/>
+										<Route
+											exact
+											path={`/partner-relations/:partnerName`}
+											component={PartnerRelations2}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[3].submenu_url[2]}
+											component={CorporateGovernance}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[3].submenu_url[0]}
+											component={FinancialInformation}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[3].submenu_url[1]}
+											component={InvestorContact}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[4].menu_url}
+											component={Media}
+										/>
+										<Route
+											exact
+											path={menu.menu_list[2].submenu_url[0]}
+											component={Covid}
+										/>
+										<Route
+											exact
+											path={home.home_page_list[5].link}
+											component={LandMark}
+										/>
+										{(hist[0] ===
+											menu.menu_list[0].submenu_url[2].replace("/", "") && (
 											<>
 												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP START */}
 												<div>
 													<Route
-														path={menu.menu_list[0].submenu_url[4]}
-														component={ManagementTeam}
+														path={menu.menu_list[0].submenu_url[2]}
+														component={BoardOfDirectors}
 													/>
 													<Route
-														path={`${menu.menu_list[0].submenu_url[4]}/:board`}
-														component={BoardDetailsManagement}
+														path={`${menu.menu_list[0].submenu_url[2]}/:board`}
+														component={BoardDetails}
 													/>
 												</div>
 												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
 											</>
 										)) ||
-										(hist[0] === "nuvoco_life2" && (
-											<>
-												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP START */}
+											(hist[0] ===
+												menu.menu_list[0].submenu_url[4].replace("/", "") && (
+												<>
+													{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP START */}
+													<div>
+														<Route
+															path={menu.menu_list[0].submenu_url[4]}
+															component={ManagementTeam}
+														/>
+														<Route
+															path={`${menu.menu_list[0].submenu_url[4]}/:board`}
+															component={BoardDetailsManagement}
+														/>
+													</div>
+													{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
+												</>
+											)) ||
+											(hist[0] === "nuvoco_life2" && (
+												<>
+													{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP START */}
+													<div>
+														<Route
+															path={`/nuvoco_life2`}
+															component={NovocoLife}
+														/>
+														<Route
+															path={`/nuvoco_life2/:nuvocoLife`}
+															component={WhyNuvocoDetail}
+														/>
+													</div>
+													{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
+												</>
+											)) ||
+											(hist[0] ===
+												menu.menu_list[0].submenu_url[6].replace("/", "") && (
 												<div>
+													{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
 													<Route
-														path={`/nuvoco_life2`}
-														component={NovocoLife}
+														path={menu.menu_list[0].submenu_url[6]}
+														component={ManufacturingUnits}
 													/>
 													<Route
-														path={`/nuvoco_life2/:nuvocoLife`}
-														component={WhyNuvocoDetail}
+														path={`${menu.menu_list[0].submenu_url[6]}/:units`}
+														component={UnitsPopUp}
 													/>
+													{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
 												</div>
-												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
-											</>
-										)) ||
-										(hist[0] ===
-											menu.menu_list[0].submenu_url[6].replace("/", "") && (
-											<div>
-												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
-												<Route
-													path={menu.menu_list[0].submenu_url[6]}
-													component={ManufacturingUnits}
-												/>
-												<Route
-													path={`${menu.menu_list[0].submenu_url[6]}/:units`}
-													component={UnitsPopUp}
-												/>
-												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
-											</div>
-										)) || (
-											<>
-												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
-												<div>
-													<Route
-														path={menu.menu_list[6].menu_url}
-														component={NovocoLife}
-													/>
-													<Route
-														path={`${menu.menu_list[6].menu_url}/:employee`}
-														component={EmployeeDetails}
-													/>
-												</div>
-												{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
-											</>
-										)}
-									{/* BOARD DIRECTOR */}
-								</Switch>
-							)) ||
-								""}
+											)) || (
+												<>
+													{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
+													<div>
+														<Route
+															path={menu.menu_list[6].menu_url}
+															component={NovocoLife}
+														/>
+														<Route
+															path={`${menu.menu_list[6].menu_url}/:employee`}
+															component={EmployeeDetails}
+														/>
+													</div>
+													{/* ROUTES FOR BOARD OF DIRECTOR PAGE AND IT'S POP-UP END */}
+													{/* BOARD DIRECTOR */}
+												</>
+											)}
+									</>
+								)) ||
+									""}
+							</Switch>
 						</NuvocoLifeContext>
 					</EmployeeTestimonial>
 				</BoardContext>

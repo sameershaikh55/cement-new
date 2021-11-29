@@ -170,34 +170,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -239,34 +246,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -308,34 +322,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -377,34 +398,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -446,34 +474,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -515,34 +550,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -584,34 +626,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -653,34 +702,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -722,34 +778,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -791,34 +854,41 @@ const OurJourney = ({ data }) => {
 															<div className="timeline-article__content-column">
 																<div className="timeline-article__title"></div>
 																<div className="timeline-article__description">
-																	<div
-																		className={`d-flex ${
-																			(i !== 0 && "my-3") || "mb-2"
-																		}`}
-																	>
-																		<div>
-																			<img
-																				className="rightImgArrow"
-																				src={selectIcon}
-																				alt="selectIcon"
-																			/>
-																		</div>
+																	{deacription !== "" &&
+																		((
+																			<div
+																				className={`d-flex ${
+																					(i !== 0 && "my-3") || "mb-2"
+																				}`}
+																			>
+																				<div>
+																					<img
+																						className="rightImgArrow"
+																						src={selectIcon}
+																						alt="selectIcon"
+																					/>
+																				</div>
 
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: deacription,
-																			}}
-																		></div>
-																	</div>
+																				<div
+																					dangerouslySetInnerHTML={{
+																						__html: deacription,
+																					}}
+																				></div>
+																			</div>
+																		) ||
+																			"")}
 																</div>
 															</div>
 															<div className="timeline-article__image-column">
 																<div className="timeline-article__image">
-																	<img
-																		className="w-100 leftPaddingTimeline"
-																		src={imgUrl + image}
-																		alt={prev.image_alt}
-																	/>
+																	{(image !== "" && (
+																		<img
+																			className="w-100 leftPaddingTimeline"
+																			src={imgUrl + image}
+																			alt={prev.image_alt}
+																		/>
+																	)) ||
+																		""}
 																</div>
 															</div>
 														</section>
@@ -862,34 +932,41 @@ const OurJourney = ({ data }) => {
 																<div className="timeline-article__content-column">
 																	<div className="timeline-article__title"></div>
 																	<div className="timeline-article__description">
-																		<div
-																			className={`d-flex ${
-																				(i !== 0 && "my-3") || "mb-2"
-																			}`}
-																		>
-																			<div>
-																				<img
-																					className="rightImgArrow"
-																					src={selectIcon}
-																					alt="selectIcon"
-																				/>
-																			</div>
+																		{deacription !== "" &&
+																			((
+																				<div
+																					className={`d-flex ${
+																						(i !== 0 && "my-3") || "mb-2"
+																					}`}
+																				>
+																					<div>
+																						<img
+																							className="rightImgArrow"
+																							src={selectIcon}
+																							alt="selectIcon"
+																						/>
+																					</div>
 
-																			<div
-																				dangerouslySetInnerHTML={{
-																					__html: deacription,
-																				}}
-																			></div>
-																		</div>
+																					<div
+																						dangerouslySetInnerHTML={{
+																							__html: deacription,
+																						}}
+																					></div>
+																				</div>
+																			) ||
+																				"")}
 																	</div>
 																</div>
 																<div className="timeline-article__image-column">
 																	<div className="timeline-article__image">
-																		<img
-																			className="w-100 leftPaddingTimeline"
-																			src={imgUrl + image}
-																			alt={prev.image_alt}
-																		/>
+																		{(image !== "" && (
+																			<img
+																				className="w-100 leftPaddingTimeline"
+																				src={imgUrl + image}
+																				alt={prev.image_alt}
+																			/>
+																		)) ||
+																			""}
 																	</div>
 																</div>
 															</section>
