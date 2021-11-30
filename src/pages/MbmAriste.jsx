@@ -32,6 +32,7 @@ const ConcreteAriste = ({ productDetails, productDetailsApi }) => {
 	// ERROR HANDLING AND SORTING (PARSE) START
 	if (Object.keys(productDetails).length) {
 		var temp_data = { ...productDetails.data };
+		console.log(temp_data);
 	}
 	// ERROR HANDLING AND SORTING (PARSE) END
 
@@ -63,7 +64,7 @@ const ConcreteAriste = ({ productDetails, productDetailsApi }) => {
 								data-aos-duration="600"
 								data-aos-offset="600"
 							>
-								<Direction title="overview" />
+								<Direction title={temp_data.page.category.section1_title} />
 							</div>
 							<p
 								data-aos="fade-right"
@@ -71,16 +72,10 @@ const ConcreteAriste = ({ productDetails, productDetailsApi }) => {
 								data-aos-duration="600"
 								data-aos-offset="600"
 								className="textJustify px-4 px-md-0"
-							>
-								Our Ready-Mix Concrete (RMX) business offer specialised products
-								under the brands Artiste, InstaMix, XCon and Concreto and are
-								proud contributors to the landmark projects like Lodha World
-								One, Amritsar Entry Gate, and the Metros. We are a preferred
-								partner for numerous developers, small contractors, builders,
-								architects, government agencies and individuals, supplying
-								efficient concrete solutions to improve the quality of
-								construction.
-							</p>
+								dangerouslySetInnerHTML={{
+									__html: temp_data.page.category.section1_desc,
+								}}
+							></p>
 						</div>
 					</div>
 

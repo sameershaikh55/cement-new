@@ -64,7 +64,7 @@ const Mbm = ({ productDetailsApi, productDetails }) => {
 								data-aos-duration="600"
 								data-aos-offset="600"
 							>
-								<Direction title="overview" />
+								<Direction title={temp_data.page.category.section1_title} />
 							</div>
 							<p
 								data-aos="fade-right"
@@ -72,15 +72,10 @@ const Mbm = ({ productDetailsApi, productDetails }) => {
 								data-aos-duration="600"
 								data-aos-offset="600"
 								className="textJustify px-4 px-md-0"
-							>
-								Our Modern Building Materials (MBM) offers a wide range of
-								value-added products such as Construction Chemicals,
-								Multipurpose Bonding and Waterproofing Agents, Wall Putty, Tile
-								Adhesive, Ready Mix Dry Plaster and Cover Blocks under our Zero
-								M and InstaMix brands. The product portfolio is popular in
-								markets we are present and boast of specialized innovations that
-								offer total waterproofing and protection from germs.
-							</p>
+								dangerouslySetInnerHTML={{
+									__html: temp_data.page.category.section1_desc,
+								}}
+							></p>
 						</div>
 					</div>
 					<StandOutAristist temp_data={temp_data} />

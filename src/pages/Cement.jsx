@@ -58,7 +58,7 @@ const Cement = ({ productDetails, productDetailsApi }) => {
 								data-aos-duration="600"
 								data-aos-offset="600"
 							>
-								<Direction title="overview" />
+								<Direction title={temp_data.page.category.section1_title} />
 							</div>
 							<div className="row">
 								<p
@@ -67,18 +67,10 @@ const Cement = ({ productDetails, productDetailsApi }) => {
 									data-aos-duration="600"
 									data-aos-offset="600"
 									className="col-12 col-lg-10 mx-auto onlyTextJustify px-4 px-md-0"
-								>
-									We have established a stronghold with innovative and
-									best-in-class cement products by prioritizing the use of
-									premium quality raw material. Our products have been awarded
-									some of the highest regulatory ratings owing to our constants
-									emphasis on delivering superior grade cement variants like{" "}
-									<br className="d-none d-md-block" />{" "}
-									<strong>
-										Concreto, Duraguard, DoubleBull, PSC, Nirmax, Infracem{" "}
-									</strong>
-									and <strong>Procem.</strong>
-								</p>
+									dangerouslySetInnerHTML={{
+										__html: temp_data.page.category.section1_desc,
+									}}
+								></p>
 							</div>
 						</div>
 					</div>
