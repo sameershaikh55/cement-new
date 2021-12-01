@@ -74,105 +74,6 @@ const InvestorContact = ({ ic, icApi }) => {
 								<div className="row">
 									<div className="col-11 col-md-12 mx-auto">
 										<div className="row">
-											{ic.page_investor[0].title.map((prev, i) => {
-												return (
-													<div
-														key={i}
-														data-aos="zoom-out"
-														data-aos-duration="500"
-														data-aos-offset="300"
-														data-aos-delay={`${
-															(i === 0 && "1400") ||
-															(i === 1 && "1800") ||
-															(i === 2 && "2200")
-														}`}
-														className="col-12 col-md-6 coorporateCard"
-													>
-														<div>
-															<h5 className="fw-bold borderBottomG border-3 pb-2">
-																{prev}
-															</h5>
-															<div>
-																<h6
-																	dangerouslySetInnerHTML={{
-																		__html:
-																			ic.page_investor[0].office_type_name[i],
-																	}}
-																	className="fw-bold"
-																></h6>
-																<p className="mb-1">
-																	<strong>Address:</strong>{" "}
-																	<span
-																		dangerouslySetInnerHTML={{
-																			__html:
-																				ic.page_investor[0].address_one[i],
-																		}}
-																	></span>
-																</p>
-																<p
-																	dangerouslySetInnerHTML={{
-																		__html: ic.page_investor[0].address_two[i],
-																	}}
-																	className="mb-1"
-																></p>
-																{ic.page_investor[0].address_three[i] && (
-																	<p
-																		dangerouslySetInnerHTML={{
-																			__html:
-																				ic.page_investor[0].address_three[i],
-																		}}
-																		className="mb-1"
-																	></p>
-																)}
-																<p className="mb-2">
-																	<strong>Phone:</strong>{" "}
-																	<span
-																		dangerouslySetInnerHTML={{
-																			__html: ic.page_investor[0].phone[i],
-																		}}
-																	></span>
-																</p>
-																{ic.page_investor[0].email[i] && (
-																	<p className="mb-2">
-																		<strong>Email:</strong>{" "}
-																		<span
-																			dangerouslySetInnerHTML={{
-																				__html: ic.page_investor[0].email[i],
-																			}}
-																		></span>
-																	</p>
-																)}
-																{ic.page_investor[0].website[i] && (
-																	<p className="mb-2">
-																		<strong>Website:</strong>{" "}
-																		<span
-																			dangerouslySetInnerHTML={{
-																				__html: ic.page_investor[0].website[i],
-																			}}
-																		></span>
-																	</p>
-																)}
-
-																<a
-																	target="blank"
-																	href={ic.page_investor[0].direction[i]}
-																>
-																	<button className="bg-transparent border-top-0 border-start-0 border-end-0 border-2 border-black fw-bold">
-																		Get Directions
-																	</button>
-																</a>
-															</div>
-														</div>
-													</div>
-												);
-											})}
-										</div>
-									</div>
-								</div>
-							)) || (
-								<div className="row">
-									<div className="col-11 col-md-12 mx-auto">
-										<div className="row">
 											{ic.page_investor[1].title.map((prev, i) => {
 												return (
 													<div
@@ -255,6 +156,105 @@ const InvestorContact = ({ ic, icApi }) => {
 																<a
 																	target="blank"
 																	href={ic.page_investor[1].direction[i]}
+																>
+																	<button className="bg-transparent border-top-0 border-start-0 border-end-0 border-2 border-black fw-bold">
+																		Get Directions
+																	</button>
+																</a>
+															</div>
+														</div>
+													</div>
+												);
+											})}
+										</div>
+									</div>
+								</div>
+							)) || (
+								<div className="row">
+									<div className="col-11 col-md-12 mx-auto">
+										<div className="row">
+											{ic.page_investor[0].title.map((prev, i) => {
+												return (
+													<div
+														key={i}
+														data-aos="zoom-out"
+														data-aos-duration="500"
+														data-aos-offset="300"
+														data-aos-delay={`${
+															(i === 0 && "1400") ||
+															(i === 1 && "1800") ||
+															(i === 2 && "2200")
+														}`}
+														className="col-12 col-md-6 coorporateCard"
+													>
+														<div>
+															<h5 className="fw-bold borderBottomG border-3 pb-2">
+																{prev}
+															</h5>
+															<div>
+																<h6
+																	dangerouslySetInnerHTML={{
+																		__html:
+																			ic.page_investor[0].office_type_name[i],
+																	}}
+																	className="fw-bold"
+																></h6>
+																<p className="mb-1">
+																	<strong>Address:</strong>{" "}
+																	<span
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				ic.page_investor[0].address_one[i],
+																		}}
+																	></span>
+																</p>
+																<p
+																	dangerouslySetInnerHTML={{
+																		__html: ic.page_investor[0].address_two[i],
+																	}}
+																	className="mb-1"
+																></p>
+																{ic.page_investor[0].address_three[i] && (
+																	<p
+																		dangerouslySetInnerHTML={{
+																			__html:
+																				ic.page_investor[0].address_three[i],
+																		}}
+																		className="mb-1"
+																	></p>
+																)}
+																<p className="mb-2">
+																	<strong>Phone:</strong>{" "}
+																	<span
+																		dangerouslySetInnerHTML={{
+																			__html: ic.page_investor[0].phone[i],
+																		}}
+																	></span>
+																</p>
+																{ic.page_investor[0].email[i] && (
+																	<p className="mb-2">
+																		<strong>Email:</strong>{" "}
+																		<span
+																			dangerouslySetInnerHTML={{
+																				__html: ic.page_investor[0].email[i],
+																			}}
+																		></span>
+																	</p>
+																)}
+																{ic.page_investor[0].website[i] && (
+																	<p className="mb-2">
+																		<strong>Website:</strong>{" "}
+																		<span
+																			dangerouslySetInnerHTML={{
+																				__html: ic.page_investor[0].website[i],
+																			}}
+																		></span>
+																	</p>
+																)}
+
+																<a
+																	target="blank"
+																	href={ic.page_investor[0].direction[i]}
 																>
 																	<button className="bg-transparent border-top-0 border-start-0 border-end-0 border-2 border-black fw-bold">
 																		Get Directions
