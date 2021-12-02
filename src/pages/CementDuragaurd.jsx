@@ -28,6 +28,7 @@ import { productDetailsPageApi } from "../redux/index";
 import { connect } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
 import Seo from "../components/Seo";
+import VideoGallery2 from "../components/VIdeoGallery2";
 
 const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 	const params = useParams();
@@ -155,7 +156,17 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 					<Benefits temp_page={temp_page} />
 
 					{/* VIDEO START */}
-					{temp_page.page.video !== null && (
+					{/* <div className="page_container mt-4">
+						<div className="container-fluid">
+							<div className="row">
+								<div className="col-12">
+									<VideoGallery2 data={temp_page.page.video} />
+								</div>
+							</div>
+						</div>
+					</div> */}
+
+					{/* {temp_page.page.video !== null && (
 						<div className="page_container mt-4">
 							<div className="container-fluid">
 								<div className="row">
@@ -192,7 +203,7 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 								</div>
 							</div>
 						</div>
-					)}
+					)} */}
 					{/* VIDEO END */}
 
 					{temp_page.page.broucher_langage.length && (

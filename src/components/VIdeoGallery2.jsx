@@ -6,7 +6,7 @@ import you2 from "../assets/you2.PNG";
 import you3 from "../assets/you3.PNG";
 import you4 from "../assets/you4.PNG";
 
-class VideoGallery extends React.Component {
+class VideoGallery2 extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -28,43 +28,86 @@ class VideoGallery extends React.Component {
 			useWindowKeyDown: true,
 		};
 
-		const {
-			data: {
-				page: { video },
-			},
-		} = this.props;
+		const { data } = this.props;
 
-		console.log(video);
+		function get_youtube_thumbnail(url, quality) {
+			if (url) {
+				var video_id, thumbnail, result;
+				if ((result = url.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/))) {
+					video_id = result.pop();
+				} else if ((result = url.match(/youtu.be\/(.{11})/))) {
+					video_id = result.pop();
+				}
+
+				if (video_id) {
+					if (typeof quality == "undefined") {
+						quality = "high";
+					}
+
+					var quality_key = "maxresdefault"; // Max quality
+					if (quality == "low") {
+						quality_key = "sddefault";
+					} else if (quality == "medium") {
+						quality_key = "mqdefault";
+					} else if (quality == "high") {
+						quality_key = "hqdefault";
+					}
+
+					var thumbnail =
+						"http://img.youtube.com/vi/" +
+						video_id +
+						"/" +
+						quality_key +
+						".jpg";
+					return thumbnail;
+				}
+			}
+			return false;
+		}
+
+		let madeData = data.map((prev, i) => {
+			return {
+				thumbnail: get_youtube_thumbnail(prev, "max"),
+				original: get_youtube_thumbnail(prev, "max"),
+				embedUrl: prev,
+				description: "Render custom slides within the gallery",
+				renderItem: this._renderVideo.bind(this),
+			};
+		});
+
+		console.log(madeData);
+
+		this.images = [...madeData].concat(this._getStaticImages());
 
 		this.images = [
-			{
-				thumbnail: `http://i3.ytimg.com/vi/MQ7XpV6jqKw/maxresdefault.jpg`,
-				original: you1,
-				embedUrl: video[0],
-				description: "Render custom slides within the gallery",
-				renderItem: this._renderVideo.bind(this),
-			},
-			{
-				thumbnail: `http://i3.ytimg.com/vi/tfiNYs9mxbc/maxresdefault.jpg`,
-				original: you2,
-				embedUrl: video[1],
-				description: "Render custom slides within the gallery",
-				renderItem: this._renderVideo.bind(this),
-			},
-			{
-				thumbnail: `http://i3.ytimg.com/vi/TaUU-rV2uIM/maxresdefault.jpg`,
-				original: you3,
-				embedUrl: video[2],
-				description: "Render custom slides within the gallery",
-				renderItem: this._renderVideo.bind(this),
-			},
-			{
-				thumbnail: `http://i3.ytimg.com/vi/kVxOp_Ar_F0/maxresdefault.jpg`,
-				original: you4,
-				embedUrl: video[3],
-				description: "Render custom slides within the gallery",
-				renderItem: this._renderVideo.bind(this),
-			},
+			// {
+			// 	thumbnail: `http://i3.ytimg.com/vi/MQ7XpV6jqKw/maxresdefault.jpg`,
+			// 	original: you1,
+			// 	embedUrl: video[0],
+			// 	description: "Render custom slides within the gallery",
+			// 	renderItem: this._renderVideo.bind(this),
+			// },
+			// {
+			// 	thumbnail: `http://i3.ytimg.com/vi/tfiNYs9mxbc/maxresdefault.jpg`,
+			// 	original: you2,
+			// 	embedUrl: video[1],
+			// 	description: "Render custom slides within the gallery",
+			// 	renderItem: this._renderVideo.bind(this),
+			// },
+			// {
+			// 	thumbnail: `http://i3.ytimg.com/vi/TaUU-rV2uIM/maxresdefault.jpg`,
+			// 	original: you3,
+			// 	embedUrl: video[2],
+			// 	description: "Render custom slides within the gallery",
+			// 	renderItem: this._renderVideo.bind(this),
+			// },
+			// {
+			// 	thumbnail: `http://i3.ytimg.com/vi/kVxOp_Ar_F0/maxresdefault.jpg`,
+			// 	original: you4,
+			// 	embedUrl: video[3],
+			// 	description: "Render custom slides within the gallery",
+			// 	renderItem: this._renderVideo.bind(this),
+			// },
 		].concat(this._getStaticImages());
 	}
 
@@ -223,4 +266,4 @@ class VideoGallery extends React.Component {
 	}
 }
 
-export default VideoGallery;
+export default VideoGallery2;
