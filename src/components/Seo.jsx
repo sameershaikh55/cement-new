@@ -29,7 +29,7 @@ const Seo = ({ description, title, canonical, robot }) => {
 			<meta itemprop="image" content="" />
 			<meta property="og:url" content="http://nuvoco.com/" />
 			<meta itemprop="url" content="http://nuvoco.com/" />
-			{/* <meta name="robots" content="noindex,follow" /> */}
+			<meta name="robots" content="index,follow" />
 			<link rel="canonical" href={canonical} />
 		</Helmet>
 	);
