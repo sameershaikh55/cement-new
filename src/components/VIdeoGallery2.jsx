@@ -67,48 +67,15 @@ class VideoGallery2 extends React.Component {
 
 		let madeData = data.map((prev, i) => {
 			return {
-				thumbnail: get_youtube_thumbnail(prev, "max"),
-				original: get_youtube_thumbnail(prev, "max"),
+				thumbnail: get_youtube_thumbnail(prev, "high"),
+				original: get_youtube_thumbnail(prev, "high"),
 				embedUrl: prev,
 				description: "Render custom slides within the gallery",
 				renderItem: this._renderVideo.bind(this),
 			};
 		});
 
-		console.log(madeData);
-
 		this.images = [...madeData].concat(this._getStaticImages());
-
-		this.images = [
-			// {
-			// 	thumbnail: `http://i3.ytimg.com/vi/MQ7XpV6jqKw/maxresdefault.jpg`,
-			// 	original: you1,
-			// 	embedUrl: video[0],
-			// 	description: "Render custom slides within the gallery",
-			// 	renderItem: this._renderVideo.bind(this),
-			// },
-			// {
-			// 	thumbnail: `http://i3.ytimg.com/vi/tfiNYs9mxbc/maxresdefault.jpg`,
-			// 	original: you2,
-			// 	embedUrl: video[1],
-			// 	description: "Render custom slides within the gallery",
-			// 	renderItem: this._renderVideo.bind(this),
-			// },
-			// {
-			// 	thumbnail: `http://i3.ytimg.com/vi/TaUU-rV2uIM/maxresdefault.jpg`,
-			// 	original: you3,
-			// 	embedUrl: video[2],
-			// 	description: "Render custom slides within the gallery",
-			// 	renderItem: this._renderVideo.bind(this),
-			// },
-			// {
-			// 	thumbnail: `http://i3.ytimg.com/vi/kVxOp_Ar_F0/maxresdefault.jpg`,
-			// 	original: you4,
-			// 	embedUrl: video[3],
-			// 	description: "Render custom slides within the gallery",
-			// 	renderItem: this._renderVideo.bind(this),
-			// },
-		].concat(this._getStaticImages());
 	}
 
 	_onImageClick(event) {

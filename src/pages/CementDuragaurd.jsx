@@ -60,8 +60,6 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 			temp_page.page.broucher_langage
 		);
 		temp_page.page.video = JSON.parse(temp_page.page.video);
-
-		console.log(temp_page);
 	}
 
 	const { isOpen, setIsOpen } = useHooks();
@@ -156,15 +154,18 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 					<Benefits temp_page={temp_page} />
 
 					{/* VIDEO START */}
-					{/* <div className="page_container mt-4">
-						<div className="container-fluid">
-							<div className="row">
-								<div className="col-12">
-									<VideoGallery2 data={temp_page.page.video} />
+					{(temp_page.page.video[0] !== null && (
+						<div className="page_container mt-4">
+							<div className="container-fluid">
+								<div className="row">
+									<div className="col-12">
+										<VideoGallery2 data={temp_page.page.video} />
+									</div>
 								</div>
 							</div>
 						</div>
-					</div> */}
+					)) ||
+						""}
 
 					{/* {temp_page.page.video !== null && (
 						<div className="page_container mt-4">
@@ -209,6 +210,7 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 					{temp_page.page.broucher_langage.length && (
 						<Brouchers temp_page={temp_page} />
 					)}
+
 					<Footer />
 				</div>
 			)}

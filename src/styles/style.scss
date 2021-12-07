@@ -3170,3 +3170,7 @@ $scrollBarHeight: 1px;
 }
 
 // TO FIX IPHONE ZOOM END
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+	max-height: 500px !important;
+}
