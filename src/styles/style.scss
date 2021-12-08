@@ -422,6 +422,16 @@ select {
 
 /* But it does not work with newer browsers, the below doesn't hide the play button parent div */
 
+.youtube_play_btn {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 90px;
+	height: auto;
+}
+
 video::-webkit-media-controls-panel {
 	display: none !important;
 	-webkit-appearance: none;
@@ -3088,6 +3098,9 @@ $scrollBarHeight: 1px;
 /*** iPhone and iOS Form Input Zoom Fixes ***/
 
 /* Fix Input Zoom on devices older than iPhone 5: */
+.image-gallery-slide .image-gallery-description {
+	display: none !important;
+}
 
 @media screen and (device-aspect-ratio: 2/3) {
 	select,

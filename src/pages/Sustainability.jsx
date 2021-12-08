@@ -28,8 +28,6 @@ const Sustainability = ({ sustainability, sustainabilityApi }) => {
 		sustainabilityApi();
 	}, []);
 
-	const urls = ["/covid", "/health_and_safety", "/enviroment", "/csr"];
-
 	return (
 		<>
 			{(Object.keys(sustainability).length && (
@@ -114,7 +112,7 @@ const Sustainability = ({ sustainability, sustainabilityApi }) => {
 											short_desc={sustainability.work_subtitle[i]}
 											title={sustainability.work_title[i]}
 											ind={i}
-											urlLink={urls[i]}
+											urlLink={sustainability.work_cta[i]}
 										/>
 									);
 								})}

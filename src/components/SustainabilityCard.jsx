@@ -43,7 +43,7 @@ const SustainabilityCard = ({
 											></p>
 										</div>
 										<div>
-											<Link to={urlLink}>
+											<Link to={"/" + urlLink}>
 												<button className="greenBtn px-3 py-1 text-uppercase text-white">
 													view more
 												</button>
@@ -81,7 +81,7 @@ const SustainabilityCard = ({
 											></p>
 										</div>
 										<div className="text-end">
-											<Link to={urlLink}>
+											<Link to={"/" + urlLink}>
 												<button className="greenBtn px-3 py-1 text-uppercase text-white">
 													view more
 												</button>

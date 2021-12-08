@@ -163,7 +163,7 @@ class VideoGallery2 extends React.Component {
 
 	_renderVideo(item) {
 		return (
-			<div>
+			<div className="position-relative">
 				{this.state.showVideo[item.embedUrl] ? (
 					<div className="video-wrapper">
 						<a
@@ -179,6 +179,11 @@ class VideoGallery2 extends React.Component {
 					</div>
 				) : (
 					<a onClick={this._toggleShowVideo.bind(this, item.embedUrl)}>
+						<img
+							className="youtube_play_btn"
+							src="https://www.freeiconspng.com/thumbs/youtube-logo-png/hd-youtube-logo-png-transparent-background-20.png"
+							alt=""
+						/>
 						<div className="play-button"></div>
 						<img className="image-gallery-image" src={item.original} />
 						{item.description && (
