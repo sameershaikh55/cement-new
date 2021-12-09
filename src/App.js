@@ -180,7 +180,10 @@ function App({ menuApi, menu, homeApi, home }) {
 										/>
 										<Route
 											exact
-											path={menu.menu_list[8].menu_url}
+											path={[
+												menu.menu_list[8].menu_url,
+												`${menu.menu_list[8].menu_url}/page/:page`,
+											]}
 											component={BlogsList}
 										/>
 										<Route exact path={`/disclaimer`} component={Disclaimer} />

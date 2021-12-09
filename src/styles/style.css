@@ -1954,6 +1954,13 @@ video::-webkit-media-controls-start-playback-button {
   height: 100%;
 }
 
+.blogListCard img {
+  height: 220px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .healthLogo img {
   width: 130px;
 }

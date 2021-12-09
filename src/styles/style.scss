@@ -1947,6 +1947,12 @@ video::-webkit-media-controls-start-playback-button {
 	border: 1px solid #ccc;
 	border-radius: 8px;
 	height: 100%;
+
+	img {
+		height: 220px;
+		width: 100%;
+		object-fit: cover;
+	}
 }
 
 // ==== BLOG LIST CARD END ====
