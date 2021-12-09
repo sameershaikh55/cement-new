@@ -158,7 +158,7 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 						<div className="page_container mt-4">
 							<div className="container-fluid">
 								<div className="row">
-									<div className="col-12">
+									<div className="col-12 col-lg-10 mx-auto">
 										<VideoGallery2 data={temp_page.page.video} />
 									</div>
 								</div>
@@ -166,45 +166,6 @@ const CementDuragaurd = ({ productDetailsPage, productDetailsPageApi }) => {
 						</div>
 					)) ||
 						""}
-
-					{/* {temp_page.page.video !== null && (
-						<div className="page_container mt-4">
-							<div className="container-fluid">
-								<div className="row">
-									<h5
-										data-aos="flip-down"
-										data-aos-duration="800"
-										data-aos-offset="500"
-										data-aos-delay="400"
-										className="text-center"
-									>
-										<span className="themeColor borderBottom pb-2 px-5 text-uppercase">
-											Video
-										</span>
-									</h5>
-									<div className="row gx-0">
-										<div
-											data-aos="flip-up"
-											data-aos-duration="800"
-											data-aos-offset="500"
-											data-aos-delay="400"
-											className="col-11 col-sm-10 col-lg-8 mx-auto mx-auto px-3 px-sm-1 mt-4"
-										>
-											<iframe
-												width="100%"
-												height="400"
-												src={temp_page.page.video}
-												title="YouTube video player"
-												frameBorder="0"
-												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-												allowFullScreen
-											></iframe>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					)} */}
 					{/* VIDEO END */}
 
 					{temp_page.page.broucher_langage.length && (

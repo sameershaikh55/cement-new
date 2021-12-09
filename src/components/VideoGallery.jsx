@@ -207,7 +207,7 @@ class VideoGallery extends React.Component {
 						></a>
 						<iframe
 							className="videoIframe"
-							src={item.embedUrl}
+							src={item.embedUrl + "?autoplay=1&mute=1"}
 							frameBorder="0"
 							allowFullScreen
 						></iframe>
