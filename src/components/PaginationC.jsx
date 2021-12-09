@@ -6,7 +6,11 @@ const PaginationC = ({ currentPage, totalPages, setCurrentPage }) => {
 	let { page } = useParams();
 
 	useEffect(() => {
-		setCurrentPage(parseInt(page));
+		if (page !== undefined) {
+			setCurrentPage(parseInt(page));
+		} else {
+			setCurrentPage(1);
+		}
 	}, []);
 
 	let history = useHistory();
