@@ -10,8 +10,8 @@ import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 
 // IMPORTING IMAGES
-import banner from "../assets/governanceBanner.png";
-import bannerM from "../assets/governanceBannerM.png";
+// import banner from "../assets/governanceBanner.png";
+// import bannerM from "../assets/governanceBannerM.png";
 
 // IMPORTING HOOKS
 import { useHooks } from "../hooks/useHooks";

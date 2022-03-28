@@ -146,8 +146,6 @@ const CorporateBody = ({
 										return (
 											//LOOP 2
 											prev1.pdfs.map((prev, i) => {
-												let name = prev.split("/");
-
 												return (
 													<div
 														data-aos="fade-up"
@@ -157,19 +155,13 @@ const CorporateBody = ({
 													>
 														<div className="d-flex justify-content-between align-items-center rounded-3 border border-1 border-aqua py-2 mt-3 mt-sm-0 px-3">
 															<p className="elipses1 mb-0 small">
-																{prev1.pdfs_title ? (
-																	prev1.pdfs_title.length > 0 ? (
-																		<div
-																			dangerouslySetInnerHTML={{
-																				__html: name.pop(),
-																			}}
-																		/>
-																	) : (
-																		"pdf document"
-																	)
-																) : (
-																	"pdf document"
-																)}
+																<div
+																	dangerouslySetInnerHTML={{
+																		__html: prev1.pdfs_title[i]
+																			? prev1.pdfs_title[i]
+																			: "pdf document",
+																	}}
+																/>
 															</p>
 															<a
 																href={`${temp_data.project_path}${prev}`}
