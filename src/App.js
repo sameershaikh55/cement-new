@@ -100,6 +100,15 @@ function App({ menuApi, menu, homeApi, home }) {
 		});
 	}, []);
 
+	console.log(
+		Object.keys(menu).length && Object.keys(home).length && menu,
+		"menu"
+	);
+	console.log(
+		Object.keys(menu).length && Object.keys(home).length && home,
+		"home"
+	);
+
 	return (
 		<>
 			<div className="loading_page">
@@ -113,7 +122,7 @@ function App({ menuApi, menu, homeApi, home }) {
 					<NavLink to={menu.menu_list[7].menu_url}>
 						<button> Contact Us </button>
 					</NavLink>
-					<NavLink to={home.home_page_list[4].link}>
+					<NavLink to={home.home_page_list[5].link}>
 						<button className="ms-4"> Home Builders </button>
 					</NavLink>
 				</div>
@@ -133,8 +142,6 @@ function App({ menuApi, menu, homeApi, home }) {
 						<NuvocoLifeContext>
 							<Switch>
 								{/* <ScrollToTop /> */}
-								{/* <Route exact path={`/`} component={TestAnim} /> */}
-								{/* <Route exact path={`/`} component={TestAnim2} /> */}
 
 								<Route exact path="/about-us" component={About} />
 								<Route exact path="/awards" component={Awards} />
@@ -149,7 +156,7 @@ function App({ menuApi, menu, homeApi, home }) {
 										<Route exact path={`/`} component={Home} />
 										<Route
 											exact
-											path={home.home_page_list[4].link}
+											path={home.home_page_list[5].link}
 											component={HomeBuilding}
 										/>
 										<Route
@@ -199,7 +206,7 @@ function App({ menuApi, menu, homeApi, home }) {
 										/>
 										<Route
 											exact
-											path={home.home_page_list[7].link}
+											path={home.home_page_list[8].link}
 											component={Sustainability}
 										/>
 										<Route exact path={`/mbmIstamax`} component={MbmIstamax} />
@@ -260,7 +267,7 @@ function App({ menuApi, menu, homeApi, home }) {
 										/>
 										<Route
 											exact
-											path={home.home_page_list[5].link}
+											path={home.home_page_list[6].link}
 											component={LandMark}
 										/>
 										{(hist[0] ===
