@@ -100,14 +100,6 @@ function App({ menuApi, menu, homeApi, home }) {
 		});
 	}, []);
 
-	console.log(
-		Object.keys(menu).length && Object.keys(home).length && menu,
-		"menu"
-	);
-	console.log(
-		Object.keys(menu).length && Object.keys(home).length && home,
-		"home"
-	);
 
 	return (
 		<>

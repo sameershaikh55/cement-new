@@ -32,7 +32,6 @@ const ConcreteAriste = ({ productDetails, productDetailsApi }) => {
 	// ERROR HANDLING AND SORTING (PARSE) START
 	if (Object.keys(productDetails).length) {
 		var temp_data = { ...productDetails.data };
-		console.log(temp_data);
 	}
 	// ERROR HANDLING AND SORTING (PARSE) END
 
