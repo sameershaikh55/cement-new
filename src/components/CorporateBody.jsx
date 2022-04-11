@@ -69,6 +69,13 @@ const CorporateBody = ({
 				"",
 				""
 			);
+		} else if (selectedCategory == 7) {
+			corporateGovernanceSearchApi(
+				selectedCategory || temp_data.corp_cat[0].id,
+				selectedYear || temp_data.corp_year[0].id,
+				"",
+				""
+			);
 		}
 	}, []);
 
@@ -116,6 +123,13 @@ const CorporateBody = ({
 				selectedPolicie || temp_data.corp_policy[0].id
 			);
 		} else if (id == 6) {
+			corporateGovernanceSearchApi(
+				id || temp_data.corp_cat[0].id,
+				selectedYear || temp_data.corp_year[0].id,
+				"",
+				""
+			);
+		} else if (id == 7) {
 			corporateGovernanceSearchApi(
 				id || temp_data.corp_cat[0].id,
 				selectedYear || temp_data.corp_year[0].id,
@@ -661,6 +675,115 @@ const CorporateBody = ({
 			)}
 
 			{selectedCategory === 6 && (
+				<>
+					{/* GOOD PRACTICES START */}
+					<div className="page_container mb-4 mb-md-5 pb-0 pb-md-2">
+						<div className="container-fluid">
+							<div className="row">
+								<div className="col-11 col-md-10 mx-auto">
+									<div className="row justify-content-center">
+										<div
+											data-aos="fade-up"
+											data-aos-delay="100"
+											className="col-12 col-md-5"
+										>
+											<div>
+												<div className="w-100 contactField">
+													<label className="fw-bold themeColorG" htmlFor="year">
+														Year
+														{/* Policies */}
+													</label>
+													<br />
+													<div className="inp position-relative w-100 d-flex align-items-center rounded-2">
+														<select
+															className="w-100 border-0 rounded-3 pe-5"
+															onChange={(e) => setSelectedYear(e.target.value)}
+														>
+															{temp_data.corp_year.map((item) => (
+																<option
+																	value={item.id}
+																	key={item.id}
+																	selected={selectedYear === item.id}
+																>
+																	{item.year}
+																</option>
+															))}
+														</select>
+														<img
+															className="contactIcon"
+															src={calenderIcon}
+															alt="calenderIcon"
+														/>
+														<img
+															style={{ width: "18px", height: "auto" }}
+															className="position-absolute end-0 me-2"
+															src={selectIcon}
+															alt="selectIcon"
+														/>
+													</div>
+													{/* <div className="inp position-relative w-100 d-flex align-items-center rounded-2">
+														<select
+															className="w-100 border-0 rounded-3 pe-5"
+															onChange={(e) =>
+																setSelectedPolicie(e.target.value)
+															}
+														>
+															{temp_data.corp_policy.map((item) => (
+																<option
+																	value={item.id}
+																	key={item.id}
+																	selected={selectedPolicie === item.id}
+																>
+																	{item.policie}
+																</option>
+															))}
+														</select>
+														<img
+															className="contactIcon"
+															src={calenderIcon}
+															alt="calenderIcon"
+														/>
+														<img
+															style={{ width: "18px", height: "auto" }}
+															className="position-absolute end-0 me-2"
+															src={selectIcon}
+															alt="selectIcon"
+														/>
+													</div> */}
+												</div>
+											</div>
+										</div>
+										<div
+											data-aos="fade-up"
+											data-aos-delay="300"
+											className="col-12 col-md-2 align-self-end mb-2 mt-3 mt-md-0 text-center"
+											onClick={() => {
+												corporateGovernanceSearchApi(
+													selectedCategory,
+													selectedYear,
+													"",
+													""
+												);
+											}}
+										>
+											<button className="greenBtn text-white px-5 py-2 text-uppercase">
+												submit
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					{/* GOOD PRACTICES END */}
+
+					{/* PDF DOWNLOADS START */}
+					{pdfDownload}
+					{/* PDF DOWNLOADS END */}
+				</>
+			)}
+
+			{selectedCategory === 7 && (
 				<>
 					{/* GOOD PRACTICES START */}
 					<div className="page_container mb-4 mb-md-5 pb-0 pb-md-2">

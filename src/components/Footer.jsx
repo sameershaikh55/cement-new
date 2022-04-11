@@ -10,8 +10,8 @@ import LightSpeed from "react-reveal/LightSpeed";
 import { NavLink } from "react-router-dom";
 
 // IMPORTING IMAGES
-import footerV from "../assets/Footer.mp4";
-import mobileFooter from "../assets/mobileFooter.mp4";
+// import footerV from "../assets/Footer.mp4";
+// import mobileFooter from "../assets/mobileFooter.mp4";
 
 // REDUX
 import { connect } from "react-redux";
