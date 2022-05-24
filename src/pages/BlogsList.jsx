@@ -27,6 +27,10 @@ const BlogsList = ({ blog, blogApi }) => {
   }, []);
 
   if (Object.keys(blog).length) {
+    blog.Blogs.sort(
+      (date1, date2) => new Date(date2.updated_at) - new Date(date1.updated_at)
+    );
+
     // Get current posts
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;

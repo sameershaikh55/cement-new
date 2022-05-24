@@ -5,10 +5,6 @@ import { imgUrl } from "../redux/config";
 const BlogListC = ({ data }) => {
   let history = useHistory();
 
-  data.sort(
-    (date1, date2) => new Date(date2.updated_at) - new Date(date1.updated_at)
-  );
-
   return (
     <div className="page_container mb-5 mt-3 mt-md-5">
       <div className="container-fluid">
