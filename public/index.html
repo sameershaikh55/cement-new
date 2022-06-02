@@ -31,21 +31,31 @@
 
     <!-- Google Tag Manager -->
     <script>
-      ;(function (w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-K5Q7Z3F')
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-P99NFD3");
     </script>
     <!-- End Google Tag Manager -->
   </head>
-
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-P99NFD3"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -63,29 +73,29 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-173151796-1"
     ></script>
     <script type="text/javascript">
-      ;(function () {
-        function async_load () {
-          var bt_ads = document.createElement('script')
-          bt_ads.setAttribute('async', true)
-          bt_ads.setAttribute('type', 'text/javascript')
+      (function () {
+        function async_load() {
+          var bt_ads = document.createElement("script");
+          bt_ads.setAttribute("async", true);
+          bt_ads.setAttribute("type", "text/javascript");
           bt_ads.src =
-            'https://bot.surbo.io/static/1.0.1/js/custom/widget_surbo.js?id=5ec6b70a4e581e24787a6799&srb_1=&srb_2=&srb_3='
-          var node = document.getElementsByTagName('script')[0]
-          node.parentNode.insertBefore(bt_ads, node)
+            "https://bot.surbo.io/static/1.0.1/js/custom/widget_surbo.js?id=5ec6b70a4e581e24787a6799&srb_1=&srb_2=&srb_3=";
+          var node = document.getElementsByTagName("script")[0];
+          node.parentNode.insertBefore(bt_ads, node);
         }
 
-        if (window.attachEvent) window.attachEvent('onload', async_load)
-        else window.addEventListener('load', async_load, false)
-      })()
+        if (window.attachEvent) window.attachEvent("onload", async_load);
+        else window.addEventListener("load", async_load, false);
+      })();
 
-      if (window.location.hostname === 'nuvoco.com') {
-        window.dataLayer = window.dataLayer || []
-        function gtag () {
-          dataLayer.push(arguments)
+      if (window.location.hostname === "nuvoco.com") {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
         }
-        gtag('js', new Date())
+        gtag("js", new Date());
 
-        gtag('config', 'UA-173151796-1')
+        gtag("config", "UA-173151796-1");
       }
     </script>
     <div id="bot-container"></div>
@@ -97,15 +107,5 @@
       type="text/javascript"
       src="%PUBLIC_URL%/libraries-generated.js"
     ></script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-K5Q7Z3F"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
   </body>
 </html>
